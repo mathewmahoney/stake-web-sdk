@@ -89,7 +89,7 @@ pnpm install
 ```
 
 - Run `pnpm run storybook --filter=<MODULE_NAME>` in the terminal to see the storybook of a sample game in a TurboRepo way. `<MODULE_NAME>` is the name in the package.json file of a module in apps or packages folders.
-- For example, we have `"name": "lines"` in the [apps/lines/package.json](/blob/main/apps/lines/package.json), so we can find it and run its storybook by:
+- For example, we have `"name": "lines"` in the [apps/lines/package.json](/apps/lines/package.json), so we can find it and run its storybook by:
 
 ```
 pnpm run storybook --filter=lines
@@ -116,18 +116,18 @@ pnpm run storybook --filter=lines
 
 Storybook is a powerful and handy tool to test our games. For example:
 
-- `COMPONENTS/<Game>/component`: It tests the [<Game \/>](/blob/main/apps/lines/src/components/Game.svelte) component. In this case, it doesn't skip the loading screen.
-- `COMPONENTS/<Game>/preSpin`: It tests the [<Game \/>](/blob/main/apps/lines/src/components/Game.svelte) component with the preSpin function.
-- `COMPONENTS/<Game>/emitterEvent`: It tests the [<Game \/>](/blob/main/apps/lines/src/components/Game.svelte) component with an emitterEvent "boardHide".
+- `COMPONENTS/<Game>/component`: It tests the [<Game \/>](/apps/lines/src/components/Game.svelte) component. In this case, it doesn't skip the loading screen.
+- `COMPONENTS/<Game>/preSpin`: It tests the [<Game \/>](/apps/lines/src/components/Game.svelte) component with the preSpin function.
+- `COMPONENTS/<Game>/emitterEvent`: It tests the [<Game \/>](/apps/lines/src/components/Game.svelte) component with an emitterEvent "boardHide".
 - ...
-- `COMPONENTS/<Symbol>/component`: It tests the [<Symbol \/>](/blob/main/apps/lines/src/components/Symbol.svelte) component with controls e.g. state of the symbol.
-- `COMPONENTS/<Symbol>/symbols`: It tests the [<Symbol \/>](/blob/main/apps/lines/src/components/Symbol.svelte) component with all the symbols and all the states.
+- `COMPONENTS/<Symbol>/component`: It tests the [<Symbol \/>](/apps/lines/src/components/Symbol.svelte) component with controls e.g. state of the symbol.
+- `COMPONENTS/<Symbol>/symbols`: It tests the [<Symbol \/>](/apps/lines/src/components/Symbol.svelte) component with all the symbols and all the states.
 - ...
-- `MODE_BASE/book/random`: It tests the [<Game \/>](/blob/main/apps/lines/src/components/Game.svelte) component with a random book of base mode.
-- `MODE_BASE/bookEvent/reveal`: It tests the [<Game \/>](/blob/main/apps/lines/src/components/Game.svelte) component with a "reveal" bookEvent of the base mode. It will spin the reels.
+- `MODE_BASE/book/random`: It tests the [<Game \/>](/apps/lines/src/components/Game.svelte) component with a random book of base mode.
+- `MODE_BASE/bookEvent/reveal`: It tests the [<Game \/>](/apps/lines/src/components/Game.svelte) component with a "reveal" bookEvent of the base mode. It will spin the reels.
 - ...
-- `MODE_BONUS/book/random`: It tests the [<Game \/>](/blob/main/apps/lines/src/components/Game.svelte) component with a random book of bonus mode.
-- `MODE_BONUS/bookEvent/reveal`: It tests the [<Game \/>](/blob/main/apps/lines/src/components/Game.svelte) component with a "reveal" bookEvent of the bonus mode. It will spin the reels.
+- `MODE_BONUS/book/random`: It tests the [<Game \/>](/apps/lines/src/components/Game.svelte) component with a random book of bonus mode.
+- `MODE_BONUS/bookEvent/reveal`: It tests the [<Game \/>](/apps/lines/src/components/Game.svelte) component with a "reveal" bookEvent of the bonus mode. It will spin the reels.
 - ...
 
 <img src="./documentation/storybook_symbol.png" alt="isolated" width="100%"/>
@@ -151,7 +151,7 @@ Here it is a simplified flow chart of steps how a game is processed after RGS re
 
 ## playBookEvents()
 
-This function is created by [packages/utils-book/src/createPlayBookUtils.ts](/blob/main/packages/utils-book/src/createPlayBookUtils.ts). It goes through bookEvents one by one, handles each one with async function `playBookEvent()`. It resolves them one after another with `sequence()` in the order of the bookEvents array. <mark>It means the sequence of bookEvents matters eminently and it determines the behaviors of the game.</mark> For example, we don't want to see the "win" before "spin", so we should put "win" after the "spin". This function is also used in the `MODE_<GAME_MODE>/book/random` stories.
+This function is created by [packages/utils-book/src/createPlayBookUtils.ts](/packages/utils-book/src/createPlayBookUtils.ts). It goes through bookEvents one by one, handles each one with async function `playBookEvent()`. It resolves them one after another with `sequence()` in the order of the bookEvents array. <mark>It means the sequence of bookEvents matters eminently and it determines the behaviors of the game.</mark> For example, we don't want to see the "win" before "spin", so we should put "win" after the "spin". This function is also used in the `MODE_<GAME_MODE>/book/random` stories.
 
 - `playBookEvent()`: This is a function that takes in a bookEvent with some context (usually all the bookEvents), then find the bookEventHandler in bookEventHandlerMap based on `bookEvent.type` to process it. This function is also used in the `MODE_<GAME_MODE>/bookEvent/<BOOK_EVENT_TYPE>` stories.
 
@@ -224,7 +224,7 @@ This function is created by [packages/utils-book/src/createPlayBookUtils.ts](/bl
 
 ## bookEventHandlerMap
 
-An object that the key is `bookEvent.type` and value is a `bookEventHandler`. We can find an example in [apps/lines/src/game/bookEventHandlerMap.ts](/blob/main/apps/lines/src/game/bookEventHandlerMap.ts).
+An object that the key is `bookEvent.type` and value is a `bookEventHandler`. We can find an example in [apps/lines/src/game/bookEventHandlerMap.ts](/apps/lines/src/game/bookEventHandlerMap.ts).
 
 ```
 // bookEventHandlerMap.ts - Example of "updateFreeSpin" bookEventHandler
@@ -324,7 +324,7 @@ context.eventEmitter.subscribeOnMount({
 
 ## emitterEventHandlerMap
 
-An object that the key is `emitterEvent.type` and value is an `emitterEventHandler`. We can find this object in each component. For example, [apps/lines/src/components/FreeSpinCounter.svelte](/blob/main/apps/lines/src/components/FreeSpinCounter.svelte).
+An object that the key is `emitterEvent.type` and value is an `emitterEventHandler`. We can find this object in each component. For example, [apps/lines/src/components/FreeSpinCounter.svelte](/apps/lines/src/components/FreeSpinCounter.svelte).
 
 - <mark>Each emitterEventHandler can do a lot or a little, but we prefer each emitterEventHandler just doing a minimum job to achieve the duty that is described by its type. This way we follow the [Single Responsibility Principle of SOLID](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#single-responsibility-principle).</mark> For example, `freeSpinCounterShow` just shows this component and does nothing more.
 
@@ -428,7 +428,7 @@ However with the data structure of math and the functions we have, we are able t
 
 For example, we have a game [apps/lines](/tree/main/apps/lines) already. Assume that we have added a new bookEvent `updateGlobalMult` to the bonus game mode (`MODE_BONUS`) in math, so that we have a new global multiplier feature for the game. Based on that, here we will go through the steps together to implement this new bookEvent and add it to the game. Along the way we will introduce part of our file structure as well.
 
-- [apps/lines/src/stories/data/bonus_books.ts](/blob/main/apps/lines/src/stories/data/bonus_books.ts): This file includes the an array of bonus books that story `MODE_BONUS/book/random` will randomly pick at. This is to simulate requesting data from RGS. All we need to do is to copy/paste data from our new math package and format it.
+- [apps/lines/src/stories/data/bonus_books.ts](/apps/lines/src/stories/data/bonus_books.ts): This file includes the an array of bonus books that story `MODE_BONUS/book/random` will randomly pick at. This is to simulate requesting data from RGS. All we need to do is to copy/paste data from our new math package and format it.
 
 ```
 // bonus_books.ts
@@ -439,7 +439,7 @@ For example, we have a game [apps/lines](/tree/main/apps/lines) already. Assume 
 },
 ```
 
-- [apps/lines/src/stories/data/bonus_events.ts](/blob/main/apps/lines/src/stories/data/bonus_events.ts): This file includes the an object of every type of bookEvent that story `MODE_BONUS/bookEvent/<BOOK_EVENT_TYPE>` uses. All we need to do is to copy/paste data from our new math package and format it.
+- [apps/lines/src/stories/data/bonus_events.ts](/apps/lines/src/stories/data/bonus_events.ts): This file includes the an object of every type of bookEvent that story `MODE_BONUS/bookEvent/<BOOK_EVENT_TYPE>` uses. All we need to do is to copy/paste data from our new math package and format it.
 
 ```
 // bonus_events.ts
@@ -454,7 +454,7 @@ export default {
 }
 ```
 
-- [apps/lines/src/stories/ModeBonusBookEvent.stories.svelte](/blob/main/apps/lines/src/stories/ModeBonusBookEvent.stories.svelte): This file implements all the sub stories in story set `MODE_BONUS/bookEvent`. With the following code added in this file, you will see the a new story `MODE_BONUS/bookEvent/updateGlobalMult` that is added in our storybook with an `Action` button. Now if we click on it and nothing would happen, but it is a good start because we set up the testing environment first. Next step is to add code of bookEventHandler to handle it.
+- [apps/lines/src/stories/ModeBonusBookEvent.stories.svelte](/apps/lines/src/stories/ModeBonusBookEvent.stories.svelte): This file implements all the sub stories in story set `MODE_BONUS/bookEvent`. With the following code added in this file, you will see the a new story `MODE_BONUS/bookEvent/updateGlobalMult` that is added in our storybook with an `Action` button. Now if we click on it and nothing would happen, but it is a good start because we set up the testing environment first. Next step is to add code of bookEventHandler to handle it.
 
 ```
 // ModeBonusBookEvent.stories.svelte
@@ -469,7 +469,7 @@ export default {
 />
 ```
 
-- [apps/lines/src/game/typesBookEvent.ts](/blob/main/apps/lines/src/game/typesBookEvent.ts): This file contains typescript types of all the bookEvents. Let is add the type of our new bookEvent to get the intellisense from typescript for the following step.
+- [apps/lines/src/game/typesBookEvent.ts](/apps/lines/src/game/typesBookEvent.ts): This file contains typescript types of all the bookEvents. Let is add the type of our new bookEvent to get the intellisense from typescript for the following step.
   - `type BookEvent` is a <mark>union type</mark> ([typescript union type](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)) of BookEvent types.
 
 ```
@@ -488,13 +488,13 @@ export type BookEvent =
 ;
 ```
 
-- [apps/lines/src/game/bookEventHandlerMap.ts](/blob/main/apps/lines/src/game/bookEventHandlerMap.ts): This file includes all the bookEventHandlers. Let is add a new one for the new bookEvent. Check the intellisense that the previous step brings, it provides a better developer experience.
+- [apps/lines/src/game/bookEventHandlerMap.ts](/apps/lines/src/game/bookEventHandlerMap.ts): This file includes all the bookEventHandlers. Let is add a new one for the new bookEvent. Check the intellisense that the previous step brings, it provides a better developer experience.
 
 <img src="./documentation/book_event_intellisense.png" alt="isolated" width="100%"/>
 
 ###
 
-- [apps/lines/src/components/GlobalMultiplier.svelte](/blob/main/apps/lines/src/components/GlobalMultiplier.svelte): This file is created as our target svelte component for updateGlobalMulti bookEvent. Technically speaking, all the jobs that is related to global multiplier of the game should only be in this svelte component. Similar to the bookEvent types, let is add the typescript types for new emitterEvents first.
+- [apps/lines/src/components/GlobalMultiplier.svelte](/apps/lines/src/components/GlobalMultiplier.svelte): This file is created as our target svelte component for updateGlobalMulti bookEvent. Technically speaking, all the jobs that is related to global multiplier of the game should only be in this svelte component. Similar to the bookEvent types, let is add the typescript types for new emitterEvents first.
   - `type GlobalMultiplierEmitterEvent` is a <mark>union type</mark> of EmitterEvent types.
 
 ```
@@ -508,7 +508,7 @@ export type BookEvent =
 </script>
 ```
 
-- [apps/lines/src/game/typesEmitterEvent.ts](/blob/main/apps/lines/src/game/typesEmitterEvent.ts): This file has typescript types of all the emitterEvents of the game. Let is add the type of our new emitterEvents for intellisense.
+- [apps/lines/src/game/typesEmitterEvent.ts](/apps/lines/src/game/typesEmitterEvent.ts): This file has typescript types of all the emitterEvents of the game. Let is add the type of our new emitterEvents for intellisense.
   - `type GameEmitterEvent` is a <mark>union type</mark> of EmitterEvent types.
 
 ```
@@ -525,7 +525,7 @@ export type GameEmitterEvent =
 ;
 ```
 
-- [apps/lines/src/game/eventEmitter.ts](/blob/main/apps/lines/src/game/eventEmitter.ts): This file exports the eventEmitter, it uses the `GameEmitterEvent` and other EmitterEvent types to compose `type EmitterEvent`.
+- [apps/lines/src/game/eventEmitter.ts](/apps/lines/src/game/eventEmitter.ts): This file exports the eventEmitter, it uses the `GameEmitterEvent` and other EmitterEvent types to compose `type EmitterEvent`.
   - `type EmitterEvent` is a <mark>union type</mark> of EmitterEvent types.
 
 ```
@@ -538,7 +538,7 @@ export const { eventEmitter } = createEventEmitter<EmitterEvent>();
 
 ```
 
-- [apps/lines/src/components/GlobalMultiplier.svelte](/blob/main/apps/lines/src/components/GlobalMultiplier.svelte): Back to our component file, the intellisense is there. Let is add the code to process the values with a spine animation as well.
+- [apps/lines/src/components/GlobalMultiplier.svelte](/apps/lines/src/components/GlobalMultiplier.svelte): Back to our component file, the intellisense is there. Let is add the code to process the values with a spine animation as well.
 
 <img src="./documentation/emitter_event_intellisense.png" alt="isolated" width="100%"/>
 
@@ -574,11 +574,11 @@ export const { eventEmitter } = createEventEmitter<EmitterEvent>();
 
 - <mark>Test it individually</mark> `(MODE_BONUS/bookEvent/updateGlobalMult)`: Run storybook and we should see this a new story "updateGlobalMult" has been added.
 
-  - Now click on the `Action` button and we should see the [<GlobalMultiplier \/>](/blob/main/apps/lines/src/components/GlobalMultiplier.svelte) component animates correctly followed by the "<mark> ⓘ Action is resolved ✅ </mark>" message, otherwise we need to go back to the component and figure out what is wrong until it is resolved.
+  - Now click on the `Action` button and we should see the [<GlobalMultiplier \/>](/apps/lines/src/components/GlobalMultiplier.svelte) component animates correctly followed by the "<mark> ⓘ Action is resolved ✅ </mark>" message, otherwise we need to go back to the component and figure out what is wrong until it is resolved.
 
   - If you find out the component hard to debug, we'd better start creating a new story `COMPONENTS/<GlobalMultiplierSpine>/component`. `<GlobalMultiplierSpine />` component will purely take props and achieve its duty instead of being controlled by emitterEvents. This way it becomes more friendly for testing the component with the storybook controls.
 
-- <mark>Test it in books</mark> `(MODE_BONUS/book/random)`: Final step is to test it in a book environment by switching to this book story. In a previous step we have updated [apps/lines/src/stories/data/bonus_books.ts](/blob/main/apps/lines/src/stories/data/bonus_books.ts), so the new bookEvent will appear if we keep hitting the `Action` button in this story.
+- <mark>Test it in books</mark> `(MODE_BONUS/book/random)`: Final step is to test it in a book environment by switching to this book story. In a previous step we have updated [apps/lines/src/stories/data/bonus_books.ts](/apps/lines/src/stories/data/bonus_books.ts), so the new bookEvent will appear if we keep hitting the `Action` button in this story.
 
 <a name="fileStructure"></a>
 
@@ -610,7 +610,7 @@ root
 
 For each game, it has an individual folder in the apps, for example [apps/lines](/tree/main/apps/lines).
 
-- [apps/lines/package.json](/blob/main/apps/lines/package.json): Find the module name of the app here.
+- [apps/lines/package.json](/apps/lines/package.json): Find the module name of the app here.
 
 ```
 {
@@ -625,9 +625,9 @@ For each game, it has an individual folder in the apps, for example [apps/lines]
 pnpm run dev --filter=lines
 ```
 
-- [apps/lines/src/routes/+page.svelte](/blob/main/apps/lines/src/routes/%2Bpage.svelte): This is the entry file of sample game apps/lines in a sveltekit way. It is a combination of two things:
-  - [setContext()](/blob/main/apps/lines/src/game/context.ts#L14): A function that sets all the [svelte-context](https://svelte.dev/docs/svelte/context) required and used in this app and in the [packages](/tree/main/packages). As we already know, only children-level components can access the context. That is why we set the context at the entry level of the app.
-  - [<Game \/>](/blob/main/apps/lines/src/components/Game.svelte): The entry svelte component to the game. It includes all the components of the game.
+- [apps/lines/src/routes/+page.svelte](/apps/lines/src/routes/%2Bpage.svelte): This is the entry file of sample game apps/lines in a sveltekit way. It is a combination of two things:
+  - [setContext()](/apps/lines/src/game/context.ts#L14): A function that sets all the [svelte-context](https://svelte.dev/docs/svelte/context) required and used in this app and in the [packages](/tree/main/packages). As we already know, only children-level components can access the context. That is why we set the context at the entry level of the app.
+  - [<Game \/>](/apps/lines/src/components/Game.svelte): The entry svelte component to the game. It includes all the components of the game.
 
 ```
 // +page.svelte
@@ -642,7 +642,7 @@ pnpm run dev --filter=lines
 <Game />
 ```
 
-- [apps/lines/src/stories/ComponentsGame.stories.svelte](/blob/main/apps/lines/src/stories/ComponentsGame.stories.svelte): You will find the same pattern in this storybook or other `Mode<GAME_MODE>Book.stories.svelte` and `Mode<GAME_MODE>BookEvent.stories.svelte`.
+- [apps/lines/src/stories/ComponentsGame.stories.svelte](/apps/lines/src/stories/ComponentsGame.stories.svelte): You will find the same pattern in this storybook or other `Mode<GAME_MODE>Book.stories.svelte` and `Mode<GAME_MODE>BookEvent.stories.svelte`.
 
 ```
 // ComponentsGame.stories.svelte
@@ -663,13 +663,13 @@ pnpm run dev --filter=lines
 </Story>
 ```
 
-- We can render [<Game \/>](/blob/main/apps/lines/src/components/Game.svelte) component in the app or in the storybook. Either way it requires the context to set in advance, otherwise the children or the descendants will throw errors if they use the ["getContext()"](/blob/main/apps/lines/src/game/context.ts#L21) from [apps](/tree/main/apps) or ["getContext()"](/blob/main/packages/components-ui/src/context.ts#L8) from [packages](/tree/main/packages).
+- We can render [<Game \/>](/apps/lines/src/components/Game.svelte) component in the app or in the storybook. Either way it requires the context to set in advance, otherwise the children or the descendants will throw errors if they use the ["getContext()"](/apps/lines/src/game/context.ts#L21) from [apps](/tree/main/apps) or ["getContext()"](/packages/components-ui/src/context.ts#L8) from [packages](/tree/main/packages).
 
 <a name="packages"></a>
 
 ## [/packages](/tree/main/packages)
 
-For every TurboRepo local package, you can import and use them in an app or in another local package directly without publishing them to [npm](https://www.npmjs.com). <mark>Our codebase benefits considerably from a monorepo because it brings reusability, readability, maintainability, code splitting and so on.</mark> Here is an example of importing local packages with `workspace:*` in [apps/lines/package.json](/blob/main/apps/lines/package.json):
+For every TurboRepo local package, you can import and use them in an app or in another local package directly without publishing them to [npm](https://www.npmjs.com). <mark>Our codebase benefits considerably from a monorepo because it brings reusability, readability, maintainability, code splitting and so on.</mark> Here is an example of importing local packages with `workspace:*` in [apps/lines/package.json](/apps/lines/package.json):
 
 ```
 // package.json
@@ -737,7 +737,7 @@ For `*-shared` packages, they are created to be reused as much as possible by ot
 
 # Context
 
-[svelte-context](https://svelte.dev/docs/svelte/context) is a useful feature from svelte especially when a shared state requires some inputs/types to create. Here it shows the structure of context of sample game [apps/lines](/tree/main/apps/lines). As showed before, `setContext()` is called at entry level component. For example, [apps/lines/src/routes/+page.svelte](/blob/main/apps/lines/src/routes/%2Bpage.svelte) or [apps/lines/src/stories/ComponentsGame.stories.svelte](/blob/main/apps/lines/src/stories/ComponentsGame.stories.svelte). It sets four major contexts from the packages by this:
+[svelte-context](https://svelte.dev/docs/svelte/context) is a useful feature from svelte especially when a shared state requires some inputs/types to create. Here it shows the structure of context of sample game [apps/lines](/tree/main/apps/lines). As showed before, `setContext()` is called at entry level component. For example, [apps/lines/src/routes/+page.svelte](/apps/lines/src/routes/%2Bpage.svelte) or [apps/lines/src/stories/ComponentsGame.stories.svelte](/apps/lines/src/stories/ComponentsGame.stories.svelte). It sets four major contexts from the packages by this:
 
 ```
 // context.ts - Example of setContext in apps
@@ -758,13 +758,13 @@ export const setContext = () => {
 
 ## EventEmitterContext
 
-`eventEmitter` is created by [packages/utils-event-emitter/src/createEventEmitter.ts](/blob/main/packages/utils-event-emitter/src/createEventEmitter.ts). We have covered eventEmitter in the [previous content](#eventEmitter).
+`eventEmitter` is created by [packages/utils-event-emitter/src/createEventEmitter.ts](/packages/utils-event-emitter/src/createEventEmitter.ts). We have covered eventEmitter in the [previous content](#eventEmitter).
 
 <a name="layoutContext"></a>
 
 ## LayoutContext
 
-`stateLayout` and `stateLayoutDerived` are created by [packages/utils-layout/src/createLayout.svelte.ts](/blob/main/packages/utils-layout/src/createLayout.svelte.ts). It provides canvasSizes, canvasRatio, layoutType and so on. Because we have a setting `resizeTo: window` for PIXI.Application, we use the sizes of window from [svelte-reactivity](https://svelte.dev/docs/svelte/svelte-reactivity-window) as `canvasSizes`.
+`stateLayout` and `stateLayoutDerived` are created by [packages/utils-layout/src/createLayout.svelte.ts](/packages/utils-layout/src/createLayout.svelte.ts). It provides canvasSizes, canvasRatio, layoutType and so on. Because we have a setting `resizeTo: window` for PIXI.Application, we use the sizes of window from [svelte-reactivity](https://svelte.dev/docs/svelte/svelte-reactivity-window) as `canvasSizes`.
 
 For html, the tags will auto-flow by default. However, in the canvas/pixijs we need to set positions manually to avoid overlapping. The importance of LayoutContext is that it provides us the values of boundaries (canvasSizes), device type based on the dimensions (layoutType) and so on. For example:
 
@@ -803,7 +803,7 @@ const stateLayoutDerived = {
 
 ## XstateContext
 
-`stateXstate` and `stateXstateDerived` are created by [packages/utils-xstate/src/createXstateUtils.svelte.ts](/blob/main/packages/utils-xstate/src/createXstateUtils.svelte.ts). It provides a few functions to check the state of [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine), also known as `gameActor`, which is created by [packages/utils-xstate/src/createGameActor.svelte.ts](/blob/main/packages/utils-xstate/src/createGameActor.ts).
+`stateXstate` and `stateXstateDerived` are created by [packages/utils-xstate/src/createXstateUtils.svelte.ts](/packages/utils-xstate/src/createXstateUtils.svelte.ts). It provides a few functions to check the state of [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine), also known as `gameActor`, which is created by [packages/utils-xstate/src/createGameActor.svelte.ts](/packages/utils-xstate/src/createGameActor.ts).
 
 ```
 // createXstateUtils.svelte.ts
@@ -879,7 +879,7 @@ const gameActor = createActor(gameMachine);
 
 ## AppContext
 
-`stateApp` is created by [packages/pixi-svelte/src/lib/createApp.svelte.ts](/blob/main/packages/pixi-svelte/src/lib/createApp.svelte.ts). `loadedAssets` contains the static images, animations and sound data that is processed by `PIXI.Assets.load` with `stateApp.assets`. `loadedAssets` can be digested by pixi-svelte components directly as showed in pixi-svelte component [\<Sprite /\>](/blob/main/packages/pixi-svelte/src/lib/components/Sprite.svelte).
+`stateApp` is created by [packages/pixi-svelte/src/lib/createApp.svelte.ts](/packages/pixi-svelte/src/lib/createApp.svelte.ts). `loadedAssets` contains the static images, animations and sound data that is processed by `PIXI.Assets.load` with `stateApp.assets`. `loadedAssets` can be digested by pixi-svelte components directly as showed in pixi-svelte component [\<Sprite /\>](/packages/pixi-svelte/src/lib/components/Sprite.svelte).
 
 ```
 // createApp.svelte.ts
