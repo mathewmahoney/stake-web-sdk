@@ -1,0 +1,56 @@
+<script lang="ts" module>
+	import { defineMeta, setTemplate } from '@storybook/addon-svelte-csf';
+
+	const { Story } = defineMeta({
+		title: 'Game',
+	});
+</script>
+
+<script lang="ts">
+	import {
+		StoryLocale,
+		StoryGameTemplate,
+		type TemplateArgs,
+		templateArgs,
+	} from 'components-storybook';
+
+	import { stateGame, stateGameDerived } from '../game/stateGame.svelte';
+	import Game from '../components/Game.svelte';
+	import { setContext } from '../game/context';
+	import config from '../game/config';
+
+	setTemplate(template);
+	setContext();
+</script>
+
+{#snippet template(args: TemplateArgs<any>)}
+	<StoryGameTemplate
+		skipLoadingScreen={args.skipLoadingScreen}
+		action={async () => {
+			await args.action?.(args.data);
+		}}
+	>
+		<StoryLocale lang="en">
+			<Game />
+		</StoryLocale>
+	</StoryGameTemplate>
+{/snippet}
+
+<Story name="Preview">
+	<StoryLocale lang="en">
+		<Game />
+	</StoryLocale>
+</Story>
+
+<Story
+	name="PreSpin"
+	args={templateArgs({
+		skipLoadingScreen: true,
+		data: {},
+		action: async () => {
+			await stateGameDerived.enhancedBoard.preSpin({
+				paddingBoard: config.paddingReels[stateGame.gameType],
+			});
+		},
+	})}
+/>
