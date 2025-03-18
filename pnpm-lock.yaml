@@ -1727,9 +1727,15 @@ importers:
         specifier: workspace:*
         version: link:../utils-shared
     devDependencies:
+      config-svelte:
+        specifier: workspace:*
+        version: link:../config-svelte
       config-ts:
         specifier: workspace:*
         version: link:../config-ts
+      config-vite:
+        specifier: workspace:*
+        version: link:../config-vite
       eslint:
         specifier: ^9
         version: 9.21.0(jiti@1.21.7)

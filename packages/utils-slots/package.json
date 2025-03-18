@@ -10,7 +10,9 @@
 	"devDependencies": {
 		"eslint": "^9",
 		"eslint-config-custom": "workspace:*",
-		"config-ts": "workspace:*"
+		"config-ts": "workspace:*",
+		"config-vite": "workspace:*",
+		"config-svelte": "workspace:*"
 	},
 	"dependencies": {
 		"svelte": "^5",
