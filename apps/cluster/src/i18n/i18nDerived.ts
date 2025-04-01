@@ -1,6 +1,6 @@
 import { i18n } from '@lingui/core';
 
-import { i18nDerived as i18nDerivedUi } from 'components-ui';
+import { i18nDerived as i18nDerivedUi } from 'components-ui-pixi';
 
 export const i18nDerived = {
 	...i18nDerivedUi,

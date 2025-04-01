@@ -4,8 +4,8 @@
 	import { EnablePixiExtension } from 'components-pixi';
 	import { EnableHotkey } from 'components-shared';
 	import { MainContainer } from 'components-layout';
-	import { Modals } from 'components-modal';
-	import { UI } from 'components-ui';
+	import { Modals } from 'components-ui-html';
+	import { UI } from 'components-ui-pixi';
 	import { App } from 'pixi-svelte';
 
 	import { getContext } from '../game/context';

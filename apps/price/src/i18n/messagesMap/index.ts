@@ -1,5 +1,5 @@
 import { mergeMessagesMaps } from 'utils-shared/i18n';
-import { messagesMap as messagesMapUi } from 'components-ui';
+import { messagesMap as messagesMapUi } from 'components-ui-pixi';
 
 import en from './en';
 import zh from './zh';
