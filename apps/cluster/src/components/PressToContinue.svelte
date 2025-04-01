@@ -14,7 +14,7 @@
 	const context = getContext();
 </script>
 
-<MainContainer vertical="bottom">
+<MainContainer alignVertical="bottom">
 	<Sprite
 		key="pressToContinueText_{stateUrlDerived.lang()}.png"
 		width={800}

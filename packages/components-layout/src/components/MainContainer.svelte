@@ -4,23 +4,28 @@
 
 	type Props = Omit<ContainerProps, 'x' | 'y' | 'scale' | 'pivot'> & {
 		debug?: boolean;
-		vertical?: 'center' | 'bottom';
-		horizontal?: 'center' | 'left' | 'right';
+		standard?: boolean;
+		alignVertical?: 'center' | 'bottom';
+		alignHorizontal?: 'center' | 'left' | 'right';
 	};
 
-	const { debug, vertical, horizontal, children, ...containerProps }: Props = $props();
+	const { debug, alignVertical, alignHorizontal, children, standard, ...containerProps }: Props = $props();
 	const context = getLayoutContext();
 
-	const mainLayout = $derived.by(context.stateLayoutDerived.mainLayout);
+	const mainLayout = $derived.by(
+		standard
+			? context.stateLayoutDerived.mainLayoutStandard
+			: context.stateLayoutDerived.mainLayout,
+	);
 	const canvasSizes = $derived.by(context.stateLayoutDerived.canvasSizes);
 	const getY = () => {
 		const bottomY = canvasSizes.height * 0.5 - mainLayout.height * mainLayout.scale * 0.5;
-		return vertical === 'bottom' ? bottomY : 0;
+		return alignVertical === 'bottom' ? bottomY : 0;
 	};
 	const getX = () => {
-		if (horizontal === 'left')
+		if (alignHorizontal === 'left')
 			return -canvasSizes.width * 0.5 + mainLayout.width * mainLayout.scale * 0.5;
-		if (horizontal === 'right')
+		if (alignHorizontal === 'right')
 			return canvasSizes.width * 0.5 - mainLayout.width * mainLayout.scale * 0.5;
 		return 0;
 	};
@@ -40,24 +45,35 @@
 		})}
 	>
 		{#if debug}
-			<Rectangle width={mainLayout.width} height={mainLayout.height} alpha={0.8} />
+			<Rectangle
+				width={mainLayout.width}
+				height={mainLayout.height}
+				alpha={0.5}
+				borderWidth={2}
+				borderColor={0xffffff}
+			/>
+		{/if}
+		{@render children()}
+		{#if debug}
 			<Text
-				text={`layoutType: ${context.stateLayoutDerived.layoutType()}
+				text={`
+layoutType: ${context.stateLayoutDerived.layoutType()}
 
-scale: ${context.stateLayoutDerived.mainLayout().scale}
+type: ${standard ? 'standard' : 'game'}
+
+scale: ${mainLayout.scale}
 
 mainSizes: {
-	width: ${context.stateLayoutDerived.mainLayout().width}
-	height: ${context.stateLayoutDerived.mainLayout().height}
+		width: ${mainLayout.width},
+		height: ${mainLayout.height}
 }
 
 canvasSizes: {
-		width: ${context.stateLayoutDerived.canvasSizes().width}
+		width: ${context.stateLayoutDerived.canvasSizes().width},
 		height: ${context.stateLayoutDerived.canvasSizes().height}
 }`}
 				style={{ fill: 0xffffff }}
 			/>
 		{/if}
-		{@render children()}
 	</Container>
 </Container>

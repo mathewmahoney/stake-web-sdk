@@ -332,7 +332,7 @@ An object that the key is `emitterEvent.type` and value is an `emitterEventHandl
 // FreeSpinCounter.svelte and its emitterEventHandlers
 
 <script lang="ts" module>
-  export type FreeSpinCounterEmitterEvent =
+  export type EmitterEventFreeSpinCounter =
     | { type: 'freeSpinCounterShow' }
     | { type: 'freeSpinCounterHide' }
     | { type: 'freeSpinCounterUpdate'; current?: number; total?: number };
@@ -495,13 +495,13 @@ export type BookEvent =
 ###
 
 - [apps/lines/src/components/GlobalMultiplier.svelte](/apps/lines/src/components/GlobalMultiplier.svelte): This file is created as our target svelte component for updateGlobalMulti bookEvent. Technically speaking, all the jobs that is related to global multiplier of the game should only be in this svelte component. Similar to the bookEvent types, let is add the typescript types for new emitterEvents first.
-  - `type GlobalMultiplierEmitterEvent` is a <mark>union type</mark> of EmitterEvent types.
+  - `type EmitterEventGlobalMultiplier` is a <mark>union type</mark> of EmitterEvent types.
 
 ```
 // GlobalMultiplier.svelte
 
 <script lang="ts" module>
-  export type GlobalMultiplierEmitterEvent =
+  export type EmitterEventGlobalMultiplier =
     | { type: 'globalMultiplierShow' }
     | { type: 'globalMultiplierHide' }
     | { type: 'globalMultiplierUpdate'; multiplier: number };
@@ -509,31 +509,31 @@ export type BookEvent =
 ```
 
 - [apps/lines/src/game/typesEmitterEvent.ts](/apps/lines/src/game/typesEmitterEvent.ts): This file has typescript types of all the emitterEvents of the game. Let is add the type of our new emitterEvents for intellisense.
-  - `type GameEmitterEvent` is a <mark>union type</mark> of EmitterEvent types.
+  - `type EmitterEventGame` is a <mark>union type</mark> of EmitterEvent types.
 
 ```
 // typesEmitterEvent.ts
 
 ...
-import type { GlobalMultiplierEmitterEvent } from '../components/GlobalMultiplier.svelte';
+import type { EmitterEventGlobalMultiplier } from '../components/GlobalMultiplier.svelte';
 ...
 
-export type GameEmitterEvent =
+export type EmitterEventGame =
   | ...
-  | GlobalMultiplierEmitterEvent
+  | EmitterEventGlobalMultiplier
   | ...
 ;
 ```
 
-- [apps/lines/src/game/eventEmitter.ts](/apps/lines/src/game/eventEmitter.ts): This file exports the eventEmitter, it uses the `GameEmitterEvent` and other EmitterEvent types to compose `type EmitterEvent`.
+- [apps/lines/src/game/eventEmitter.ts](/apps/lines/src/game/eventEmitter.ts): This file exports the eventEmitter, it uses the `EmitterEventGame` and other EmitterEvent types to compose `type EmitterEvent`.
   - `type EmitterEvent` is a <mark>union type</mark> of EmitterEvent types.
 
 ```
 // eventEmitter.ts
 
 ...
-import type { GameEmitterEvent } from './typesEmitterEvent';
-export type EmitterEvent = UiEmitterEvent | HotKeyEmitterEvent | GameEmitterEvent;
+import type { EmitterEventGame } from './typesEmitterEvent';
+export type EmitterEvent = EmitterEventUi | EmitterEventHotKey | EmitterEventGame;
 export const { eventEmitter } = createEventEmitter<EmitterEvent>();
 
 ```
@@ -548,7 +548,7 @@ export const { eventEmitter } = createEventEmitter<EmitterEvent>();
 // GlobalMultiplier.svelte
 
 <script lang="ts" module>
-  export type GlobalMultiplierEmitterEvent =
+  export type EmitterEventGlobalMultiplier =
     | { type: 'globalMultiplierShow' }
     | { type: 'globalMultiplierHide' }
     | { type: 'globalMultiplierUpdate'; multiplier: number };

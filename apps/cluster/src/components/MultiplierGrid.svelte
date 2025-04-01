@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	export type MultiplierGridEmitterEvent =
+	export type EmitterEventMultiplierGrid =
 		| { type: 'multiplierGridShow' }
 		| { type: 'multiplierGridHide' }
 		| { type: 'multiplierGridUpdate'; grid: number[][] }

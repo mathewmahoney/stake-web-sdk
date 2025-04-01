@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	export type GlobalMultiplierEmitterEvent =
+	export type EmitterEventGlobalMultiplier =
 		| { type: 'globalMultiplierShow' }
 		| { type: 'globalMultiplierHide' }
 		| { type: 'globalMultiplierUpdate'; multiplier: number };

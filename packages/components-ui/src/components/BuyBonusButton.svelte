@@ -11,7 +11,7 @@
 	let index = 0;
 	const disabled = $derived.by(context.stateXstateDerived.isPlaying);
 	const onpress = () => {
-		context.eventEmitter.broadcast({ type: 'soundButtonGeneral' });
+		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 		index = index + 1;
 		if (index > betModeList.length - 1) index = 0;
 		const betModeKey = betModeList[index].mode;

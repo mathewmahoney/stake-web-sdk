@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import type { WinLevelData } from '../game/winLevelMap';
 
-	export type WinEmitterEvent =
+	export type EmitterEventWin =
 		| { type: 'winShow' }
 		| { type: 'winHide' }
 		| { type: 'winUpdate'; amount: number; winLevelData: WinLevelData };

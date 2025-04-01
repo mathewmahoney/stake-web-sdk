@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	export type MultiplierBoardEmitterEvent =
+	export type EmitterEventMultiplierBoard =
 		| { type: 'multiplierBoardShow' }
 		| { type: 'multiplierBoardHide' }
 		| { type: 'multiplierBoardInit' }

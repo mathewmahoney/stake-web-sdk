@@ -4,7 +4,7 @@
 	type AddingBoard = RawSymbol[][];
 	type ExplodingPositions = Position[];
 
-	export type TumbleBoardEmitterEvent =
+	export type EmitterEventTumbleBoard =
 		| { type: 'tumbleBoardShow' }
 		| { type: 'tumbleBoardHide' }
 		| { type: 'tumbleBoardInit'; addingBoard: AddingBoard }

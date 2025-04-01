@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import type { Position, Wild } from '../game/types';
 
-	export type ExpandingWildsEmitterEvent =
+	export type EmitterEventExpandingWilds =
 		| { type: 'expandingWildsShow' }
 		| { type: 'expandingWildsHide' }
 		| { type: 'expandingWildsNew'; wilds: Wild[] }

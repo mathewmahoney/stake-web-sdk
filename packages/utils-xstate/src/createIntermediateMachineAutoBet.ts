@@ -1,5 +1,5 @@
 import { setup, fromPromise } from 'xstate';
-import { stateBet, stateBetDerived } from 'state-shared';
+import { stateBet, stateBetDerived, stateModal } from 'state-shared';
 import { bookEventAmountToNormalisedAmount } from 'utils-shared/amount';
 
 import { context, type Context } from './machineContext';
@@ -17,8 +17,7 @@ const checkInsufficientFunds = fromPromise(async () => {
 	if (stateBetDerived.isBetCostAvailable()) return 'continue';
 
 	stateBet.autoSpinsCounter = 0;
-	// TODO
-	// modal.open('autoSpinsInfo', { data: { message: 'insufficientFunds' } });
+	stateModal.modal = { name: 'autoSpinMessage', message: 'insufficientFunds' };
 	throw Error('End auto bet with insufficientFunds');
 });
 
@@ -31,7 +30,7 @@ const checkLossLimit = fromPromise(async () => {
 	if (stateBet.autoSpinsLossLimitAmount > loss) return 'continue';
 
 	stateBet.autoSpinsCounter = 0;
-	// modal.open('autoSpinsInfo', { data: { message: 'lossLimitReached' } });
+	stateModal.modal = { name: 'autoSpinMessage', message: 'lossLimitReached' };
 	throw Error('End auto bet with lossLimitReached');
 });
 
@@ -43,7 +42,7 @@ const checkIfSingleWinLimit = fromPromise(async () => {
 	)
 		return 'continue';
 	stateBet.autoSpinsCounter = 0;
-	// modal.open('autoSpinsInfo', { data: { message: 'singleWinLimitReached' } });
+	stateModal.modal = { name: 'autoSpinMessage', message: 'singleWinLimitReached' };
 	throw Error('End auto bet with singleWinLimitReached');
 });
 
@@ -53,7 +52,7 @@ const checkAutoSpinsCounter = fromPromise(async () => {
 	throw Error('End auto bet with autoSpinsCounter being 0');
 });
 
-const updateAutoSpinCounter = fromPromise(async () => {
+const updateAutoSpinsCounter = fromPromise(async () => {
 	const newValue = stateBet.autoSpinsCounter - 1;
 	stateBet.autoSpinsCounter = newValue > 0 ? newValue : 0;
 });
@@ -72,7 +71,7 @@ export const createIntermediateMachineAutoBet = ({ bet }: { bet: IntermediateMac
 				checkIfSingleWinLimit,
 				checkAutoSpinsCounter,
 				bet,
-				updateAutoSpinCounter,
+				updateAutoSpinsCounter,
 			},
 		}).createMachine({
 			context,
@@ -123,13 +122,13 @@ export const createIntermediateMachineAutoBet = ({ bet }: { bet: IntermediateMac
 					invoke: {
 						id: 'bet',
 						src: 'bet',
-						onDone: 'updateAutoSpinCounter',
+						onDone: 'updateAutoSpinsCounter',
 					},
 				},
-				updateAutoSpinCounter: {
+				updateAutoSpinsCounter: {
 					invoke: {
-						id: 'updateAutoSpinCounter',
-						src: 'updateAutoSpinCounter',
+						id: 'updateAutoSpinsCounter',
+						src: 'updateAutoSpinsCounter',
 						onDone: 'checkInsufficientFunds',
 					},
 				},

@@ -1,0 +1,17 @@
+export const WHITE = 0xffffff;
+export const BLACK = 0x000000;
+export const LIGHT_BLACK = 0x585858;
+export const LIGHT_GREEN = 0x30d901;
+export const GREEN = 0x208f01;
+export const DARK_GREEN = 0x0f4300;
+export const GREY = 0xcccccc;
+export const DARK_GREY = 0x808080;
+export const SUPER_GREY = 0x8d8d8d;
+export const DAVY_GREY = 0x53535e;
+export const DARK_BLUE = 0x6a6a70;
+export const BLUE_MAGENTA_VIOLET = 0x584a98;
+export const PURPLE = 0x9896ff;
+export const TWIST_PURPLE = 0x8076ff;
+export const PRIMARY = PURPLE;
+export const ORANGE = 0xef8c1d;
+export const YELLOW = 0xecde94;

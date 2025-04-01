@@ -89,7 +89,7 @@ export type Cursor =
 	| 'zoom-in'
 	| 'zoom-ou';
 
-export type BaseEmitterEvent = {
+export type EmitterEventBase = {
 	type: string;
 };
 

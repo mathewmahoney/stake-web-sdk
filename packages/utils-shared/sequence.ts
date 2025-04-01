@@ -4,10 +4,10 @@ export async function sequence<TItem, TResult>(
 ) {
 	const results: TResult[] = [];
 
-	for(const [index, item] of itemList.entries()) {
+	for (const [index, item] of itemList.entries()) {
 		const result = await itemHandler(item, index, itemList);
 		results.push(result);
-	};
+	}
 
 	return results;
 }

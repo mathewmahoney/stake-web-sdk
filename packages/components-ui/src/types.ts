@@ -1,4 +1,4 @@
-export type UiEmitterEvent =
+export type EmitterEventUi =
 	| { type: 'hotKeySpace' }
 	| { type: 'hotKeyEscape' }
 	| { type: 'stopButtonClick' }
@@ -7,8 +7,8 @@ export type UiEmitterEvent =
 	| { type: 'uiHide' }
 	// sound
 	| { type: 'soundBetMode'; betModeKey: string }
-	| { type: 'soundButtonGeneral' }
-	| { type: 'soundButtonBet' }
+	| { type: 'soundPressGeneral' }
+	| { type: 'soundPressBet' }
 	// bet services
 	| { type: 'forceResult' }
 	| { type: 'resumeBet' }

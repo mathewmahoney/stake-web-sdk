@@ -1,22 +1,6 @@
 const BASE_BUCKET = 'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/1-2-mining-game';
 
 export default {
-	autospin_active: {
-		type: 'sprite',
-		src: `${BASE_BUCKET}/sprites/uiSlotsAssetsBespoke/autospin_active.webp`,
-	},
-	autospin_active_hover: {
-		type: 'sprite',
-		src: `${BASE_BUCKET}/sprites/uiSlotsAssetsBespoke/autospin_active_hover.webp`,
-	},
-	turbo_active: {
-		type: 'sprite',
-		src: `${BASE_BUCKET}/sprites/uiSlotsAssetsBespoke/turbo_active.webp`,
-	},
-	turbo_active_hover: {
-		type: 'sprite',
-		src: `${BASE_BUCKET}/sprites/uiSlotsAssetsBespoke/turbo_active_hover.webp`,
-	},
 	pressToContinueText: {
 		type: 'sprites',
 		src: `${BASE_BUCKET}/sprites/pressToContinueText/MM_pressanywhere.json`,

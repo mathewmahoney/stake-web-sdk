@@ -1,1 +1,1 @@
-export let stateSlots = $state({ isPreSpinning: false });
+export const stateSlots = $state({ isPreSpinning: false });

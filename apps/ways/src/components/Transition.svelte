@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	export type TransitionEmitterEvent = { type: 'transition' };
+	export type EmitterEventTransition = { type: 'transition' };
 </script>
 
 <script lang="ts">

@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	export type FreeSpinCounterEmitterEvent =
+	export type EmitterEventFreeSpinCounter =
 		| { type: 'freeSpinCounterShow' }
 		| { type: 'freeSpinCounterHide' }
 		| { type: 'freeSpinCounterUpdate'; current?: number; total?: number };

@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import type { WinLevelData } from '../game/winLevelMap';
 
-	export type FreeSpinOutroEmitterEvent =
+	export type EmitterEventFreeSpinOutro =
 		| { type: 'freeSpinOutroShow' }
 		| { type: 'freeSpinOutroHide' }
 		| { type: 'freeSpinOutroCountUp'; amount: number; winLevelData: WinLevelData };

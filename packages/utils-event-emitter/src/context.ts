@@ -1,17 +1,17 @@
 import { setContext, getContext } from 'svelte';
 
-import type { createEventEmitter, BaseEmitterEvent } from './createEventEmitter';
+import type { createEventEmitter, EmitterEventBase } from './createEventEmitter';
 
-type EventEmitterContext<TEmitterEvent extends BaseEmitterEvent> = ReturnType<
+type EventEmitterContext<TEmitterEvent extends EmitterEventBase> = ReturnType<
 	typeof createEventEmitter<TEmitterEvent>
 >;
 
 const EVENT_EMITTER_NS = '@@eventEmitter';
-export function setEventEmitterContext<TEmitterEvent extends BaseEmitterEvent>(
+export function setEventEmitterContext<TEmitterEvent extends EmitterEventBase>(
 	value: EventEmitterContext<TEmitterEvent>,
 ) {
 	setContext(EVENT_EMITTER_NS, value);
 }
-export function getEventEmitterContext<TEmitterEvent extends BaseEmitterEvent>() {
+export function getEventEmitterContext<TEmitterEvent extends EmitterEventBase>() {
 	return getContext(EVENT_EMITTER_NS) as EventEmitterContext<TEmitterEvent>;
 }

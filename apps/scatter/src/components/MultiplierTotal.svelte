@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	export type MultiplierTotalEmitterEvent =
+	export type EmitterEventMultiplierTotal =
 		| { type: 'multiplierTotalShow' }
 		| { type: 'multiplierTotalHide' }
 		| { type: 'multiplierTotalUpdate'; totalMultiplier: number }

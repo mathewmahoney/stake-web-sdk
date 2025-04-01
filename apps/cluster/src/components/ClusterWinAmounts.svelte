@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import ClusterWinAmount, { type RawWin, type Win } from './ClusterWinAmount.svelte';
 
-	export type ClusterWinAmountsEmitterEvent = {
+	export type EmitterEventClusterWinAmounts = {
 		type: 'showClusterWinAmounts';
 		wins: RawWin[];
 	};

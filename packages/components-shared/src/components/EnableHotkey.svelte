@@ -3,9 +3,9 @@
 
 	import { getEventEmitterContext } from 'utils-event-emitter';
 
-	import type { HotKeyEmitterEvent } from '../types';
+	import type { EmitterEventHotKey } from '../types';
 
-	const context = getEventEmitterContext<HotKeyEmitterEvent>();
+	const context = getEventEmitterContext<EmitterEventHotKey>();
 	const PREVENT_DEFAULT_KEYS = ['Space', 'ArrowUp', 'ArrowDown'];
 	const EXCLUDED_TAGS = ['input', 'textarea', 'select'];
 

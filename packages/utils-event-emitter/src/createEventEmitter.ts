@@ -1,10 +1,10 @@
 import { onMount } from 'svelte';
 
-export type BaseEmitterEvent = {
+export type EmitterEventBase = {
 	type: string;
 };
 
-export function createEventEmitter<TEmitterEvent extends BaseEmitterEvent>() {
+export function createEventEmitter<TEmitterEvent extends EmitterEventBase>() {
 	type EmitterEventType = TEmitterEvent['type'];
 	type EmitterEventOfType<T> = Extract<TEmitterEvent, { type: T }>;
 	type EmitterEventHandler = (emitterEvent: TEmitterEvent) => any;

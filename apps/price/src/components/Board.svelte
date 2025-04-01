@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import type { RawSymbol, Position } from '../game/types';
 
-	export type BoardEmitterEvent =
+	export type EmitterEventBoard =
 		| { type: 'boardSettle'; board: RawSymbol[][] }
 		| { type: 'boardShow' }
 		| { type: 'boardHide' }

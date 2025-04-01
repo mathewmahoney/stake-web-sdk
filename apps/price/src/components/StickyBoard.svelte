@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import type { Prize, PrizeWin } from '../game/types';
 
-	export type StickyBoardEmitterEvent =
+	export type EmitterEventStickyBoard =
 		| { type: 'stickyBoardShow' }
 		| { type: 'stickyBoardHide' }
 		| { type: 'stickyBoardNew'; prizes: Prize[] }

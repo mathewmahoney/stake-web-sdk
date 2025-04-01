@@ -13,7 +13,7 @@
 	});
 </script>
 
-<script lang="ts" module>
+<script lang="ts">
 	import { Container, Text } from 'pixi-svelte';
 	import { StoryPixiApp } from 'components-storybook';
 

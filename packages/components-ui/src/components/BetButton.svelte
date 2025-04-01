@@ -14,7 +14,7 @@
 			!stateBetDerived.isBetCostAvailable(),
 	);
 	const onpress = () => {
-		context.eventEmitter.broadcast({ type: 'soundButtonBet' });
+		context.eventEmitter.broadcast({ type: 'soundPressBet' });
 		context.eventEmitter.broadcast({ type: 'bet' });
 	};
 	const betTextWithMode = $derived.by(() => {

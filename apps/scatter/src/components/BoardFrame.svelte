@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	export type BoardFrameEmitterEvent =
+	export type EmitterEventBoardFrame =
 		| { type: 'boardFrameGlowShow' }
 		| { type: 'boardFrameGlowHide' };
 </script>

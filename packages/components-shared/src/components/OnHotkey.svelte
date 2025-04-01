@@ -5,7 +5,7 @@
 	import { createInterruptible } from 'utils-shared/interruptible';
 	import { waitForTimeout } from 'utils-shared/wait';
 
-	import type { HotKeyEmitterEvent } from '../types';
+	import type { EmitterEventHotKey } from '../types';
 
 	type Props = {
 		hotkey: string;
@@ -17,7 +17,7 @@
 	};
 
 	const props: Props = $props();
-	const context = getEventEmitterContext<HotKeyEmitterEvent>();
+	const context = getEventEmitterContext<EmitterEventHotKey>();
 	const interruptible = createInterruptible();
 	const WAIT_TO_HOLD_TIMEOUT = 400;
 	let isHolding = $state(false);

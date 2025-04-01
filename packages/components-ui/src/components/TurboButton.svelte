@@ -7,7 +7,7 @@
 	const context = getContext();
 
 	const onpress = () => {
-		context.eventEmitter.broadcast({ type: 'soundButtonGeneral' });
+		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 		stateBetDerived.updateIsTurbo(!stateBet.isTurbo, { persistent: true });
 	};
 

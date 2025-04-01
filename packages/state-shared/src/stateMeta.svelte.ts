@@ -26,9 +26,36 @@ export type BetModeData = {
 	};
 };
 
-type BetModeMeta = Record<string, BetModeData>;
+export type BetModeMeta = Record<string, BetModeData>;
+
+export type GameRuleContainer = {
+	title: string;
+	text: string;
+	textImages?: { [key: string]: string };
+	image: string;
+	row: number;
+	column: number;
+	imagePosition: 'top' | 'left';
+};
+
+export type GameRuleData = {
+	containers: GameRuleContainer[];
+	rows: number;
+	columns: number;
+	title: string;
+};
+
+type GameRuleMeta = {
+	gameRules: GameRuleData[];
+	payTable: GameRuleData[];
+	splashScreen: GameRuleData[];
+};
 
 export const stateMeta = $state({
 	betModeMeta: DEFAULT_BET_MODE_META as BetModeMeta,
-	gameRuleMeta: DEFAULT_GAME_RULE_META,
+	gameRuleMeta: DEFAULT_GAME_RULE_META as GameRuleMeta,
 });
+
+export const stateMetaDerived = {
+	betModeMetaList: () => Object.values(stateMeta.betModeMeta),
+};

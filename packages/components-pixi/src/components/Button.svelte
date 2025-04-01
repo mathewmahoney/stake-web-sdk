@@ -2,8 +2,9 @@
 	import type { Snippet } from 'svelte';
 
 	import {
-		anchorToPivot,
 		Container,
+		Rectangle,
+		anchorToPivot,
 		type ContainerProps,
 		type Sizes,
 		type PixiPoint,
@@ -23,7 +24,7 @@
 		sizes: Sizes;
 		onpress: () => void;
 		disabled?: boolean;
-		anchor: PixiPoint;
+		anchor?: PixiPoint;
 		children: Snippet<
 			[
 				{
@@ -33,11 +34,12 @@
 				},
 			]
 		>;
+		debug?: boolean;
 	};
 </script>
 
 <script lang="ts">
-	const { children, sizes, anchor, disabled, onpress, ...containerProps }: Props = $props();
+	const { children, sizes, anchor, disabled, onpress, debug, ...containerProps }: Props = $props();
 	const center = $derived({
 		x: sizes.width * 0.5,
 		y: sizes.height * 0.5,
@@ -77,5 +79,14 @@
 		onpress();
 	}}
 >
+	{#if debug}
+		<Rectangle
+			width={sizes.width}
+			height={sizes.height}
+			alpha={0.5}
+			borderWidth={2}
+			borderColor={0xffffff}
+		/>
+	{/if}
 	{@render children({ center, hovered, pressed })}
 </Container>

@@ -16,7 +16,7 @@
 		return true;
 	});
 	const onpress = () => {
-		context.eventEmitter.broadcast({ type: 'soundButtonGeneral' });
+		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 
 		if (context.stateXstateDerived.isAutoBetting()) {
 			stateBet.autoSpinsCounter = 0;

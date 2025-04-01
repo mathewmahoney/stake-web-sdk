@@ -1,3 +1,5 @@
-import EnableModal from './src/components/EnableModal.svelte';
+import Modals from './src/components/Modals.svelte';
 
-export { EnableModal };
+export * from './src/types';
+
+export { Modals };

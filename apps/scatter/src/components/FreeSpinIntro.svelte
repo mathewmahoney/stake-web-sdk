@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	export type FreeSpinIntroEmitterEvent =
+	export type EmitterEventFreeSpinIntro =
 		| { type: 'freeSpinIntroShow' }
 		| { type: 'freeSpinIntroHide' }
 		| { type: 'freeSpinIntroUpdate'; totalFreeSpins: number };

@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	export type TumbleWinAmountEmitterEvent =
+	export type EmitterEventTumbleWinAmount =
 		| { type: 'tumbleWinAmountShow' }
 		| { type: 'tumbleWinAmountHide' }
 		| { type: 'tumbleWinAmountReset' }

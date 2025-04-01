@@ -1,4 +1,3 @@
-import * as PIXI from 'pixi.js';
 import WebFont from 'webfontloader';
 
 import type { PixiPoint, Sizes } from './types';

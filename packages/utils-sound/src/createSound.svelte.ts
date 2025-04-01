@@ -45,9 +45,11 @@ function createSound<TSoundName extends string>() {
 			Howler.ctx.removeEventListener('statechange', onAudioContextChange);
 			document.removeEventListener('visibilitychange', onVisibilityStateChange);
 
-			players.music.howl.unload();
-			players.loop.howl.unload();
-			players.once.howl.unload();
+			if (players) {
+				players.music.howl.unload();
+				players.loop.howl.unload();
+				players.once.howl.unload();
+			}
 		};
 
 		return {
@@ -56,19 +58,23 @@ function createSound<TSoundName extends string>() {
 	};
 
 	const stop = (stopOptions: StopOptions<TSoundName>) => {
-		players.music.stop(stopOptions);
-		players.loop.stop(stopOptions);
-		players.once.stop(stopOptions);
+		if (players) {
+			players.music.stop(stopOptions);
+			players.loop.stop(stopOptions);
+			players.once.stop(stopOptions);
+		}
 	};
 
 	const fade = async (fadeOptions: FadeOptions<TSoundName>) => {
-		const getPromises = () => [
-			players.music.fade(fadeOptions),
-			players.loop.fade(fadeOptions),
-			players.once.fade(fadeOptions),
-		];
+		if (players) {
+			const getPromises = () => [
+				players.music.fade(fadeOptions),
+				players.loop.fade(fadeOptions),
+				players.once.fade(fadeOptions),
+			];
 
-		await Promise.all(getPromises());
+			await Promise.all(getPromises());
+		}
 	};
 
 	const rate = (rateOptions: RateOptions<TSoundName>) => {
@@ -101,9 +107,11 @@ function createSound<TSoundName extends string>() {
 
 	const volumeEffect = () => {
 		$effect(() => {
-			players.music.volume(stateSoundDerived.volumeMusic());
-			players.loop.volume(stateSoundDerived.volumeSoundEffect());
-			players.once.volume(stateSoundDerived.volumeSoundEffect());
+			if (players) {
+				players.music.volume(stateSoundDerived.volumeMusic());
+				players.loop.volume(stateSoundDerived.volumeSoundEffect());
+				players.once.volume(stateSoundDerived.volumeSoundEffect());
+			}
 		});
 	};
 

@@ -24,11 +24,11 @@
 	hotkey="ArrowUp"
 	{disabled}
 	onpress={() => {
-		context.eventEmitter.broadcast({ type: 'soundButtonGeneral' });
+		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 		updateBetAmountBy(1);
 	}}
 	onhold={() => {
-		context.eventEmitter.broadcast({ type: 'soundButtonGeneral' });
+		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 		updateBetAmountBy(10);
 	}}
 />
@@ -37,11 +37,11 @@
 	hotkey="ArrowDown"
 	{disabled}
 	onpress={() => {
-		context.eventEmitter.broadcast({ type: 'soundButtonGeneral' });
+		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 		updateBetAmountBy(-1);
 	}}
 	onhold={() => {
-		context.eventEmitter.broadcast({ type: 'soundButtonGeneral' });
+		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 		updateBetAmountBy(-10);
 	}}
 />

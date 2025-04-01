@@ -4,7 +4,7 @@
 	import { EnablePixiExtension } from 'components-pixi';
 	import { EnableHotkey } from 'components-shared';
 	import { MainContainer } from 'components-layout';
-	import { EnableModal } from 'components-modal';
+	import { Modals } from 'components-modal';
 	import { UI } from 'components-ui';
 	import { App } from 'pixi-svelte';
 
@@ -72,4 +72,4 @@
 	{/if}
 </App>
 
-<EnableModal />
+<Modals />

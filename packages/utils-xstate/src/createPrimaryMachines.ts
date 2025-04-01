@@ -68,8 +68,6 @@ const handleRequestEndRound = async () => {
 
 const handleUpdateBalance = ({ balanceAmountFromApi }: { balanceAmountFromApi: number }) => {
 	stateBet.balanceAmount = balanceAmountFromApi / API_AMOUNT_MULTIPLIER;
-	// Update balance and reset win at the same time;
-	stateBet.winBookEventAmount = 0;
 };
 
 type Options<TBet extends BaseBet> = {

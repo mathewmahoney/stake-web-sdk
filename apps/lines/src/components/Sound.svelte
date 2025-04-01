@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import { sound, type MusicName, type SoundEffectName, type SoundName } from '../game/sound';
 
-	export type SoundEmitterEvent =
+	export type EmitterEventSound =
 		| { type: 'soundMusic'; name: MusicName }
 		| { type: 'soundOnce'; name: SoundEffectName; forcePlay?: boolean }
 		| { type: 'soundLoop'; name: SoundEffectName }
@@ -34,8 +34,8 @@
 				sound.players.music.play({ name: 'bgm_main' });
 			}
 		},
-		soundButtonGeneral: () => sound.players.once.play({ name: 'sfx_btn_general' }),
-		soundButtonBet: () => sound.players.once.play({ name: 'sfx_btn_spin' }),
+		soundPressGeneral: () => sound.players.once.play({ name: 'sfx_btn_general' }),
+		soundPressBet: () => sound.players.once.play({ name: 'sfx_btn_spin' }),
 		// scatterCounter
 		soundScatterCounterIncrease: () => (context.stateGame.scatterCounter = context.stateGame.scatterCounter + 1), // prettier-ignore
 		soundScatterCounterClear: () => (context.stateGame.scatterCounter = 0),

@@ -16,17 +16,21 @@ const CANVAS_SIZE_TYPE_BREAK_POINTS = {
 
 const getRatio = (value: Sizes) => value.width / (value.height || 1);
 
+const STANDARD_MAIN_SIZES_MAP = {
+	desktop: { width: 1920, height: 1080 },
+	tablet: { width: 1920, height: 1920 },
+	landscape: { width: 1920, height: 1080 },
+	portrait: { width: 1080, height: 1920 },
+};
+
+type MainSizesMap = typeof STANDARD_MAIN_SIZES_MAP;
+
 export const createLayout = (layoutOptions: {
 	backgroundRatio: {
 		normal: number;
 		portrait: number;
 	};
-	mainSizesMap: {
-		desktop: Sizes;
-		tablet: Sizes;
-		landscape: Sizes;
-		portrait: Sizes;
-	};
+	mainSizesMap: MainSizesMap;
 }) => {
 	const canvasSizes = () => ({ width: innerWidth.current ?? 1, height: innerHeight.current ?? 1 }); // because of resizeTo: window
 	const canvasRatio = () => getRatio(canvasSizes());
@@ -52,10 +56,10 @@ export const createLayout = (layoutOptions: {
 	};
 	const isStacked = () => ['portrait', 'almostSquare'].includes(layoutType());
 
-	const mainLayout = () => {
+	const createMainLayout = (mainSizesMap: MainSizesMap) => () => {
 		const x = canvasSizes().width * 0.5;
 		const y = canvasSizes().height * 0.5;
-		const mainSizes = layoutOptions.mainSizesMap[layoutType()];
+		const mainSizes = mainSizesMap[layoutType()];
 		const widthScale = canvasSizes().width / mainSizes.width;
 		const heightScale = canvasSizes().height / mainSizes.height;
 		const scale = Math.min(widthScale, heightScale);
@@ -69,6 +73,10 @@ export const createLayout = (layoutOptions: {
 			anchor: 0.5,
 		};
 	};
+
+	const mainLayout = createMainLayout(layoutOptions.mainSizesMap);
+
+	const mainLayoutStandard = createMainLayout(STANDARD_MAIN_SIZES_MAP);
 
 	const createBackgroundLayout = ({ scale, ratio }: { scale: number; ratio: number }) => {
 		const canvasRatio = getRatio(canvasSizes());
@@ -105,6 +113,7 @@ export const createLayout = (layoutOptions: {
 		layoutType,
 		isStacked,
 		mainLayout,
+		mainLayoutStandard,
 		normalBackgroundLayout,
 		portraitBackgroundLayout,
 	};

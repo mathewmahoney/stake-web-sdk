@@ -12,7 +12,7 @@
 		return context.stateXstateDerived.isPlaying();
 	});
 	const onpress = () => {
-		context.eventEmitter.broadcast({ type: 'soundButtonGeneral' });
+		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 		stateBet.autoSpinsCounter = stateBet.autoSpinsCounter + 10;
 		context.eventEmitter.broadcast({ type: 'autoBet' });
 	};

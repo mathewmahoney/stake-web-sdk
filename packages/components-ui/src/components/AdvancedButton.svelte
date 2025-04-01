@@ -8,7 +8,7 @@
 	const context = getContext();
 
 	const onpress = () => {
-		context.eventEmitter.broadcast({ type: 'soundButtonGeneral' });
+		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 		stateModal.modal = { name: 'settings' };
 	};
 </script>

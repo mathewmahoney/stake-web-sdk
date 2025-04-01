@@ -1,6 +1,6 @@
 # pixi-svelte
 
-Use PixiJS in a declarative way with Svelte.
+Use PixiJS in a declarative way with Svelte5.
 
 ## Storybook
 
@@ -71,32 +71,13 @@ Check out the storybook repo for pixi-svelte usage and for more information: htt
 
 ## SSR
 
-"window" is required for this package, so if SvelteKit is used, there are some options to make it work:
+"window" is required for this package, so if SvelteKit is used, there is an option to make it work:
 
 - Turn off SSR
 
 ```ts
 // src/routes/+page.ts
 export const ssr = false;
-```
-
-- Dynamic import
-
-```ts
-<script lang="ts">
-    import { browser } from "$app/environment";
-    let component = undefined;
-
-    $: if(browser) {
-        import("./PixiSvelteApp.svelte").then(data => {
-        component = data.default
-        });
-    }
-</script>
-
-{#if browser && component}
-    <svelte:component this={component} />
-{/if}
 ```
 
 ## Reference
