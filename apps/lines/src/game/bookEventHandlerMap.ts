@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 import { recordBookEvent, checkIsMultipleRevealEvents, type BookEventHandlerMap } from 'utils-book';
-import { stateBet } from 'state-shared';
+import { stateBet, stateUi } from 'state-shared';
 import { sequence } from 'utils-shared/sequence';
 
 import { eventEmitter } from './eventEmitter';
@@ -87,20 +87,27 @@ export const bookEventHandlerMap: BookEventHandlerMap<BookEvent, BookEventContex
 		eventEmitter.broadcast({ type: 'freeSpinIntroHide' });
 		eventEmitter.broadcast({ type: 'boardFrameGlowShow' });
 		eventEmitter.broadcast({ type: 'freeSpinCounterShow' });
+		stateUi.freeSpinCounterShow = true;
 		eventEmitter.broadcast({
 			type: 'freeSpinCounterUpdate',
 			current: undefined,
 			total: bookEvent.totalFs,
 		});
+		stateUi.freeSpinCounterTotal = bookEvent.totalFs;
 		await eventEmitter.broadcastAsync({ type: 'uiShow' });
+		await eventEmitter.broadcastAsync({ type: 'drawerButtonShow' });
+		eventEmitter.broadcast({ type: 'drawerFold' });
 	},
 	updateFreeSpin: async (bookEvent: BookEventOfType<'updateFreeSpin'>) => {
 		eventEmitter.broadcast({ type: 'freeSpinCounterShow' });
+		stateUi.freeSpinCounterShow = true;
 		eventEmitter.broadcast({
 			type: 'freeSpinCounterUpdate',
 			current: bookEvent.amount + 1,
 			total: bookEvent.total,
 		});
+		stateUi.freeSpinCounterTotal = bookEvent.amount + 1;
+		stateUi.freeSpinCounterTotal = bookEvent.total;
 	},
 	freeSpinEnd: async (bookEvent: BookEventOfType<'freeSpinEnd'>) => {
 		const winLevelData = winLevelMap[bookEvent.winLevel as WinLevel];
@@ -119,8 +126,11 @@ export const bookEventHandlerMap: BookEventHandlerMap<BookEvent, BookEventContex
 		winLevelSoundsStop();
 		eventEmitter.broadcast({ type: 'freeSpinOutroHide' });
 		eventEmitter.broadcast({ type: 'freeSpinCounterHide' });
+		stateUi.freeSpinCounterShow = false;
 		await eventEmitter.broadcastAsync({ type: 'transition' });
 		await eventEmitter.broadcastAsync({ type: 'uiShow' });
+		await eventEmitter.broadcastAsync({ type: 'drawerUnfold' });
+		eventEmitter.broadcast({ type: 'drawerButtonHide' });
 	},
 	setWin: async (bookEvent: BookEventOfType<'setWin'>) => {
 		const winLevelData = winLevelMap[bookEvent.winLevel as WinLevel];

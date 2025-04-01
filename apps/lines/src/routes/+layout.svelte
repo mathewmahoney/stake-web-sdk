@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { type Snippet } from 'svelte';
+	import { StyleTwist } from 'components-ui-html';
 
 	import { Authenticate, LoaderCarrot, LoaderExample, LoadI18n } from 'components-shared';
 	import messagesMap from '../i18n/messagesMap';
@@ -11,11 +12,13 @@
 	let showYourLoader = $state(false);
 </script>
 
-<Authenticate>
-	<LoadI18n {messagesMap}>
-		{@render props.children()}
-	</LoadI18n>
-</Authenticate>
+<StyleTwist>
+	<Authenticate>
+		<LoadI18n {messagesMap}>
+			{@render props.children()}
+		</LoadI18n>
+	</Authenticate>
+</StyleTwist>
 
 <LoaderCarrot oncomplete={() => (showYourLoader = true)} />
 
@@ -24,3 +27,4 @@
 	<!-- '/loader.gif' is served from static folder of sveltekit -->
 	<!-- File location: apps/scatter/static/loader.gif -->
 {/if}
+

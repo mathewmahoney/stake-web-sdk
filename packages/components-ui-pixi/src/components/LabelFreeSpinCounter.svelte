@@ -16,5 +16,5 @@
 	tiled={props.tiled}
 	stacked={props.stacked}
 	label={i18nDerived.freeSpins()}
-	value="{stateUi.freeSpinCounter.current} / {stateUi.freeSpinCounter.total}"
+	value="{stateUi.freeSpinCounterCurrent} / {stateUi.freeSpinCounterTotal}"
 />

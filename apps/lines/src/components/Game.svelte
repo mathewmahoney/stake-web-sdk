@@ -3,19 +3,17 @@
 
 	import { EnablePixiExtension } from 'components-pixi';
 	import { EnableHotkey } from 'components-shared';
-	import { Modals } from 'components-ui-html';
 	import { MainContainer } from 'components-layout';
-	import { UI } from 'components-ui-pixi';
 	import { App } from 'pixi-svelte';
 
-	import { getContext } from '../game/context';
+	import { UI, UiGameName, UiLogo } from 'components-ui-pixi';
+	import { GameVersion, Modals } from 'components-ui-html';
 
+	import { getContext } from '../game/context';
 	import EnableSound from './EnableSound.svelte';
 	import EnableGameActor from './EnableGameActor.svelte';
-
 	import ResumeBet from './ResumeBet.svelte';
 	import Sound from './Sound.svelte';
-
 	import Background from './Background.svelte';
 	import LoadingScreen from './LoadingScreen.svelte';
 	import BoardFrame from './BoardFrame.svelte';
@@ -61,10 +59,19 @@
 			<Anticipations />
 		</MainContainer>
 
-		<UI />
+		<UI>
+			{#snippet gameName()}
+				<UiGameName name="LINES GAME" />
+			{/snippet}
+			{#snippet logo()}
+				<UiLogo key="logo" sizeRatio={45 / 14} />
+			{/snippet}
+		</UI>
 		<Win />
 		<FreeSpinIntro />
-		<FreeSpinCounter />
+		{#if context.stateLayoutDerived.layoutType() !== 'portrait' && context.stateLayoutDerived.layoutType() !== 'tablet'}
+			<FreeSpinCounter />
+		{/if}
 		<FreeSpinOutro />
 		<Transition />
 
@@ -72,4 +79,8 @@
 	{/if}
 </App>
 
-<Modals />
+<Modals>
+	{#snippet version()}
+		<GameVersion version="0.0.0" />
+	{/snippet}
+</Modals>

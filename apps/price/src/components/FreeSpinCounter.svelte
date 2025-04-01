@@ -15,19 +15,15 @@
 
 	const context = getContext();
 	const PANEL_KEY_DESKTOP = 'Frame_FSCounter.png';
-	const PANEL_KEY_PORTRAIT = 'Frame_Tumble.png';
 	const PANEL_RATIO_DESKTOP = 824 / 622;
-	const PANEL_RATIO_PORTRAIT = 1442 / 374;
-	const panelKey = context.stateLayoutDerived.isStacked() ? PANEL_KEY_PORTRAIT : PANEL_KEY_DESKTOP;
-	const panelWidth = $derived(SYMBOL_SIZE * (context.stateLayoutDerived.isStacked() ? 5.3 : 2));
+	const panelKey = PANEL_KEY_DESKTOP;
+	const panelWidth = $derived(SYMBOL_SIZE * 2);
 	const panelSizes = $derived({
 		width: panelWidth,
-		height:
-			panelWidth /
-			(context.stateLayoutDerived.isStacked() ? PANEL_RATIO_PORTRAIT : PANEL_RATIO_DESKTOP),
+		height: panelWidth / PANEL_RATIO_DESKTOP,
 	});
-	const scale = $derived(context.stateLayoutDerived.layoutType() === 'tablet' ? 0.7 : 1);
-	const desktopPosition = $derived({
+	const scale = 1;
+	const position = $derived({
 		x:
 			context.stateGameDerived.boardLayout().x -
 			context.stateGameDerived.boardLayout().width * 0.5 -
@@ -37,29 +33,8 @@
 			context.stateGameDerived.boardLayout().y -
 			context.stateGameDerived.boardLayout().height * 0.5,
 	});
-	const almostSquarePosition = $derived({
-		x: context.stateGameDerived.boardLayout().x - panelSizes.width * 0.5 * scale,
-		y:
-			context.stateGameDerived.boardLayout().y +
-			context.stateGameDerived.boardLayout().height * 0.5 +
-			panelSizes.height * 0.75,
-	});
-	const portraitPosition = $derived({
-		x: context.stateGameDerived.boardLayout().x - panelSizes.width * 0.5,
-		y:
-			context.stateGameDerived.boardLayout().y +
-			context.stateGameDerived.boardLayout().height * 0.5 +
-			panelSizes.height * 1.5,
-	});
-	const position = $derived(
-		context.stateLayoutDerived.isStacked()
-			? context.stateLayoutDerived.layoutType() === 'tablet'
-				? almostSquarePosition
-				: portraitPosition
-			: desktopPosition,
-	);
-	const fontSize = SYMBOL_SIZE * (context.stateLayoutDerived.isStacked() ? 0.4 : 0.275);
-	const textGap = 0.25 * SYMBOL_SIZE;
+
+	const fontSize = SYMBOL_SIZE * 0.275;
 
 	let show = $state(false);
 	let current = $state(0);
@@ -67,16 +42,11 @@
 	let titleSizes: Sizes = $state({ width: 0, height: 0 });
 	let counterSizes: Sizes = $state({ width: 0, height: 0 });
 
-	const textContainerSizes = $derived(
-		context.stateLayoutDerived.isStacked()
-			? { width: titleSizes.width + counterSizes.width + textGap, height: titleSizes.height }
-			: { width: titleSizes.width, height: titleSizes.height + counterSizes.height },
-	);
-	const counterPosition = $derived(
-		context.stateLayoutDerived.isStacked()
-			? { x: titleSizes.width + textGap + counterSizes.width / 2, y: 0 }
-			: { x: titleSizes.width / 2, y: titleSizes.height },
-	);
+	const textContainerSizes = $derived({
+		width: titleSizes.width,
+		height: titleSizes.height + counterSizes.height,
+	});
+	const counterPosition = $derived({ x: titleSizes.width / 2, y: titleSizes.height });
 
 	context.eventEmitter.subscribeOnMount({
 		freeSpinCounterShow: () => (show = true),
@@ -93,7 +63,7 @@
 		<Sprite key={panelKey} {...panelSizes} />
 		<Container
 			x={panelSizes.width * 0.5}
-			y={panelSizes.height * (context.stateLayoutDerived.isStacked() ? 0.46 : 0.48)}
+			y={panelSizes.height * 0.48}
 			pivot={anchorToPivot({
 				sizes: textContainerSizes,
 				anchor: { x: 0.5, y: 0.5 },
