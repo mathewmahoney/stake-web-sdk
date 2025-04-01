@@ -73,7 +73,7 @@
 		</UI>
 		<Win />
 		<FreeSpinIntro />
-		{#if context.stateLayoutDerived.layoutType() !== 'portrait' && context.stateLayoutDerived.layoutType() !== 'tablet'}
+		{#if ['desktop', 'landscape'].includes(context.stateLayoutDerived.layoutType())}
 			<FreeSpinCounter />
 		{/if}
 		<FreeSpinOutro />
