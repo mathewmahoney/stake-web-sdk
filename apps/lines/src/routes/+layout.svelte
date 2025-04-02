@@ -27,4 +27,3 @@
 	<!-- '/loader.gif' is served from static folder of sveltekit -->
 	<!-- File location: apps/scatter/static/loader.gif -->
 {/if}
-

@@ -4,9 +4,10 @@
 	import { EnablePixiExtension } from 'components-pixi';
 	import { EnableHotkey } from 'components-shared';
 	import { MainContainer } from 'components-layout';
-	import { App } from 'pixi-svelte';
+	import { App, Text, REM } from 'pixi-svelte';
+	import { stateModal } from 'state-shared';
 
-	import { UI, UiGameName, UiLogo } from 'components-ui-pixi';
+	import { UI, UiGameName } from 'components-ui-pixi';
 	import { GameVersion, Modals } from 'components-ui-html';
 
 	import { getContext } from '../game/context';
@@ -29,6 +30,12 @@
 	const context = getContext();
 
 	onMount(() => (context.stateLayout.showLoadingScreen = true));
+
+	context.eventEmitter.subscribeOnMount({
+		buyBonusConfirm: () => {
+			stateModal.modal = { name: 'buyBonusConfirm' };
+		},
+	});
 </script>
 
 <App>
@@ -64,7 +71,17 @@
 				<UiGameName name="WAYS GAME" />
 			{/snippet}
 			{#snippet logo()}
-				<UiLogo key="logo" sizeRatio={45 / 14} />
+				<Text
+					anchor={{ x: 1, y: 0 }}
+					text="ADD A LOGO"
+					style={{
+						fontFamily: 'proxima-nova',
+						fontSize: REM * 1.5,
+						fontWeight: '600',
+						lineHeight: REM * 2,
+						fill: 0xffffff,
+					}}
+				/>
 			{/snippet}
 		</UI>
 		<Win />

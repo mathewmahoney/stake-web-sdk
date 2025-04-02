@@ -1,18 +1,18 @@
 <script lang="ts">
-	import { Container } from 'pixi-svelte';
+	import { Container, Text } from 'pixi-svelte';
 	import { Button, type ButtonProps } from 'components-pixi';
 	import { OnHotkey } from 'components-shared';
 	import { stateBetDerived } from 'state-shared';
 
-	import ButtonBetSpine from './ButtonBetSpine.svelte';
-	import ButtonBetSprite from './ButtonBetSprite.svelte';
+	import UiSprite from './UiSprite.svelte';
 	import ButtonBetProvider from './ButtonBetProvider.svelte';
 	import ButtonBetAutoSpinsCounter from './ButtonBetAutoSpinsCounter.svelte';
-	import { UI_BASE_SIZE } from '../constants';
+	import { UI_BASE_FONT_SIZE, UI_BASE_SIZE } from '../constants';
+	import { i18nDerived } from '../i18n/i18nDerived';
 
 	const props: Partial<Omit<ButtonProps, 'children'>> = $props();
 	const disabled = $derived(!stateBetDerived.isBetCostAvailable());
-	const sizes = { width: UI_BASE_SIZE * 1.5, height: UI_BASE_SIZE * 1.5 };
+	const sizes = { width: UI_BASE_SIZE, height: UI_BASE_SIZE };
 </script>
 
 <ButtonBetProvider>
@@ -21,8 +21,30 @@
 		<Button {...props} {sizes} {onpress} {disabled}>
 			{#snippet children({ center, hovered })}
 				<Container {...center}>
-					<ButtonBetSprite {key} {hovered} width={sizes.width} height={sizes.height} />
-					<ButtonBetSpine {key} width={sizes.width * 0.5} height={sizes.height * 0.5} />
+					<UiSprite
+						key="bet"
+						width={sizes.width}
+						height={sizes.height}
+						anchor={0.5}
+						{...disabled
+							? {
+									backgroundColor: 0xaaaaaa,
+								}
+							: {}}
+					/>
+					<Text
+						anchor={0.5}
+						text={i18nDerived.bet()}
+						style={{
+							align: 'center',
+							wordWrap: true,
+							wordWrapWidth: 200,
+							fontFamily: 'proxima-nova',
+							fontWeight: '600',
+							fontSize: UI_BASE_FONT_SIZE * 0.9,
+							fill: 0xffffff,
+						}}
+					/>
 					<ButtonBetAutoSpinsCounter baseSize={sizes.width * 0.1} />
 				</Container>
 			{/snippet}

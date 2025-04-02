@@ -4,12 +4,9 @@
 	import { MainContainer } from 'components-layout';
 	import { Container, Rectangle, anchorToPivot } from 'pixi-svelte';
 
-	import UiSprite from './UiSprite.svelte';
-	import LabelWin from './LabelWin.svelte';
-	import LabelFreeSpinCounter from './LabelFreeSpinCounter.svelte';
-	import { TABLET_BASE_SIZE, TABLET_BACKGROUND_WIDTH_LIST } from '../constants';
-	import type { LayoutUiProps } from '../types';
+	import { DESKTOP_BASE_SIZE, DESKTOP_BACKGROUND_WIDTH_LIST } from '../constants';
 	import { getContext } from '../context';
+	import type { LayoutUiProps } from '../types';
 
 	const props: LayoutUiProps = $props();
 	const context = getContext();
@@ -23,110 +20,57 @@
 	{@render props.logo()}
 </Container>
 
-<UiSprite
-	x={0}
-	y={context.stateLayoutDerived.canvasSizes().height + 1}
-	anchor={{ x: 0, y: 1 }}
-	key="desktop_gradient"
-	width={context.stateLayoutDerived.canvasSizes().width}
-	height={context.stateLayoutDerived.canvasSizes().width * (320 / 1920)}
-/>
-
 <MainContainer standard alignVertical="bottom">
-	{@const sizes = {
-		height: TABLET_BASE_SIZE,
-		width: TABLET_BACKGROUND_WIDTH_LIST.reduce((sum, width) => sum + width, 0),
-	}}
 	<Container
 		x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5}
-		y={context.stateLayoutDerived.mainLayoutStandard().height - TABLET_BASE_SIZE - 55}
+		y={context.stateLayoutDerived.mainLayoutStandard().height - DESKTOP_BASE_SIZE - 30}
 		pivot={anchorToPivot({
 			anchor: { x: 0.5, y: 0 },
-			sizes,
+			sizes: {
+				height: DESKTOP_BASE_SIZE,
+				width: DESKTOP_BACKGROUND_WIDTH_LIST.reduce((sum, width) => sum + width, 0),
+			},
 		})}
 	>
-		<UiSprite
-			key="background_menu_frame"
-			height={TABLET_BASE_SIZE}
-			width={TABLET_BACKGROUND_WIDTH_LIST[0]}
-			tint={BLACK}
-			alpha={0.8}
-		/>
+		<Container y={DESKTOP_BASE_SIZE * 0.5 - 220} x={880 - 640}>
+			{@render props.amountBalance({ stacked: true })}
+		</Container>
 
-		<UiSprite
-			x={TABLET_BACKGROUND_WIDTH_LIST[0]}
-			key="background_balance_frame"
-			height={TABLET_BASE_SIZE}
-			width={TABLET_BACKGROUND_WIDTH_LIST[1]}
-			tint={BLACK}
-			alpha={0.35}
-		/>
+		<Container y={DESKTOP_BASE_SIZE * 0.5 - 220} x={880}>
+			{@render props.amountWin({ stacked: true })}
+		</Container>
 
-		<UiSprite
-			x={TABLET_BACKGROUND_WIDTH_LIST[0] + TABLET_BACKGROUND_WIDTH_LIST[1]}
-			key="background_bet_amount_frame"
-			height={TABLET_BASE_SIZE}
-			width={TABLET_BACKGROUND_WIDTH_LIST[2]}
-			tint={BLACK}
-			alpha={0.8}
-		/>
+		<Container y={DESKTOP_BASE_SIZE * 0.5 - 220} x={880 + 640}>
+			{@render props.amountBet({ stacked: true })}
+		</Container>
 
-		<UiSprite
-			x={TABLET_BACKGROUND_WIDTH_LIST[0] +
-				TABLET_BACKGROUND_WIDTH_LIST[1] +
-				TABLET_BACKGROUND_WIDTH_LIST[2]}
-			key="background_bet_frame"
-			height={TABLET_BASE_SIZE}
-			width={TABLET_BACKGROUND_WIDTH_LIST[3]}
-			tint={BLACK}
-			alpha={0.8}
-		/>
-
-		<Container y={TABLET_BASE_SIZE * 0.5} x={85} scale={0.9}>
+		<Container y={DESKTOP_BASE_SIZE * 0.5} x={20}>
 			{@render props.buttonMenu({ anchor: 0.5 })}
 		</Container>
 
-		<Container y={TABLET_BASE_SIZE * 0.5} x={290} scale={1.05}>
+		<Container y={DESKTOP_BASE_SIZE * 0.5} x={20 + 180}>
 			{@render props.buttonBuyBonus({ anchor: 0.5 })}
 		</Container>
 
-		<Container y={TABLET_BASE_SIZE * 0.5} x={470} scale={0.7}>
-			{@render props.amountBalance({ stacked: true, anchor: { x: 0, y: 0.5 } })}
-		</Container>
-
-		<Container y={TABLET_BASE_SIZE * 0.5} x={990} scale={0.7}>
-			{@render props.amountBet({ stacked: true, anchor: { x: 0, y: 0.5 } })}
-		</Container>
-
-		<Container y={TABLET_BASE_SIZE * 0.5 - 38} x={1240} scale={0.7}>
-			{@render props.buttonIncrease({ anchor: 0.5 })}
-		</Container>
-
-		<Container y={TABLET_BASE_SIZE * 0.5 + 38} x={1240} scale={0.7}>
-			{@render props.buttonDecrease({ anchor: 0.5 })}
-		</Container>
-
-		<Container y={TABLET_BASE_SIZE * 0.5} x={1555 - 190} scale={0.8}>
+		<Container y={DESKTOP_BASE_SIZE * 0.5} x={-10 + 180 * 4}>
 			{@render props.buttonAutoBet({ anchor: 0.5 })}
 		</Container>
 
-		<Container y={TABLET_BASE_SIZE * 0.5} x={1555} scale={1.2}>
+		<Container y={DESKTOP_BASE_SIZE * 0.5} x={-10 + 180 * 5}>
 			{@render props.buttonBet({ anchor: 0.5 })}
 		</Container>
 
-		<Container y={TABLET_BASE_SIZE * 0.5} x={1555 + 190} scale={0.8}>
+		<Container y={DESKTOP_BASE_SIZE * 0.5} x={-10 + 180 * 6}>
 			{@render props.buttonTurbo({ anchor: 0.5 })}
 		</Container>
 
-		<Container x={sizes.width * 0.5 - 225 - 285} y={-70} scale={0.3}>
-			<LabelWin tiled />
+		<Container y={DESKTOP_BASE_SIZE * 0.5} x={1560}>
+			{@render props.buttonDecrease({ anchor: 0.5 })}
 		</Container>
 
-		{#if stateUi.freeSpinCounterShow}
-			<Container x={sizes.width * 0.5 - 225 + 285} y={-70} scale={0.3}>
-				<LabelFreeSpinCounter tiled />
-			</Container>
-		{/if}
+		<Container y={DESKTOP_BASE_SIZE * 0.5} x={1560 + 180}>
+			{@render props.buttonIncrease({ anchor: 0.5 })}
+		</Container>
 	</Container>
 </MainContainer>
 
@@ -146,34 +90,26 @@
 
 	<MainContainer standard alignVertical="bottom">
 		<Container
-			x={135}
-			y={context.stateLayoutDerived.mainLayoutStandard().height - TABLET_BASE_SIZE - 55}
+			x={100}
+			y={context.stateLayoutDerived.mainLayoutStandard().height - DESKTOP_BASE_SIZE - 30}
 		>
-			<UiSprite
-				anchor={{ x: 0.5, y: 1 }}
-				y={TABLET_BASE_SIZE * 0.9}
-				key="popup_sidemenu"
-				height={710}
-				width={710 * (80 / 352)}
-			/>
-
-			<Container scale={0.9} y={TABLET_BASE_SIZE * 0.5 - 30 - 130 * 4}>
+			<Container y={DESKTOP_BASE_SIZE * 0.5 - 185 - 210 * 3}>
 				{@render props.buttonPayTable({ anchor: 0.5 })}
 			</Container>
 
-			<Container scale={0.9} y={TABLET_BASE_SIZE * 0.5 - 30 - 130 * 3}>
+			<Container y={DESKTOP_BASE_SIZE * 0.5 - 185 - 210 * 2}>
 				{@render props.buttonGameRules({ anchor: 0.5 })}
 			</Container>
 
-			<Container scale={0.9} y={TABLET_BASE_SIZE * 0.5 - 30 - 130 * 2}>
+			<Container y={DESKTOP_BASE_SIZE * 0.5 - 185 - 210 * 1}>
 				{@render props.buttonSettings({ anchor: 0.5 })}
 			</Container>
 
-			<Container scale={0.9} y={TABLET_BASE_SIZE * 0.5 - 30 - 130 * 1}>
+			<Container y={DESKTOP_BASE_SIZE * 0.5 - 185}>
 				{@render props.buttonSoundSwitch({ anchor: 0.5 })}
 			</Container>
 
-			<Container scale={0.9} y={TABLET_BASE_SIZE * 0.5}>
+			<Container y={DESKTOP_BASE_SIZE * 0.5}>
 				{@render props.buttonMenuClose({ anchor: 0.5 })}
 			</Container>
 		</Container>

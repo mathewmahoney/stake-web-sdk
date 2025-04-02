@@ -1,8 +1,6 @@
-import { sharedAssetsPixi } from 'constants-shared/assets';
 const BASE_BUCKET = 'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/1-2-mining-game';
 
 export default {
-	...sharedAssetsPixi,
 	pressToContinueText: {
 		type: 'sprites',
 		src: `${BASE_BUCKET}/sprites/pressToContinueText/MM_pressanywhere.json`,

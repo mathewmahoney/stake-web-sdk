@@ -3,14 +3,12 @@
 	import { stateModal } from 'state-shared';
 
 	import UiButton from './UiButton.svelte';
-	import UiMenuLabel from './UiMenuLabel.svelte';
-	import { i18nDerived } from '../i18n/i18nDerived';
 	import { getContext } from '../context';
 	import { UI_BASE_SIZE } from '../constants';
 
 	const props: Partial<Omit<ButtonProps, 'children'>> = $props();
 	const context = getContext();
-	const sizes = { width: UI_BASE_SIZE, height: UI_BASE_SIZE };
+	const sizes = { width: UI_BASE_SIZE * 1.3, height: UI_BASE_SIZE * 1.3 };
 
 	const onpress = () => {
 		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
@@ -18,6 +16,4 @@
 	};
 </script>
 
-<UiButton {...props} {sizes} {onpress} icon="info">
-	<UiMenuLabel x={sizes.width} y={sizes.height * 0.5} text={i18nDerived.info()} />
-</UiButton>
+<UiButton {...props} {sizes} {onpress} icon="info" variant="light" />

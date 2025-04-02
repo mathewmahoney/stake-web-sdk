@@ -7,12 +7,10 @@ export const UI_BASE_FONT_SIZE = UI_BASE_SIZE * 0.3;
 export const UI_TEXT_STYLES = {
 	labelStyle: {
 		fontSize: UI_BASE_FONT_SIZE,
-		fontWeight: 'lighter' as const,
 		fill: WHITE,
 	},
 	amountStyle: {
-		fontSize: UI_BASE_FONT_SIZE * 1.5,
-		fontWeight: 'bold' as const,
+		fontSize: UI_BASE_FONT_SIZE,
 		fill: WHITE,
 	},
 };

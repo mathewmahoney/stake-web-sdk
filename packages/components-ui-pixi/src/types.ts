@@ -1,7 +1,6 @@
 import type { Snippet } from 'svelte';
 
-import type { AmountProps, ButtonProps } from 'components-pixi';
-import type { KeyOfSharedAssetsPixi } from 'constants-shared/assets';
+import type { ButtonProps } from 'components-pixi';
 
 export type EmitterEventUi =
 	| { type: 'hotKeySpace' }
@@ -37,21 +36,12 @@ export type ButtonIcon =
 	| 'soundOff'
 	| 'menuExit';
 
-export type ButtonKeys = {
-	defaultKey?: KeyOfSharedAssetsPixi;
-	hoverKey?: KeyOfSharedAssetsPixi;
-	pressKey?: KeyOfSharedAssetsPixi;
-	disabledKey?: KeyOfSharedAssetsPixi;
-	activeKey?: KeyOfSharedAssetsPixi;
-	activeHoverKey?: KeyOfSharedAssetsPixi;
-};
-
 export type LayoutUiProps = {
 	gameName: Snippet;
 	logo: Snippet;
-	amountBalance: Snippet<[Partial<AmountProps>]>;
-	amountWin: Snippet<[Partial<AmountProps>]>;
-	amountBet: Snippet<[Partial<AmountProps>]>;
+	amountBalance: Snippet<[{ stacked?: boolean }]>;
+	amountWin: Snippet<[{ stacked?: boolean }]>;
+	amountBet: Snippet<[{ stacked?: boolean }]>;
 	buttonBuyBonus: Snippet<[Partial<ButtonProps>]>;
 	buttonBet: Snippet<[Partial<ButtonProps>]>;
 	buttonTurbo: Snippet<[Partial<ButtonProps>]>;

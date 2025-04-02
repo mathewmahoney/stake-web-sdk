@@ -3,7 +3,7 @@
 	import { WHITE } from 'constants-shared/colors';
 
 	import UiSprite from './UiSprite.svelte';
-	import { UI_BASE_SIZE } from '../constants';
+	import { UI_BASE_FONT_SIZE } from '../constants';
 
 	type Props = {
 		label: string;
@@ -16,15 +16,13 @@
 
 	const labelStyle = {
 		fontFamily: 'proxima-nova',
-		fontSize: UI_BASE_SIZE,
-		fontWeight: 'bold',
+		fontSize: UI_BASE_FONT_SIZE,
 		fill: WHITE,
 	} as const;
 
 	const valueStyle = {
 		fontFamily: 'proxima-nova',
-		fontSize: UI_BASE_SIZE,
-		fontWeight: 'lighter',
+		fontSize: UI_BASE_FONT_SIZE,
 		fill: WHITE,
 	} as const;
 </script>
@@ -32,27 +30,27 @@
 {#if props.stacked}
 	{#if props.tiled}
 		<UiSprite
-			y={-30}
+			y={-20}
 			anchor={{ x: 0.5, y: 0 }}
 			key="base_ticker"
-			width={UI_BASE_SIZE * 2.5 * (326 / 73)}
-			height={UI_BASE_SIZE * 2.5}
-			tint={0x000000}
+			width={UI_BASE_FONT_SIZE * 3 * (326 / 73)}
+			height={UI_BASE_FONT_SIZE * 3}
+			borderRadius={35}
 		/>
 	{/if}
 	<Text anchor={{ x: 0.5, y: 0 }} text={props.label} style={labelStyle} />
-	<Text anchor={{ x: 0.5, y: 0 }} text={props.value} style={valueStyle} y={UI_BASE_SIZE} />
+	<Text anchor={{ x: 0.5, y: 0 }} text={props.value} style={valueStyle} y={UI_BASE_FONT_SIZE} />
 {:else}
 	{#if props.tiled}
 		<UiSprite
 			x={-90}
 			anchor={{ x: 0, y: 0.5 }}
 			key="base_ticker"
-			width={UI_BASE_SIZE * 2.5 * (326 / 73)}
-			height={UI_BASE_SIZE * 2.5}
-			tint={0x000000}
+			width={UI_BASE_FONT_SIZE * 3 * (326 / 73)}
+			height={UI_BASE_FONT_SIZE * 3}
+			borderRadius={35}
 		/>
 	{/if}
 	<Text anchor={{ x: 0, y: 0.5 }} text={props.label} style={labelStyle} />
-	<Text anchor={{ x: 1, y: 0.5 }} text={props.value} style={valueStyle} x={UI_BASE_SIZE * 10} />
+	<Text anchor={{ x: 1, y: 0.5 }} text={props.value} style={valueStyle} x={UI_BASE_FONT_SIZE * 10} />
 {/if}

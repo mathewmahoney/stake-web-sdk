@@ -11,9 +11,6 @@
 
 	import LabelFreeSpinCounter from './LabelFreeSpinCounter.svelte';
 	import ButtonDrawer from './ButtonDrawer.svelte';
-	import LabelWin from './LabelWin.svelte';
-	import UiSprite from './UiSprite.svelte';
-	import { PORTRAIT_BASE_SIZE } from '../constants';
 	import type { LayoutUiProps } from '../types';
 	import { getContext } from '../context';
 
@@ -77,30 +74,9 @@
 	{@render props.logo()}
 </Container>
 
-<UiSprite
-	x={0}
-	y={context.stateLayoutDerived.canvasSizes().height + 1}
-	anchor={{ x: 0, y: 1 }}
-	tint={BLACK}
-	key="background_ui_gradient_portrait"
-	width={context.stateLayoutDerived.canvasSizes().width}
-	height={context.stateLayoutDerived.canvasSizes().width * (320 / 1656)}
-/>
-
 <MainContainer standard alignVertical="bottom">
 	<!-- drawer container -->
 	<Container y={drawerTween.current}>
-		<UiSprite
-			anchor={0.5}
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5}
-			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
-			key="background_bet_frame_portrait"
-			width={PORTRAIT_BASE_SIZE * (574 / 106)}
-			height={PORTRAIT_BASE_SIZE}
-			tint={0x000000}
-			alpha={0.8}
-		/>
-
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 440}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
@@ -111,7 +87,6 @@
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 + 440}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
-			scale={0.8}
 		>
 			{@render props.buttonBuyBonus({ anchor: 0.5 })}
 		</Container>
@@ -119,7 +94,6 @@
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
-			scale={1.2}
 		>
 			{@render props.buttonBet({ anchor: 0.5 })}
 		</Container>
@@ -127,7 +101,6 @@
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 240}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
-			scale={1.15}
 		>
 			{@render props.buttonAutoBet({ anchor: 0.5 })}
 		</Container>
@@ -135,17 +108,15 @@
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 + 240}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
-			scale={1.15}
 		>
 			{@render props.buttonTurbo({ anchor: 0.5 })}
 		</Container>
 
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5}
-			y={context.stateLayoutDerived.mainLayoutStandard().height - 220}
-			scale={0.7}
+			y={context.stateLayoutDerived.mainLayoutStandard().height - 270}
 		>
-			{@render props.amountBalance({ anchor: 0.5, stacked: false })}
+			{@render props.amountBalance({ stacked: true })}
 		</Container>
 	</Container>
 
@@ -153,87 +124,38 @@
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 670}
-			scale={0.3}
 		>
-			<LabelWin stacked tiled />
+			{@render props.amountWin({ stacked: true })}
 		</Container>
 	</Container>
 </MainContainer>
 
 <MainContainer standard alignVertical="bottom">
 	{#if stateUi.freeSpinCounterShow}
-		<UiSprite
-			anchor={{ x: 0.5, y: 1 }}
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5}
-			y={context.stateLayoutDerived.mainLayoutStandard().height + 140}
-			key="background_bet_amount_frame_portrait"
-			width={PORTRAIT_BASE_SIZE * 1.5 * (158 / 90)}
-			height={PORTRAIT_BASE_SIZE * 1.5}
-			tint={0x000000}
-			alpha={0.8}
-		/>
-
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 130}
-			scale={0.3}
 		>
 			<LabelFreeSpinCounter stacked />
 		</Container>
 	{:else}
-		<UiSprite
-			anchor={{ x: 0.5, y: 1 }}
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5}
-			y={context.stateLayoutDerived.mainLayoutStandard().height + 20}
-			key="background_bet_amount_frame_portrait"
-			width={PORTRAIT_BASE_SIZE * 0.9 * (158 / 90)}
-			height={PORTRAIT_BASE_SIZE * 0.9}
-			tint={0x000000}
-			alpha={0.8}
-		/>
-
-		<UiSprite
-			anchor={{ x: 0.5, y: 1 }}
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 240}
-			y={context.stateLayoutDerived.mainLayoutStandard().height}
-			key="background_increase_frame_portrait"
-			width={PORTRAIT_BASE_SIZE * 0.8 * (76 / 90)}
-			height={PORTRAIT_BASE_SIZE * 0.8}
-			tint={0x000000}
-			alpha={0.8}
-		/>
-
-		<UiSprite
-			anchor={{ x: 0.5, y: 1 }}
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 + 240}
-			y={context.stateLayoutDerived.mainLayoutStandard().height}
-			key="background_increase_frame_portrait"
-			width={PORTRAIT_BASE_SIZE * 0.8 * (76 / 90)}
-			height={PORTRAIT_BASE_SIZE * 0.8}
-			tint={0x000000}
-			alpha={0.8}
-		/>
-
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5}
-			y={context.stateLayoutDerived.mainLayoutStandard().height - 80}
-			scale={0.8}
+			y={context.stateLayoutDerived.mainLayoutStandard().height - 130}
 		>
-			{@render props.amountBet({ anchor: 0.5, stacked: true, centerLabel: true })}
+			{@render props.amountBet({ stacked: true })}
 		</Container>
 
 		<Container
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 240}
-			y={context.stateLayoutDerived.mainLayoutStandard().height - 90}
-			scale={1.1}
+			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 390}
+			y={context.stateLayoutDerived.mainLayoutStandard().height - 85}
 		>
 			{@render props.buttonDecrease({ anchor: 0.5 })}
 		</Container>
 
 		<Container
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 + 240}
-			y={context.stateLayoutDerived.mainLayoutStandard().height - 90}
-			scale={1.1}
+			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 + 390}
+			y={context.stateLayoutDerived.mainLayoutStandard().height - 85}
 		>
 			{@render props.buttonIncrease({ anchor: 0.5 })}
 		</Container>
@@ -246,21 +168,9 @@
 		oncomplete={drawerButtonFadeComplete}
 		y={drawerButtonTween.current}
 	>
-		<UiSprite
-			anchor={{ x: 0.5, y: 1 }}
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 + 440}
-			y={context.stateLayoutDerived.mainLayoutStandard().height}
-			key="background_increase_frame_portrait"
-			width={PORTRAIT_BASE_SIZE * 0.8 * (76 / 90)}
-			height={PORTRAIT_BASE_SIZE * 0.8}
-			tint={0x000000}
-			alpha={0.8}
-		/>
-
 		<Container
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 + 440}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 105}
-			scale={1.1}
 		>
 			<ButtonDrawer disabled={!stateUi.drawerButtonShow} anchor={0.5} />
 		</Container>
@@ -286,27 +196,19 @@
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 440}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
 		>
-			<UiSprite
-				anchor={{ x: 0.5, y: 1 }}
-				y={95}
-				key="popup_sidemenu"
-				height={920}
-				width={920 * (80 / 352)}
-			/>
-
-			<Container y={-20 - 175 * 4} scale={1.15}>
+			<Container y={-190 - 210 * 3}>
 				{@render props.buttonPayTable({ anchor: 0.5 })}
 			</Container>
 
-			<Container y={-20 - 175 * 3} scale={1.15}>
+			<Container y={-190 - 210 * 2}>
 				{@render props.buttonGameRules({ anchor: 0.5 })}
 			</Container>
 
-			<Container y={-20 - 175 * 2} scale={1.15}>
+			<Container y={-190 - 210 * 1}>
 				{@render props.buttonSettings({ anchor: 0.5 })}
 			</Container>
 
-			<Container y={-20 - 175 * 1} scale={1.15}>
+			<Container y={-190}>
 				{@render props.buttonSoundSwitch({ anchor: 0.5 })}
 			</Container>
 

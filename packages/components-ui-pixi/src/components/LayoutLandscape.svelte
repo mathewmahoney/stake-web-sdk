@@ -4,10 +4,9 @@
 	import { MainContainer } from 'components-layout';
 	import { Container, Rectangle, anchorToPivot } from 'pixi-svelte';
 
-	import UiSprite from './UiSprite.svelte';
 	import { LANDSCAPE_BASE_SIZE, LANDSCAPE_BACKGROUND_WIDTH_LIST } from '../constants';
-	import { getContext } from '../context';
 	import type { LayoutUiProps } from '../types';
+	import { getContext } from '../context';
 
 	const props: LayoutUiProps = $props();
 	const context = getContext();
@@ -33,57 +32,31 @@
 			},
 		})}
 	>
-		<UiSprite
-			key="background_menu_frame"
-			height={LANDSCAPE_BASE_SIZE}
-			width={LANDSCAPE_BACKGROUND_WIDTH_LIST[0]}
-			tint={BLACK}
-			alpha={0.8}
-		/>
-
-		<UiSprite
-			x={LANDSCAPE_BACKGROUND_WIDTH_LIST[0]}
-			key="background_balance_frame"
-			height={LANDSCAPE_BASE_SIZE}
-			width={LANDSCAPE_BACKGROUND_WIDTH_LIST[1]}
-			tint={BLACK}
-			alpha={0.35}
-		/>
-
-		<UiSprite
-			x={LANDSCAPE_BACKGROUND_WIDTH_LIST[0] + LANDSCAPE_BACKGROUND_WIDTH_LIST[1]}
-			key="background_bet_amount_frame_landscape"
-			height={LANDSCAPE_BASE_SIZE}
-			width={LANDSCAPE_BACKGROUND_WIDTH_LIST[2]}
-			tint={BLACK}
-			alpha={0.8}
-		/>
-
-		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={85} scale={0.8}>
+		<Container y={LANDSCAPE_BASE_SIZE * 0.5 - 90} x={85 + 20} scale={0.8}>
 			{@render props.buttonMenu({ anchor: 0.5 })}
 		</Container>
 
-		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={267} scale={0.8}>
+		<Container y={LANDSCAPE_BASE_SIZE * 0.5 - 90} x={220 + 20} scale={0.8}>
 			{@render props.buttonBuyBonus({ anchor: 0.5 })}
 		</Container>
 
-		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={420} scale={0.6}>
-			{@render props.amountBalance({ stacked: true, anchor: { x: 0, y: 0.5 } })}
+		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={420} scale={0.8}>
+			{@render props.amountBalance({ stacked: true })}
 		</Container>
 
-		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={900} scale={0.6}>
-			{@render props.amountWin({ stacked: true, anchor: { x: 0, y: 0.5 } })}
+		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={910} scale={0.8}>
+			{@render props.amountWin({ stacked: true })}
 		</Container>
 
-		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={1300} scale={0.6}>
-			{@render props.amountBet({ stacked: true, anchor: { x: 0, y: 0.5 } })}
+		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={1400} scale={0.8}>
+			{@render props.amountBet({ stacked: true })}
 		</Container>
 
-		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={1580} scale={1.2}>
+		<Container y={LANDSCAPE_BASE_SIZE * 0.5 - 90} x={1580} scale={0.8}>
 			{@render props.buttonDecrease({ anchor: 0.5 })}
 		</Container>
 
-		<Container y={LANDSCAPE_BASE_SIZE * 0.5} x={1710} scale={1.2}>
+		<Container y={LANDSCAPE_BASE_SIZE * 0.5 - 90} x={1715} scale={0.8}>
 			{@render props.buttonIncrease({ anchor: 0.5 })}
 		</Container>
 	</Container>
@@ -94,36 +67,20 @@
 		pivot={anchorToPivot({
 			anchor: { x: 1, y: 0.5 },
 			sizes: {
-				height: LANDSCAPE_BASE_SIZE * (341 / 94),
+				height: LANDSCAPE_BASE_SIZE,
 				width: LANDSCAPE_BASE_SIZE,
 			},
 		})}
 	>
-		<UiSprite
-			key="background_bet_frame_landscape"
-			height={LANDSCAPE_BASE_SIZE * (341 / 94)}
-			width={LANDSCAPE_BASE_SIZE}
-			tint={BLACK}
-			alpha={0.8}
-		/>
-
-		<Container
-			x={LANDSCAPE_BASE_SIZE * 0.5}
-			y={LANDSCAPE_BASE_SIZE * (341 / 94) * 0.5 - 205}
-			scale={0.9}
-		>
+		<Container x={LANDSCAPE_BASE_SIZE * 0.5} y={LANDSCAPE_BASE_SIZE * 0.5 - 140} scale={0.8}>
 			{@render props.buttonAutoBet({ anchor: 0.5 })}
 		</Container>
 
-		<Container x={LANDSCAPE_BASE_SIZE * 0.5} y={LANDSCAPE_BASE_SIZE * (341 / 94) * 0.5} scale={1.1}>
+		<Container x={LANDSCAPE_BASE_SIZE * 0.5} y={LANDSCAPE_BASE_SIZE * 0.5} scale={0.8}>
 			{@render props.buttonBet({ anchor: 0.5 })}
 		</Container>
 
-		<Container
-			x={LANDSCAPE_BASE_SIZE * 0.5}
-			y={LANDSCAPE_BASE_SIZE * (341 / 94) * 0.5 + 205}
-			scale={0.9}
-		>
+		<Container x={LANDSCAPE_BASE_SIZE * 0.5} y={LANDSCAPE_BASE_SIZE * 0.5 + 140} scale={0.8}>
 			{@render props.buttonTurbo({ anchor: 0.5 })}
 		</Container>
 	</Container>
@@ -145,30 +102,22 @@
 
 	<MainContainer standard alignVertical="bottom">
 		<Container
-			x={145}
-			y={context.stateLayoutDerived.mainLayoutStandard().height - LANDSCAPE_BASE_SIZE - 40}
+			x={165}
+			y={context.stateLayoutDerived.mainLayoutStandard().height - LANDSCAPE_BASE_SIZE - 130}
 		>
-			<UiSprite
-				anchor={{ x: 0.5, y: 1 }}
-				y={150}
-				key="popup_sidemenu"
-				height={680}
-				width={680 * (80 / 352)}
-			/>
-
-			<Container scale={0.8} y={LANDSCAPE_BASE_SIZE * 0.5 - 10 - 130 * 4}>
+			<Container scale={0.8} y={LANDSCAPE_BASE_SIZE * 0.5 - 150 - 170 * 3}>
 				{@render props.buttonPayTable({ anchor: 0.5 })}
 			</Container>
 
-			<Container scale={0.8} y={LANDSCAPE_BASE_SIZE * 0.5 - 10 - 130 * 3}>
+			<Container scale={0.8} y={LANDSCAPE_BASE_SIZE * 0.5 - 150 - 170 * 2}>
 				{@render props.buttonGameRules({ anchor: 0.5 })}
 			</Container>
 
-			<Container scale={0.8} y={LANDSCAPE_BASE_SIZE * 0.5 - 10 - 130 * 2}>
+			<Container scale={0.8} y={LANDSCAPE_BASE_SIZE * 0.5 - 150 - 170 * 1}>
 				{@render props.buttonSettings({ anchor: 0.5 })}
 			</Container>
 
-			<Container scale={0.8} y={LANDSCAPE_BASE_SIZE * 0.5 - 10 - 130 * 1}>
+			<Container scale={0.8} y={LANDSCAPE_BASE_SIZE * 0.5 - 150}>
 				{@render props.buttonSoundSwitch({ anchor: 0.5 })}
 			</Container>
 

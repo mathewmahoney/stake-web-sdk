@@ -1,14 +1,16 @@
 <script lang="ts">
+	import { Text } from 'pixi-svelte';
 	import { Button, type ButtonProps } from 'components-pixi';
 	import { stateModal, stateBet, stateBetDerived } from 'state-shared';
 
-	import ButtonBuyBonusSpine from './ButtonBuyBonusSpine.svelte';
-	import { UI_BASE_SIZE } from '../constants';
+	import UiSprite from './UiSprite.svelte';
+	import { UI_BASE_FONT_SIZE, UI_BASE_SIZE } from '../constants';
 	import { getContext } from '../context';
+	import { i18nDerived } from '../i18n/i18nDerived';
 
 	const props: Partial<Omit<ButtonProps, 'children'>> = $props();
 	const { stateXstateDerived, eventEmitter } = getContext();
-	const sizes = { width: UI_BASE_SIZE * 1.5, height: UI_BASE_SIZE * 1.5 };
+	const sizes = { width: UI_BASE_SIZE, height: UI_BASE_SIZE };
 	const disabled = $derived(!stateXstateDerived.isIdle());
 	const active = $derived(stateBetDerived.activeBetMode()?.type === 'activate');
 
@@ -46,6 +48,39 @@
 			hovered,
 			pressed,
 		})}
-		<ButtonBuyBonusSpine {state} {...center} width={sizes.width * 3.5} />
+
+		<UiSprite
+			key="buyBonus"
+			{...center}
+			anchor={0.5}
+			width={sizes.width}
+			height={sizes.height}
+			{...disabled
+				? {
+						backgroundColor: 0xaaaaaa,
+					}
+				: {}}
+			{...active
+				? {
+						borderWidth: 10,
+						borderColor: 0xffffff,
+					}
+				: {}}
+		/>
+
+		<Text
+			{...center}
+			anchor={0.5}
+			text={state === 'active' ? i18nDerived.disable() : i18nDerived.buyBonus()}
+			style={{
+				align: 'center',
+				wordWrap: true,
+				wordWrapWidth: 200,
+				fontFamily: 'proxima-nova',
+				fontWeight: '600',
+				fontSize: UI_BASE_FONT_SIZE * 0.9,
+				fill: 0xffffff,
+			}}
+		/>
 	{/snippet}
 </Button>

@@ -7,9 +7,9 @@
 	import LayoutPortrait from './LayoutPortrait.svelte';
 	import LayoutLandscape from './LayoutLandscape.svelte';
 	import LayoutTablet from './LayoutTablet.svelte';
-	import AmountBalance from './AmountBalance.svelte';
-	import AmountWin from './AmountWin.svelte';
-	import AmountBet from './AmountBet.svelte';
+	import LabelBalance from './LabelBalance.svelte';
+	import LabelWin from './LabelWin.svelte';
+	import LabelBet from './LabelBet.svelte';
 	import ButtonPayTable from './ButtonPayTable.svelte';
 	import ButtonGameRules from './ButtonGameRules.svelte';
 	import ButtonSettings from './ButtonSettings.svelte';
@@ -55,16 +55,16 @@
 			{@render props.logo()}
 		{/snippet}
 
-		{#snippet amountBalance(amountProps)}
-			<AmountBalance {...amountProps} />
+		{#snippet amountBalance(labelProps)}
+			<LabelBalance {...labelProps} />
 		{/snippet}
 
-		{#snippet amountWin(amountProps)}
-			<AmountWin {...amountProps} />
+		{#snippet amountWin(labelProps)}
+			<LabelWin {...labelProps} />
 		{/snippet}
 
-		{#snippet amountBet(amountProps)}
-			<AmountBet {...amountProps} />
+		{#snippet amountBet(labelProps)}
+			<LabelBet {...labelProps} />
 		{/snippet}
 
 		{#snippet buttonBuyBonus(buttonProps)}

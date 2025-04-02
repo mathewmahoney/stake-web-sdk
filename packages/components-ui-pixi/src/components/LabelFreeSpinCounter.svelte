@@ -5,16 +5,12 @@
 	import { i18nDerived } from '../i18n/i18nDerived';
 
 	type Props = {
-		tiled?: boolean;
 		stacked?: boolean;
 	};
 
 	const props: Props = $props();
+	const label = $derived(i18nDerived.freeSpins());
+	const value = $derived(`${stateUi.freeSpinCounterCurrent} / ${stateUi.freeSpinCounterTotal}`);
 </script>
 
-<UiLabel
-	tiled={props.tiled}
-	stacked={props.stacked}
-	label={i18nDerived.freeSpins()}
-	value="{stateUi.freeSpinCounterCurrent} / {stateUi.freeSpinCounterTotal}"
-/>
+<UiLabel tiled {label} {value} stacked={props.stacked} />
