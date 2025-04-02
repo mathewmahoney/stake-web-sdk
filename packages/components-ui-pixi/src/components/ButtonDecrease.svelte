@@ -1,9 +1,8 @@
 <script lang="ts">
 	import type { ButtonProps } from 'components-pixi';
-	import { stateModal, stateBet, stateBetDerived, stateConfig } from 'state-shared';
+	import { stateBet, stateBetDerived, stateConfig } from 'state-shared';
 
 	import UiButton from './UiButton.svelte';
-	import UiDoublePress from './UiDoublePress.svelte';
 	import { getContext } from '../context';
 	import { UI_BASE_SIZE } from '../constants';
 
@@ -15,7 +14,7 @@
 		!context.stateXstateDerived.isIdle() || stateBet.betAmount === smallest,
 	);
 
-	const onpressSingle = () => {
+	const onpress = () => {
 		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
 
 		const nextSmaller = [...stateConfig.betAmountOptions]
@@ -24,15 +23,6 @@
 
 		stateBetDerived.setBetAmount(nextSmaller || smallest);
 	};
-
-	const onpressDouble = () => {
-		context.eventEmitter.broadcast({ type: 'soundPressGeneral' });
-		stateModal.modal = { name: 'betAmountMenu' };
-	};
 </script>
 
-<UiDoublePress {onpressSingle} {onpressDouble}>
-	{#snippet children({ onpress })}
-		<UiButton {...props} {sizes} {onpress} {disabled} icon="decrease" />
-	{/snippet}
-</UiDoublePress>
+<UiButton {...props} {sizes} {onpress} {disabled} icon="decrease" />

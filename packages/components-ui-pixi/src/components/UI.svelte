@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+
 	import { getLayoutContext } from 'utils-layout';
 	import { EnableSpaceHold } from 'components-shared';
 
@@ -22,7 +24,6 @@
 	import ButtonMenu from './ButtonMenu.svelte';
 	import ButtonMenuClose from './ButtonMenuClose.svelte';
 	import ButtonSoundSwitch from './ButtonSoundSwitch.svelte';
-	import type { Snippet } from 'svelte';
 
 	type Props = {
 		gameName: Snippet;
