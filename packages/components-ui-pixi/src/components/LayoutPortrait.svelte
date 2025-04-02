@@ -99,14 +99,14 @@
 		</Container>
 
 		<Container
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 240}
+			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 180}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
 		>
 			{@render props.buttonAutoBet({ anchor: 0.5 })}
 		</Container>
 
 		<Container
-			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 + 240}
+			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 + 180}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
 		>
 			{@render props.buttonTurbo({ anchor: 0.5 })}

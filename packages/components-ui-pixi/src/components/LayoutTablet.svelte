@@ -4,9 +4,10 @@
 	import { MainContainer } from 'components-layout';
 	import { Container, Rectangle, anchorToPivot } from 'pixi-svelte';
 
-	import { DESKTOP_BASE_SIZE, DESKTOP_BACKGROUND_WIDTH_LIST } from '../constants';
 	import { getContext } from '../context';
 	import type { LayoutUiProps } from '../types';
+	import LabelFreeSpinCounter from './LabelFreeSpinCounter.svelte';
+	import { DESKTOP_BASE_SIZE, DESKTOP_BACKGROUND_WIDTH_LIST } from '../constants';
 
 	const props: LayoutUiProps = $props();
 	const context = getContext();
@@ -71,6 +72,12 @@
 		<Container y={DESKTOP_BASE_SIZE * 0.5} x={1560 + 180}>
 			{@render props.buttonIncrease({ anchor: 0.5 })}
 		</Container>
+
+		{#if stateUi.freeSpinCounterShow}
+			<Container y={DESKTOP_BASE_SIZE * 0.5 - 320} x={668}>
+				<LabelFreeSpinCounter />
+			</Container>
+		{/if}
 	</Container>
 </MainContainer>
 
