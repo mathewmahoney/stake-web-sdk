@@ -1,3 +1,3 @@
 export default {
-	ADVANCED: 'ADVANCED',
+	'MASTER VOLUME': 'MASTER VOLUME',
 };

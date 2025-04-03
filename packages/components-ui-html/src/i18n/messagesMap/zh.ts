@@ -1,3 +1,3 @@
 export default {
-	ADVANCED: '高级',
+	'MASTER VOLUME': '主音量',
 };
