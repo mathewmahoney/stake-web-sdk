@@ -12,7 +12,7 @@ import Popup from './src/components/Popup.svelte';
 import Button from './src/components/Button.svelte';
 import OptionsGrid from './src/components/OptionsGrid.svelte';
 import OptionsToggle from './src/components/OptionsToggle.svelte';
-import OptionsDropdown from './src/components/OptionsDropdown.svelte';
+import DropdownToggle from './src/components/DropdownToggle.svelte';
 import AmountFadeProvider from './src/components/AmountFadeProvider.svelte';
 
 export * from './src/context';
@@ -33,6 +33,6 @@ export {
 	Button,
 	OptionsGrid,
 	OptionsToggle,
-	OptionsDropdown,
+	DropdownToggle,
 	AmountFadeProvider,
 };

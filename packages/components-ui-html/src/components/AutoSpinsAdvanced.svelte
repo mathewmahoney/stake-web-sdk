@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { stateBetDerived } from 'state-shared';
-	import { OptionsDropdown } from 'components-shared';
+	import { DropdownToggle } from 'components-shared';
 	import { getEventEmitterContext } from 'utils-event-emitter';
 
 	import AutoSpinsLossLimit from './AutoSpinsLossLimit.svelte';
@@ -24,7 +24,7 @@
 	});
 </script>
 
-<OptionsDropdown
+<DropdownToggle
 	{open}
 	disabled={stateBetDerived.activeBetMode().type === 'activate'}
 	onchange={(value) => {
@@ -33,7 +33,7 @@
 	}}
 >
 	<span>{i18nDerived.advanced()}</span>
-</OptionsDropdown>
+</DropdownToggle>
 
 {#if open}
 	<div
