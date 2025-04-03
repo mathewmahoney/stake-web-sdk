@@ -3,19 +3,18 @@
 
 	import { EnablePixiExtension } from 'components-pixi';
 	import { EnableHotkey } from 'components-shared';
-	import { Modals } from 'components-modal';
 	import { MainContainer } from 'components-layout';
-	import { UI } from 'components-ui';
-	import { App } from 'pixi-svelte';
+	import { App, Text, REM } from 'pixi-svelte';
+	import { stateModal } from 'state-shared';
+
+	import { UI, UiGameName } from 'components-ui-pixi';
+	import { GameVersion, Modals } from 'components-ui-html';
 
 	import { getContext } from '../game/context';
-
 	import EnableSound from './EnableSound.svelte';
 	import EnableGameActor from './EnableGameActor.svelte';
-
 	import ResumeBet from './ResumeBet.svelte';
 	import Sound from './Sound.svelte';
-
 	import Background from './Background.svelte';
 	import LoadingScreen from './LoadingScreen.svelte';
 	import BoardFrame from './BoardFrame.svelte';
@@ -31,6 +30,12 @@
 	const context = getContext();
 
 	onMount(() => (context.stateLayout.showLoadingScreen = true));
+
+	context.eventEmitter.subscribeOnMount({
+		buyBonusConfirm: () => {
+			stateModal.modal = { name: 'buyBonusConfirm' };
+		},
+	});
 </script>
 
 <App>
@@ -61,15 +66,38 @@
 			<Anticipations />
 		</MainContainer>
 
-		<UI />
+		<UI>
+			{#snippet gameName()}
+				<UiGameName name="LINES GAME" />
+			{/snippet}
+			{#snippet logo()}
+				<Text
+					anchor={{ x: 1, y: 0 }}
+					text="ADD YOUR LOGO"
+					style={{
+						fontFamily: 'proxima-nova',
+						fontSize: REM * 1.5,
+						fontWeight: '600',
+						lineHeight: REM * 2,
+						fill: 0xffffff,
+					}}
+				/>
+			{/snippet}
+		</UI>
 		<Win />
 		<FreeSpinIntro />
-		<FreeSpinCounter />
+		{#if ['desktop', 'landscape'].includes(context.stateLayoutDerived.layoutType())}
+			<FreeSpinCounter />
+		{/if}
 		<FreeSpinOutro />
 		<Transition />
 
-		<!-- <I18nTest /> -->
+		<I18nTest />
 	{/if}
 </App>
 
-<Modals />
+<Modals>
+	{#snippet version()}
+		<GameVersion version="0.0.0" />
+	{/snippet}
+</Modals>

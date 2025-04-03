@@ -9,7 +9,8 @@
 		alignHorizontal?: 'center' | 'left' | 'right';
 	};
 
-	const { debug, alignVertical, alignHorizontal, children, standard, ...containerProps }: Props = $props();
+	const { debug, alignVertical, alignHorizontal, children, standard, ...containerProps }: Props =
+		$props();
 	const context = getLayoutContext();
 
 	const mainLayout = $derived.by(

@@ -46,4 +46,5 @@
 	});
 </script>
 
-{@render props.children({ alpha: alpha.current })}
+<!-- {@render props.children({ alpha: alpha.current })} TODO -->
+{@render props.children({ alpha: 1 })}

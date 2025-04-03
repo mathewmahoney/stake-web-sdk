@@ -58,10 +58,8 @@ export const stateUi = $state({
 	autoSpinsLossLimitText: INFINITY_MARK as LossLimitText,
 	autoSpinsSingleWinLimitText: INFINITY_MARK as SingleWinLimitText,
 	freeSpinCounterShow: false,
-	freeSpinCounter: {
-		current: 0,
-		total: 0,
-	},
+	freeSpinCounterCurrent: 0,
+	freeSpinCounterTotal: 0,
 	menuOpen: false,
 	drawerFold: false,
 	drawerButtonShow: false,

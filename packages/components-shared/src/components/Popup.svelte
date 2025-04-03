@@ -22,12 +22,6 @@
 		contentLayer: 100,
 	};
 
-	const BASE_URL =
-		'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/shared-asset-package/ui-slots/2.0';
-	const ASSETS = {
-		buy_base_1: `${BASE_URL}/buy_base_1.webp` as const,
-		icon_exit: `${BASE_URL}/icon_exit.webp` as const,
-	};
 	const closeModal = () => (props.persistent ? undefined : props.onclose());
 
 	let disabled = $state(true);
@@ -45,19 +39,12 @@
 
 <OnHotkey hotkey="Escape" onpress={closeModal} />
 
-<div
-	class="pop-up-wrap"
-	class:disabled
-	style={`
-		z-index: ${props.zIndex};
-		--popup-base-url: url("${ASSETS.buy_base_1}");
-	`}
->
+<div class="pop-up-wrap" class:disabled style={`z-index: ${props.zIndex};`}>
 	<div class="blur-layer"></div>
 	<div
 		class="top-layer"
 		style="--zIndex: {zIndexInternal.topLayer}"
-		in:blur={{ duration: 300, opacity: 0, y: 30 }}
+		in:blur={{ duration: 300, opacity: 0 }}
 	>
 		<div
 			tabindex={0}
@@ -70,11 +57,7 @@
 
 		{#if !props.persistent}
 			<div class="close-button-wrap" style="--zIndex: {zIndexInternal.closeButton}">
-				<button class="close-button" data-test="close-button" onclick={closeModal}>
-					<div style="width: 1.5rem; height: 1.5rem;">
-						<img src={ASSETS.icon_exit} style="width: 100%; object-fit: cover;" alt="icon_exit" />
-					</div>
-				</button>
+				<button class="close-button" data-test="close-button" onclick={closeModal}>×</button>
 			</div>
 		{/if}
 		{@render props.children()}
@@ -135,17 +118,17 @@
 		top: 0;
 		right: 0;
 		z-index: var(--zIndex);
-		background-image: var(--popup-base-url);
-		border-radius: 0 0 0 10px;
 	}
 
 	.close-button {
 		cursor: pointer;
 		color: white;
+		font-size: 3rem;
 		font-weight: 900;
 		background-color: transparent;
 		border-color: transparent;
-		line-height: 1.1rem; /* to remove the button style influence */
-		padding: 0.7rem 1rem 0.7rem 1.2rem;
+		line-height: 0px; /* to remove the button style influence */
+		width: 3rem;
+		height: 3rem;
 	}
 </style>
