@@ -25,8 +25,6 @@
 
 <style lang="scss">
 	.content {
-		padding: 0 var(--padding-size) 0 var(--padding-size);
-
 		position: relative;
 		text-align: center;
 		display: flex;

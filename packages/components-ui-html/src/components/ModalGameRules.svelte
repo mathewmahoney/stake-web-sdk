@@ -7,7 +7,6 @@
 
 	import BaseContent from './BaseContent.svelte';
 	import BaseScrollable from './BaseScrollable.svelte';
-	import MetaRules from './MetaRules.svelte';
 
 	type Props = {
 		children: Snippet;
@@ -18,9 +17,9 @@
 
 {#if stateModal.modal?.name === 'gameRules'}
 	<Popup zIndex={zIndex.modal} onclose={() => (stateModal.modal = null)}>
-		<BaseContent maxWidth="100%" tiled>
+		<BaseContent maxWidth="100%">
 			<BaseScrollable type="column">
-				<MetaRules type="gameRules" />
+				<span>ADD YOUR GAME RULES</span>
 				{@render props.children()}
 			</BaseScrollable>
 		</BaseContent>

@@ -2,6 +2,8 @@
 	import { stateUi, SINGLE_WIN_LIMIT_TEXT_OPTIONS } from 'state-shared';
 	import { OptionsGrid } from 'components-shared';
 
+	import BaseIcon from './BaseIcon.svelte';
+	import BaseButtonContent from './BaseButtonContent.svelte';
 	import { i18nDerived } from '../i18n/i18nDerived';
 </script>
 
@@ -14,9 +16,16 @@
 	onchange={(value) => (stateUi.autoSpinsSingleWinLimitText = value)}
 >
 	{#snippet option({ option })}
-		<span class:infinity={option === '∞'} class="option-wrap" data-test="single-win-limit-options">
-			{option}
-		</span>
+		<BaseIcon
+			width="100%"
+			height="2rem"
+			border={option === stateUi.autoSpinsSingleWinLimitText ? '2px white solid' : '2px black solid'}
+		/>
+		<BaseButtonContent>
+			<span style="font-size: 1rem;" class:infinity={option === '∞'} class="option-wrap" data-test="single-win-limit-options">
+				{option}
+			</span>
+		</BaseButtonContent>
 	{/snippet}
 </OptionsGrid>
 

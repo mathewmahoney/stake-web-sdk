@@ -73,7 +73,7 @@
 		})}
 	>
 		<Container x={LANDSCAPE_BASE_SIZE * 0.5} y={LANDSCAPE_BASE_SIZE * 0.5 - 140} scale={0.8}>
-			{@render props.buttonAutoBet({ anchor: 0.5 })}
+			{@render props.buttonAutoSpin({ anchor: 0.5 })}
 		</Container>
 
 		<Container x={LANDSCAPE_BASE_SIZE * 0.5} y={LANDSCAPE_BASE_SIZE * 0.5} scale={0.8}>

@@ -54,7 +54,7 @@
 		</Container>
 
 		<Container y={DESKTOP_BASE_SIZE * 0.5} x={-10 + 180 * 4}>
-			{@render props.buttonAutoBet({ anchor: 0.5 })}
+			{@render props.buttonAutoSpin({ anchor: 0.5 })}
 		</Container>
 
 		<Container y={DESKTOP_BASE_SIZE * 0.5} x={-10 + 180 * 5}>

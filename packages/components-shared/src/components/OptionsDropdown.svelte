@@ -26,18 +26,11 @@
 
 <style lang="scss">
 	.toggle {
-		background-color: black;
-		border-radius: 34px;
-		border-color: transparent;
 		position: relative;
 		display: inline-block;
 		color: white;
 		font-weight: normal;
 		cursor: pointer;
-		border-width: 1.5px;
-		border-style: solid;
-		border-color: white;
-		padding: 0 0.5rem;
 
 		&.disabled {
 			opacity: 0.5;
@@ -52,7 +45,6 @@
 	}
 
 	.content {
-		padding: 0 0.5rem;
 		font-weight: bold;
 		white-space: nowrap;
 	}
@@ -60,7 +52,7 @@
 	.content:after {
 		content: '▼';
 		vertical-align: middle;
-		color: var(--lightgrey);
+		color: white;
 		margin-left: 0.5rem;
 	}
 

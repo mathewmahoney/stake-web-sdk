@@ -44,6 +44,5 @@
 
 	.value {
 		font-weight: bold;
-		color: var(--primary);
 	}
 </style>

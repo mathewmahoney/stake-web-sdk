@@ -16,7 +16,7 @@
 
 {#if stateModal.modal?.name === 'autoSpin'}
 	<Popup zIndex={zIndex.modal} onclose={() => (stateModal.modal = null)}>
-		<BaseContent maxWidth="100%" tiled>
+		<BaseContent maxWidth="100%">
 			<BaseTitle>
 				{i18nDerived.autoSpins()}
 			</BaseTitle>

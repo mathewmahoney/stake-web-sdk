@@ -17,7 +17,7 @@
 
 {#if stateModal.modal?.name === 'autoSpinMessage'}
 	<Popup zIndex={zIndex.modal} onclose={() => (stateModal.modal = null)}>
-		<BaseContent maxWidth="100%" tiled>
+		<BaseContent maxWidth="100%">
 			<BaseTitle>
 				{i18nDerived.notification()}
 			</BaseTitle>
@@ -33,17 +33,15 @@
 
 <style lang="scss">
 	.text {
-		font-weight: bold;
 		text-align: center;
 	}
 
 	.info-text {
 		text-align: center;
-		font-weight: bold;
 		max-height: 100px;
 		max-width: 480px;
 		border-radius: 8px;
-		border: 1px solid var(--game-theme-color);
+		border: 1px solid white;
 		white-space: normal;
 		padding: 1rem;
 	}

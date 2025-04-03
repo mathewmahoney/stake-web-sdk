@@ -9,7 +9,6 @@
 
 	type Props = {
 		maxListLength: number;
-		rtpBadge: Snippet<[{ size: string }]>;
 		betAmount: Snippet;
 		bonusCardsActivate: Snippet;
 		bonusCardsBuy: Snippet;
@@ -49,9 +48,6 @@
 
 		{#if !scaled}
 			<div>
-				<div class="badge-icon-wrap">
-					{@render props.rtpBadge({ size: '4rem' })}
-				</div>
 				{@render props.betAmount()}
 			</div>
 		{/if}
@@ -59,9 +55,6 @@
 
 	{#if scaled}
 		<div class="badge-amount-wrap-scaled">
-			<div class="badge-icon-wrap">
-				{@render props.rtpBadge({ size: '4rem' })}
-			</div>
 			{@render props.betAmount()}
 		</div>
 	{/if}
@@ -98,10 +91,5 @@
 		bottom: 0;
 		left: 50%;
 		transform: translate(-50%, -20%);
-	}
-
-	.badge-icon-wrap {
-		position: absolute;
-		transform: translate(-105%, 50%);
 	}
 </style>

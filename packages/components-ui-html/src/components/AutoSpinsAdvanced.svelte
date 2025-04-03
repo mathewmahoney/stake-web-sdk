@@ -36,17 +36,11 @@
 </OptionsDropdown>
 
 {#if open}
-	<div class="panel-wrap" transition:slide={{ duration: SLIDE_DURATION }}>
+	<div
+		style="border: 2px solid white; border-radius: 10px;"
+		transition:slide={{ duration: SLIDE_DURATION }}
+	>
 		<AutoSpinsLossLimit />
 		<AutoSpinsSingleWinLimit />
 	</div>
 {/if}
-
-<style lang="scss">
-	.panel-wrap {
-		background-color: black;
-		padding: 0.8rem 0.8rem 1.2rem 0.8rem;
-		border-radius: 1rem;
-		border: 2px solid white;
-	}
-</style>

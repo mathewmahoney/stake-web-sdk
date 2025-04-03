@@ -5,7 +5,6 @@
 	import BaseScrollable from './BaseScrollable.svelte';
 
 	type Props = {
-		rtpBadge: Snippet<[{ size: string }]>;
 		betAmount: Snippet;
 		bonusCardsActivate: Snippet;
 		bonusCardsBuy: Snippet;
@@ -15,10 +14,6 @@
 </script>
 
 <BaseContent maxWidth="100%">
-	<div class="badge-icon-wrap">
-		{@render props.rtpBadge({ size: '7rem' })}
-	</div>
-
 	{@render props.betAmount()}
 
 	<BaseScrollable type="column">
@@ -30,12 +25,6 @@
 </BaseContent>
 
 <style lang="scss">
-	.badge-icon-wrap {
-		position: fixed;
-		top: 1rem;
-		left: 1rem;
-	}
-
 	.bonuses-wrap {
 		display: flex;
 		flex-direction: row;

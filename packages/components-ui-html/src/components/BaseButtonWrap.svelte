@@ -24,12 +24,10 @@
 
 	.full-width {
 		width: 100%;
-		padding: 0 var(--padding-size) 0 var(--padding-size);
 	}
 
 	.max-width {
 		width: 100%;
-		padding: 0;
 		max-width: 250px;
 	}
 </style>

@@ -9,7 +9,6 @@ export const i18nDerived = {
 	masterVolume: () => i18n._(i18n.t('MASTER VOLUME')),
 	musicVolume: () => i18n._(i18n.t('MUSIC VOLUME')),
 	soundEffectVolume: () => i18n._(i18n.t('SOUND EFFECT VOLUME')),
-	volatility: () => i18n._(i18n.t('VOLATILITY')),
 	autoSpins: () => i18n._(i18n.t('AUTO SPINS')),
 	numberOfRounds: () => i18n._(i18n.t('NUMBER OF ROUNDS')),
 	advanced: () => i18n._(i18n.t('ADVANCED')),

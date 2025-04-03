@@ -8,21 +8,18 @@
 	const props: Props = $props();
 </script>
 
-<div class="description">
+<div class="base-button-content">
 	{@render props.children()}
 </div>
 
 <style lang="scss">
-	.description {
-		text-align: center;
-		min-height: 4rem;
-		white-space: pre-line;
-		font-size: 0.75rem;
-		display: inline-flex;
+	.base-button-content {
+		position: absolute;
+		color: white;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
 		align-items: center;
-	}
-
-	.description:empty {
-		display: none;
 	}
 </style>

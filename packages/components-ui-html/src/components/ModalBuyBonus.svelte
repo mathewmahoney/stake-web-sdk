@@ -4,9 +4,8 @@
 	import { getLayoutContext } from 'utils-layout';
 	import { stateModal, stateMetaDerived } from 'state-shared';
 
-	import BaseIcon from './BaseIcon.svelte';
 	import BonusCards from './BonusCards.svelte';
-	import BonusBetAmountToggle from './BonusBetAmountToggle.svelte';
+	import BetMenuAmountToggle from './BetMenuAmountToggle.svelte';
 	import BonusContentWrapLarge from './BonusContentWrapLarge.svelte';
 	import BonusContentWrapPortrait from './BonusContentWrapPortrait.svelte';
 	import BonusContentWrapLandscape from './BonusContentWrapLandscape.svelte';
@@ -34,14 +33,8 @@
 {#if stateModal.modal?.name === 'buyBonus'}
 	<Popup zIndex={zIndex.modal} onclose={() => (stateModal.modal = null)}>
 		<BonusContentWrap maxListLength={Math.max(activateList.length, buyList.length)}>
-			{#snippet rtpBadge({ size })}
-				<div class="badge-icon">
-					<BaseIcon icon="rtp_badge" {size} />
-				</div>
-			{/snippet}
-
 			{#snippet betAmount()}
-				<BonusBetAmountToggle />
+				<BetMenuAmountToggle />
 			{/snippet}
 
 			{#snippet bonusCardsActivate()}
@@ -57,7 +50,7 @@
 
 <style lang="scss">
 	.badge-icon {
-		border: 2px solid var(--game-theme-color);
+		border: 2px solid white;
 		border-radius: 8rem;
 	}
 </style>

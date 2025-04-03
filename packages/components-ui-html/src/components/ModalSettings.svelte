@@ -12,7 +12,7 @@
 
 {#if stateModal.modal?.name === 'settings'}
 	<Popup zIndex={zIndex.modal} onclose={() => (stateModal.modal = null)}>
-		<BaseContent maxWidth="100%" tiled>
+		<BaseContent maxWidth="100%">
 			<BaseTitle>{i18nDerived.settings()}</BaseTitle>
 			<BaseScrollable type="column">
 				<wrap class="wrap">

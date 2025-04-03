@@ -4,11 +4,12 @@
 	import { stateBet, stateModal, stateUi, INFINITY_MARK } from 'state-shared';
 	import { getEventEmitterContext } from 'utils-event-emitter';
 
+	import BaseIcon from './BaseIcon.svelte';
 	import BaseTitle from './BaseTitle.svelte';
 	import BaseContent from './BaseContent.svelte';
 	import BaseScrollable from './BaseScrollable.svelte';
 	import BaseButtonWrap from './BaseButtonWrap.svelte';
-	import BaseVolatilityWrap from './BaseVolatilityWrap.svelte';
+	import BaseButtonContent from './BaseButtonContent.svelte';
 	import { stateBonus, stateBonusDerived } from '../stateBonus.svelte';
 	import { i18nDerived } from '../i18n/i18nDerived';
 	import type { EmitterEventModal } from '../types';
@@ -36,18 +37,10 @@
 				{stateBonusDerived.selectedBetModeData().text.title}
 			</BaseTitle>
 			<BaseScrollable type="column">
-				<!-- svelte-ignore a11y-img-redundant-alt -->
-				<img
-					style="width: 100%;"
-					src={stateBonusDerived.selectedBetModeData().assets.dialogImage}
-					alt="dialog image"
-					draggable="false"
-				/>
 				{stateBonusDerived.selectedBetModeData().text.dialog}
 			</BaseScrollable>
 			<BaseButtonWrap type="max-width">
 				<Button
-					spacing="primary"
 					data-test="confirm-button"
 					onclick={() => {
 						confirm();
@@ -55,17 +48,12 @@
 						stateModal.modal = null;
 					}}
 				>
-					{i18nDerived.confirm()}
+					<BaseIcon width="100%" height="3rem" />
+					<BaseButtonContent>
+						<span style="font-size: 1rem;">{i18nDerived.confirm()}</span>
+					</BaseButtonContent>
 				</Button>
 			</BaseButtonWrap>
 		</BaseContent>
-
-		<BaseVolatilityWrap>
-			<span>{i18nDerived.volatility()}</span>
-			<img
-				src={stateBonusDerived.selectedBetModeData().assets.dialogVolatility}
-				alt="dialog volatility"
-			/>
-		</BaseVolatilityWrap>
 	</Popup>
 {/if}

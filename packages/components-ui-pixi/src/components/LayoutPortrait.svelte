@@ -102,7 +102,7 @@
 			x={context.stateLayoutDerived.mainLayoutStandard().width * 0.5 - 180}
 			y={context.stateLayoutDerived.mainLayoutStandard().height - 400}
 		>
-			{@render props.buttonAutoBet({ anchor: 0.5 })}
+			{@render props.buttonAutoSpin({ anchor: 0.5 })}
 		</Container>
 
 		<Container

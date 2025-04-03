@@ -10,7 +10,7 @@
 	<Popup zIndex={zIndex.modal} persistent onclose={() => (stateModal.modal = null)}>
 		<BaseContent maxWidth="100%">
 			{@const error = stateModal.modal?.error}
-			<span class="text">Sorry, something went wrong.</span>
+			<span>Sorry, something went wrong.</span>
 			<div class="scrollY error-text">
 				{#if error}
 					{#if error?.error && error?.message}
@@ -28,12 +28,7 @@
 {/if}
 
 <style lang="scss">
-	.text {
-		font-weight: bold;
-	}
-
 	.error-text {
-		font-weight: bold;
 		max-height: 100px;
 		max-width: 480px;
 		border-radius: 8px;

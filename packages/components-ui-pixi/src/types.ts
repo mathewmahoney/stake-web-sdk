@@ -45,7 +45,7 @@ export type LayoutUiProps = {
 	buttonBuyBonus: Snippet<[Partial<ButtonProps>]>;
 	buttonBet: Snippet<[Partial<ButtonProps>]>;
 	buttonTurbo: Snippet<[Partial<ButtonProps>]>;
-	buttonAutoBet: Snippet<[Partial<ButtonProps>]>;
+	buttonAutoSpin: Snippet<[Partial<ButtonProps>]>;
 	buttonIncrease: Snippet<[Partial<ButtonProps>]>;
 	buttonDecrease: Snippet<[Partial<ButtonProps>]>;
 	buttonMenu: Snippet<[Partial<ButtonProps>]>;

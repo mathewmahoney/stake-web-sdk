@@ -19,10 +19,6 @@
 		<div class="grid" class:miniSize={props.miniSize}>
 			{#each props.options as option, index (option)}
 				<Button
-					variant={props.value === option ? 'primary' : 'light'}
-					spacing="input"
-					shape="rounded"
-					border="white"
 					onclick={() => {
 						props.onchange(option);
 					}}

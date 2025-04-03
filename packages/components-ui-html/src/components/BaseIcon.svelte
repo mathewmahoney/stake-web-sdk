@@ -1,4 +1,27 @@
 <script lang="ts">
+	type Props = {
+		width: string;
+		height: string;
+		background?: string;
+		border?: string;
+	};
+
+	const { width, height, background = 'black', border = 'none' }: Props = $props();
+</script>
+
+<div
+	class="rectangle"
+	style="
+	--width-value: {width};
+	--height-value: {height};
+	--background-value: {background};
+	--border-value: {border};
+"
+></div>
+
+<!-- ADD YOUR DESIGN -->
+
+<!-- <script lang="ts">
 	import { sharedAssetsHtml as assets } from 'constants-shared/assets';
 
 	type Icon = keyof typeof assets;
@@ -28,7 +51,6 @@
 	});
 </script>
 
-<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	style="width: {size}; height: {size};"
 	on:mouseenter={() => (hoveredState = true)}
@@ -39,4 +61,14 @@
 	on:pointerup={() => (pressedState = false)}
 >
 	<img {src} style="width: 100%; object-fit: cover;" alt={icon} />
-</div>
+</div> -->
+
+<style lang="scss">
+	.rectangle {
+		width: var(--width-value);
+		height: var(--height-value);
+		background: var(--background-value);
+		border: var(--border-value);
+		border-radius: 10px;
+	}
+</style>

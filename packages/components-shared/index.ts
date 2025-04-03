@@ -9,7 +9,6 @@ import Authenticate from './src/components/Authenticate.svelte';
 import BoardContext from './src/components/BoardContext.svelte';
 import LoadI18n from './src/components/LoadI18n.svelte';
 import Popup from './src/components/Popup.svelte';
-import Dialog from './src/components/Dialog.svelte';
 import Button from './src/components/Button.svelte';
 import Label from './src/components/Label.svelte';
 import OptionsGrid from './src/components/OptionsGrid.svelte';
@@ -19,7 +18,6 @@ import AmountFadeProvider from './src/components/AmountFadeProvider.svelte';
 
 export * from './src/context';
 export * from './src/types';
-export * from './src/utils';
 
 export {
 	LoaderBase,
@@ -33,7 +31,6 @@ export {
 	BoardContext,
 	LoadI18n,
 	Popup,
-	Dialog,
 	Button,
 	Label,
 	OptionsGrid,

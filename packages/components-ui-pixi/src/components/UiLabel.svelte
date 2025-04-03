@@ -52,5 +52,10 @@
 		/>
 	{/if}
 	<Text anchor={{ x: 0, y: 0.5 }} text={props.label} style={labelStyle} />
-	<Text anchor={{ x: 1, y: 0.5 }} text={props.value} style={valueStyle} x={UI_BASE_FONT_SIZE * 10} />
+	<Text
+		anchor={{ x: 1, y: 0.5 }}
+		text={props.value}
+		style={valueStyle}
+		x={UI_BASE_FONT_SIZE * 10}
+	/>
 {/if}

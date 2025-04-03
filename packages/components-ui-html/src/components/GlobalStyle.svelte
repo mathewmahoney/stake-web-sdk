@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	import './twist.scss';
+	import './global.scss';
 
 	type Props = {
 		children: Snippet;

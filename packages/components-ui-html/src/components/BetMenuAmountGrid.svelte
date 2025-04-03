@@ -1,7 +1,10 @@
 <script lang="ts">
-	import { Button } from 'components-shared';
-	import { stateBet, stateConfig } from 'state-shared';
+	import { OptionsGrid } from 'components-shared';
 	import { getLayoutContext } from 'utils-layout';
+	import { stateBet, stateConfig } from 'state-shared';
+
+	import BaseIcon from './BaseIcon.svelte';
+	import BaseButtonContent from './BaseButtonContent.svelte';
 	import { i18nDerived } from '../i18n/i18nDerived';
 
 	const { stateLayoutDerived } = getLayoutContext();
@@ -25,83 +28,21 @@
 	};
 </script>
 
-<div class="wrap">
-	<div class="grid-wrap">
-		<div class="grid">
-			{#each options as option (option)}
-				<Button
-					variant={option === stateBet.betAmount ? 'primary' : 'light'}
-					spacing="input"
-					shape="rounded"
-					border="white"
-					onclick={() => (stateBet.betAmount = option)}
-				>
-					<span data-test="round-options">
-						{isMaxValue(option) ? i18nDerived.max() : formatValue(option)}
-					</span>
-				</Button>
-			{/each}
-		</div>
-	</div>
-</div>
-
-<style lang="scss">
-	.wrap {
-		text-align: center;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		min-width: 300px;
-		// portrait width range: (320px - screen height)
-		@media (orientation: portrait) {
-			@media (min-width: 320px) {
-				min-width: 200px;
-			}
-			@media (min-width: 360px) {
-				min-width: 260px;
-			}
-			@media (min-width: 480px) {
-				min-width: 280px;
-			}
-		}
-		// landscape height range: (320px - 610px)
-		@media (orientation: landscape) {
-			@media (max-height: 480px) {
-				min-width: 400px;
-			}
-		}
-	}
-
-	.grid-wrap {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.grid {
-		display: grid;
-		gap: 0.8rem;
-		justify-items: center;
-		white-space: nowrap;
-		grid-template-columns: repeat(3, 85px);
-		// mobile in portrait has max width 600px
-		@media (orientation: portrait) {
-			@media (max-width: 600px) {
-				gap: 0.6rem;
-				grid-template-columns: repeat(3, 75px);
-			}
-		}
-
-		// landscape height range: (200px - 610px)
-		@media (orientation: landscape) {
-			@media (max-height: 300px) {
-				gap: 0.35em;
-				grid-template-columns: repeat(5, 70px);
-			}
-			@media (min-height: 300px) and (max-height: 480px) {
-				gap: 0.35rem;
-				grid-template-columns: repeat(5, 70px);
-			}
-		}
-	}
-</style>
+<OptionsGrid
+	value={stateBet.betAmount}
+	{options}
+	onchange={(value) => (stateBet.betAmount = value)}
+>
+	{#snippet option({ option })}
+		<BaseIcon
+			width="100%"
+			height="2rem"
+			border={option === stateBet.betAmount ? '2px white solid' : '2px black solid'}
+		/>
+		<BaseButtonContent>
+			<span style="font-size: 1rem;"
+				>{isMaxValue(option) ? i18nDerived.max() : formatValue(option)}</span
+			>
+		</BaseButtonContent>
+	{/snippet}
+</OptionsGrid>

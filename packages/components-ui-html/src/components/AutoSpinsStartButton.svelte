@@ -11,6 +11,8 @@
 	} from 'state-shared';
 	import { getEventEmitterContext } from 'utils-event-emitter';
 
+	import BaseIcon from './BaseIcon.svelte';
+	import BaseButtonContent from './BaseButtonContent.svelte';
 	import { i18nDerived } from '../i18n/i18nDerived';
 	import type { EmitterEventModal } from '../types';
 
@@ -27,6 +29,9 @@
 	};
 </script>
 
-<Button disabled={!stateBetDerived.isBetCostAvailable()} spacing={'primary'} onclick={startAutoBet}>
-	{i18nDerived.startAutoplay()}
+<Button disabled={!stateBetDerived.isBetCostAvailable()} onclick={startAutoBet}>
+	<BaseIcon width="100%" height="3rem" />
+	<BaseButtonContent>
+		<span style="font-size: 1rem;">{i18nDerived.startAutoplay()}</span>
+	</BaseButtonContent>
 </Button>

@@ -5,6 +5,7 @@
 	import { Button } from 'components-shared';
 
 	import BaseIcon from './BaseIcon.svelte';
+	import BaseButtonContent from './BaseButtonContent.svelte';
 	import type { EmitterEventModal } from '../types';
 
 	type Props = {
@@ -18,14 +19,11 @@
 </script>
 
 <div class="col">
-	<span class="title">{@render children()}</span>
+	<span>{@render children()}</span>
 	<div class="row">
 		<!-- button -->
 		<div class="button-wrap">
 			<Button
-				shape="circle"
-				spacing="none"
-				variant="transparent"
 				onclick={() => {
 					eventEmitter.broadcast({ type: 'soundPressGeneral' });
 					if (value === 0) {
@@ -35,7 +33,10 @@
 					}
 				}}
 			>
-				<BaseIcon icon={value > 0 ? ICONS.on : ICONS.off} size="1.5rem" />
+				<BaseIcon width="3rem" height="3rem" />
+				<BaseButtonContent>
+					<span>{value > 0 ? 'ON' : 'OFF'}</span>
+				</BaseButtonContent>
 			</Button>
 		</div>
 
@@ -43,7 +44,9 @@
 		<input bind:value type="range" min="0" max="100" class="range" />
 
 		<!-- value -->
-		<span class="value">{value}</span>
+		<div class="value">
+			<span>{value}</span>
+		</div>
 	</div>
 </div>
 
@@ -51,10 +54,6 @@
 	.col {
 		display: flex;
 		flex-direction: column;
-	}
-
-	.title {
-		font-weight: 600;
 	}
 
 	.row {
@@ -77,8 +76,8 @@
 
 	.value {
 		width: 15%;
-		text-align: center;
-		font-weight: 700;
-		font-size: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 </style>

@@ -16,7 +16,13 @@
 		variant?: 'dark' | 'light';
 	};
 
-	const { icon, active, variant = 'dark',children: childrenFromParent, ...buttonProps }: Props = $props();
+	const {
+		icon,
+		active,
+		variant = 'dark',
+		children: childrenFromParent,
+		...buttonProps
+	}: Props = $props();
 </script>
 
 <Button {...buttonProps}>

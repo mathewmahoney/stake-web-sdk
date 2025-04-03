@@ -8,9 +8,9 @@
 	const props: Props = $props();
 </script>
 
-<Rectangle borderRadius={50} {...props}  />
+<Rectangle borderRadius={50} {...props} />
 
-<!-- ADD YOUR DESIGN: REPLACE WITH <Sprite {...props} /> -->
+<!-- ADD YOUR DESIGN -->
 
 <!-- <script lang="ts" module>
 	import { Sprite, type SpriteProps } from 'pixi-svelte';

@@ -9,7 +9,6 @@
 
 	type Props = {
 		maxListLength: number;
-		rtpBadge: Snippet<[{ size: string }]>;
 		betAmount: Snippet;
 		bonusCardsActivate: Snippet;
 		bonusCardsBuy: Snippet;
@@ -42,9 +41,6 @@
 	</div>
 
 	<div class="badge-amount-wrap">
-		<div class="badge-wrap">
-			{@render props.rtpBadge({ size: '4rem' })}
-		</div>
 		{@render props.betAmount()}
 	</div>
 </BaseContent>
@@ -70,12 +66,5 @@
 		top: calc(50% + 1.2rem);
 		right: 1rem;
 		transform: translateY(-50%);
-	}
-
-	.badge-wrap {
-		position: absolute;
-		top: -50%;
-		left: 50%;
-		transform: translate(-50%, -5%);
 	}
 </style>
