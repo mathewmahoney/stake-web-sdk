@@ -121,6 +121,8 @@ export const bookEventHandlerMap: BookEventHandlerMap<BookEvent, BookEventContex
 			total: bookEvent.totalFs,
 		});
 		await eventEmitter.broadcastAsync({ type: 'uiShow' });
+		await eventEmitter.broadcastAsync({ type: 'drawerButtonShow' });
+		eventEmitter.broadcast({ type: 'drawerFold' });
 	},
 	freeSpinRetrigger: async (bookEvent: BookEventOfType<'freeSpinTrigger'>) => {
 		// animate scatters
@@ -193,6 +195,8 @@ export const bookEventHandlerMap: BookEventHandlerMap<BookEvent, BookEventContex
 		eventEmitter.broadcast({ type: 'tumbleWinAmountHide' });
 		await eventEmitter.broadcastAsync({ type: 'transition' });
 		await eventEmitter.broadcastAsync({ type: 'uiShow' });
+		await eventEmitter.broadcastAsync({ type: 'drawerUnfold' });
+		eventEmitter.broadcast({ type: 'drawerButtonHide' });
 	},
 	tumbleBoard: async (bookEvent: BookEventOfType<'tumbleBoard'>) => {
 		eventEmitter.broadcast({ type: 'boardHide' });
