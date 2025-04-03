@@ -77,7 +77,7 @@
 			{#snippet logo()}
 				<Text
 					anchor={{ x: 1, y: 0 }}
-					text="ADD A LOGO"
+					text="ADD YOUR LOGO"
 					style={{
 						fontFamily: 'proxima-nova',
 						fontSize: REM * 1.5,
