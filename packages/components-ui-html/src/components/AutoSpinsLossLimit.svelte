@@ -22,7 +22,12 @@
 			border={option === stateUi.autoSpinsLossLimitText ? '2px white solid' : '2px black solid'}
 		/>
 		<BaseButtonContent>
-			<span style="font-size: 1rem;" class:infinity={option === '∞'} class="option-wrap" data-test="loss-limit-{option}">
+			<span
+				style="font-size: 1rem;"
+				class:infinity={option === '∞'}
+				class="option-wrap"
+				data-test="loss-limit-{option}"
+			>
 				{option}
 			</span>
 		</BaseButtonContent>

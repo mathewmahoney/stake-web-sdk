@@ -38,7 +38,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-		padding-bottom: 1rem;
 
 		@media (min-width: 480px) {
 			min-width: 360px;

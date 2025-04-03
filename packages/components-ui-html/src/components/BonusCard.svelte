@@ -36,8 +36,6 @@
 	}
 
 	.info {
-		// padding-top: 1rem;
-		padding-bottom: 0.5rem;
 		display: flex;
 		flex-direction: column;
 		gap: 0.5em;

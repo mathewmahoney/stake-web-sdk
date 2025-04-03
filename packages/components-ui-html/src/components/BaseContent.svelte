@@ -9,10 +9,7 @@
 	const props: Props = $props();
 </script>
 
-<div
-	class="ui-popup-standard-content-wrap"
-	style="--maxWidth: {props.maxWidth}; --zIndex: {100}"
->
+<div class="ui-popup-standard-content-wrap" style="--maxWidth: {props.maxWidth}; --zIndex: {100}">
 	{@render props.children()}
 </div>
 

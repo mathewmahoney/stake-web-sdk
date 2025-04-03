@@ -129,6 +129,6 @@
 		border-color: transparent;
 		line-height: 0px; /* to remove the button style influence */
 		width: 3rem;
-    height: 3rem;
+		height: 3rem;
 	}
 </style>

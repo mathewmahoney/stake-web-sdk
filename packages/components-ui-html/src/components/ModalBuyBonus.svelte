@@ -47,10 +47,3 @@
 		</BonusContentWrap>
 	</Popup>
 {/if}
-
-<style lang="scss">
-	.badge-icon {
-		border: 2px solid white;
-		border-radius: 8rem;
-	}
-</style>

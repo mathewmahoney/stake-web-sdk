@@ -19,10 +19,17 @@
 		<BaseIcon
 			width="100%"
 			height="2rem"
-			border={option === stateUi.autoSpinsSingleWinLimitText ? '2px white solid' : '2px black solid'}
+			border={option === stateUi.autoSpinsSingleWinLimitText
+				? '2px white solid'
+				: '2px black solid'}
 		/>
 		<BaseButtonContent>
-			<span style="font-size: 1rem;" class:infinity={option === '∞'} class="option-wrap" data-test="single-win-limit-options">
+			<span
+				style="font-size: 1rem;"
+				class:infinity={option === '∞'}
+				class="option-wrap"
+				data-test="single-win-limit-options"
+			>
 				{option}
 			</span>
 		</BaseButtonContent>
