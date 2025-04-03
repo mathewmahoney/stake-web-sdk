@@ -60,6 +60,7 @@
 				fill: variant === 'dark' ? 0xffffff : 0x000000,
 			}}
 		/>
+
 		{@render childrenFromParent?.()}
 	{/snippet}
 </Button>

@@ -1,13 +1,9 @@
 <script lang="ts">
-	import { Text } from 'pixi-svelte';
+	import { Text, Rectangle } from 'pixi-svelte';
 	import { stateBet } from 'state-shared';
 	import { WHITE } from 'constants-shared/colors';
 
-	type Props = {
-		baseSize: number;
-	};
-
-	const props: Props = $props();
+	import { UI_BASE_SIZE } from '../constants';
 
 	const fontSizeMultiplier = $derived.by(() => {
 		if (stateBet.autoSpinsCounter === Infinity) return 3;
@@ -18,6 +14,12 @@
 </script>
 
 {#if stateBet.autoSpinsCounter > 0}
+	<Rectangle
+		anchor={0.5}
+		width={UI_BASE_SIZE * 0.9}
+		height={UI_BASE_SIZE * 0.9}
+		borderRadius={50}
+	/>
 	<Text
 		anchor={0.5}
 		text={stateBet.autoSpinsCounter === Infinity ? '∞' : stateBet.autoSpinsCounter}
@@ -25,7 +27,7 @@
 			fontFamily: 'proxima-nova',
 			fill: WHITE,
 			fontWeight: 'bold',
-			fontSize: fontSizeMultiplier * props.baseSize,
+			fontSize: fontSizeMultiplier * UI_BASE_SIZE * 0.2,
 		}}
 	/>
 {/if}

@@ -6,7 +6,6 @@
 
 	import UiSprite from './UiSprite.svelte';
 	import ButtonBetProvider from './ButtonBetProvider.svelte';
-	import ButtonBetAutoSpinsCounter from './ButtonBetAutoSpinsCounter.svelte';
 	import { UI_BASE_FONT_SIZE, UI_BASE_SIZE } from '../constants';
 	import { i18nDerived } from '../i18n/i18nDerived';
 
@@ -26,7 +25,7 @@
 						width={sizes.width}
 						height={sizes.height}
 						anchor={0.5}
-						{...disabled
+						{...disabled || ['spin_disabled', 'stop_disabled'].includes(key)
 							? {
 									backgroundColor: 0xaaaaaa,
 								}
@@ -34,7 +33,9 @@
 					/>
 					<Text
 						anchor={0.5}
-						text={i18nDerived.bet()}
+						text={['spin_default', 'spin_disabled'].includes(key)
+							? i18nDerived.bet()
+							: i18nDerived.stop()}
 						style={{
 							align: 'center',
 							wordWrap: true,
@@ -45,7 +46,6 @@
 							fill: 0xffffff,
 						}}
 					/>
-					<ButtonBetAutoSpinsCounter baseSize={sizes.width * 0.1} />
 				</Container>
 			{/snippet}
 		</Button>

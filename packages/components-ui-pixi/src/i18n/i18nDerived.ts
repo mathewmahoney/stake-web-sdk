@@ -5,6 +5,7 @@ export const i18nDerived = {
 	balance: () => i18n._(i18n.t('BALANCE')),
 	win: () => i18n._(i18n.t('WIN')),
 	bet: () => i18n._(i18n.t('BET')),
+	stop: () => i18n._(i18n.t('STOP')),
 	buyBonus: () => i18n._(i18n.t('BUY BONUS')),
 	disable: () => i18n._(i18n.t('DISABLE')),
 	freeSpins: () => i18n._(i18n.t('FREE SPINS')),

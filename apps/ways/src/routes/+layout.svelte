@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { type Snippet } from 'svelte';
-
+	import { GlobalStyle } from 'components-ui-html';
 	import { Authenticate, LoaderCarrot, LoaderExample, LoadI18n } from 'components-shared';
+
 	import messagesMap from '../i18n/messagesMap';
 
 	type Props = { children: Snippet };
@@ -11,11 +12,13 @@
 	let showYourLoader = $state(false);
 </script>
 
-<Authenticate>
-	<LoadI18n {messagesMap}>
-		{@render props.children()}
-	</LoadI18n>
-</Authenticate>
+<GlobalStyle>
+	<Authenticate>
+		<LoadI18n {messagesMap}>
+			{@render props.children()}
+		</LoadI18n>
+	</Authenticate>
+</GlobalStyle>
 
 <LoaderCarrot oncomplete={() => (showYourLoader = true)} />
 

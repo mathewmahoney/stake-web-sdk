@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { Container } from 'pixi-svelte';
+	import type { ButtonProps } from 'components-pixi';
 	import { stateBet, stateBetDerived, stateModal } from 'state-shared';
 
 	import UiButton from './UiButton.svelte';
 	import { getContext } from '../context';
 	import { UI_BASE_SIZE } from '../constants';
-	import type { ButtonProps } from 'components-pixi';
+	import ButtonBetAutoSpinsCounter from './ButtonBetAutoSpinsCounter.svelte';
 
 	const props: Partial<Omit<ButtonProps, 'children'>> = $props();
 	const context = getContext();
@@ -25,4 +27,8 @@
 	};
 </script>
 
-<UiButton {...props} {sizes} {active} {onpress} {disabled} icon="autoSpin" />
+<UiButton {...props} {sizes} {active} {onpress} {disabled} icon="autoSpin">
+	<Container x={sizes.width * 0.5} y={sizes.height * 0.5}>
+		<ButtonBetAutoSpinsCounter />
+	</Container>
+</UiButton>
