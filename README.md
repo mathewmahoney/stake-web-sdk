@@ -426,7 +426,7 @@ However with the data structure of math and the functions we have, we are able t
 
 # Steps to Add a New BookEvent
 
-For example, we have a game [apps/lines](/tree/main/apps/lines) already. Assume that we have added a new bookEvent `updateGlobalMult` to the bonus game mode (`MODE_BONUS`) in math, so that we have a new global multiplier feature for the game. Based on that, here we will go through the steps together to implement this new bookEvent and add it to the game. Along the way we will introduce part of our file structure as well.
+For example, we have a game [apps/lines](/apps/lines) already. Assume that we have added a new bookEvent `updateGlobalMult` to the bonus game mode (`MODE_BONUS`) in math, so that we have a new global multiplier feature for the game. Based on that, here we will go through the steps together to implement this new bookEvent and add it to the game. Along the way we will introduce part of our file structure as well.
 
 - [apps/lines/src/stories/data/bonus_books.ts](/apps/lines/src/stories/data/bonus_books.ts): This file includes the an array of bonus books that story `MODE_BONUS/book/random` will randomly pick at. This is to simulate requesting data from RGS. All we need to do is to copy/paste data from our new math package and format it.
 
@@ -584,7 +584,7 @@ export const { eventEmitter } = createEventEmitter<EmitterEvent>();
 
 # File Structure
 
-The file structure is in a way of [structure of TurboRepo](https://turbo.build/repo/docs/crafting-your-repository/structuring-a-repository) to achieve a [monorepo](https://en.wikipedia.org/wiki/Monorepo#:~:text=In%20version%2Dcontrol%20systems%2C%20a,commonly%20called%20a%20shared%20codebase.). Besides the files for the configurations of TurboRepo, sveltekit, eslint, typescript, git and so on, here is a list of of key modules of [apps](/tree/main/apps) and [packages](/tree/main/packages).
+The file structure is in a way of [structure of TurboRepo](https://turbo.build/repo/docs/crafting-your-repository/structuring-a-repository) to achieve a [monorepo](https://en.wikipedia.org/wiki/Monorepo#:~:text=In%20version%2Dcontrol%20systems%2C%20a,commonly%20called%20a%20shared%20codebase.). Besides the files for the configurations of TurboRepo, sveltekit, eslint, typescript, git and so on, here is a list of of key modules of [apps](/apps) and [packages](/packages).
 
 ```
 root
@@ -606,9 +606,9 @@ root
 
 <a name="apps"></a>
 
-## [/apps](/tree/main/apps)
+## [/apps](/apps)
 
-For each game, it has an individual folder in the apps, for example [apps/lines](/tree/main/apps/lines).
+For each game, it has an individual folder in the apps, for example [apps/lines](/apps/lines).
 
 - [apps/lines/package.json](/apps/lines/package.json): Find the module name of the app here.
 
@@ -626,7 +626,7 @@ pnpm run dev --filter=lines
 ```
 
 - [apps/lines/src/routes/+page.svelte](/apps/lines/src/routes/%2Bpage.svelte): This is the entry file of sample game apps/lines in a sveltekit way. It is a combination of two things:
-  - [setContext()](/apps/lines/src/game/context.ts#L14): A function that sets all the [svelte-context](https://svelte.dev/docs/svelte/context) required and used in this app and in the [packages](/tree/main/packages). As we already know, only children-level components can access the context. That is why we set the context at the entry level of the app.
+  - [setContext()](/apps/lines/src/game/context.ts#L14): A function that sets all the [svelte-context](https://svelte.dev/docs/svelte/context) required and used in this app and in the [packages](/packages). As we already know, only children-level components can access the context. That is why we set the context at the entry level of the app.
   - [<Game \/>](/apps/lines/src/components/Game.svelte): The entry svelte component to the game. It includes all the components of the game.
 
 ```
@@ -663,11 +663,11 @@ pnpm run dev --filter=lines
 </Story>
 ```
 
-- We can render [<Game \/>](/apps/lines/src/components/Game.svelte) component in the app or in the storybook. Either way it requires the context to set in advance, otherwise the children or the descendants will throw errors if they use the ["getContext()"](/apps/lines/src/game/context.ts#L21) from [apps](/tree/main/apps) or ["getContext()"](/packages/components-ui-pixi/src/context.ts#L8) from [packages](/tree/main/packages).
+- We can render [<Game \/>](/apps/lines/src/components/Game.svelte) component in the app or in the storybook. Either way it requires the context to set in advance, otherwise the children or the descendants will throw errors if they use the ["getContext()"](/apps/lines/src/game/context.ts#L21) from [apps](/apps) or ["getContext()"](/packages/components-ui-pixi/src/context.ts#L8) from [packages](/packages).
 
 <a name="packages"></a>
 
-## [/packages](/tree/main/packages)
+## [/packages](/packages)
 
 For every TurboRepo local package, you can import and use them in an app or in another local package directly without publishing them to [npm](https://www.npmjs.com). <mark>Our codebase benefits considerably from a monorepo because it brings reusability, readability, maintainability, code splitting and so on.</mark> Here is an example of importing local packages with `workspace:*` in [apps/lines/package.json](/apps/lines/package.json):
 
@@ -695,40 +695,39 @@ For every TurboRepo local package, you can import and use them in an app or in a
 The naming convention of packages is a combination of `<PACKAGE_TYPE>`, hyphen and `<SPECIAL_DEPENDENCY>` or `<SPECIAL_USAGE>`. For example, `components-pixi` is a local package that the package type is "components" and the special dependency is `pixi-svelte`.
 
 - `config-*`:
-  - [config-lingui](/tree/main/packages/config-lingui): This local package contains reusable configurations of npm package [lingui](https://www.npmjs.com/package/@lingui/core).
-  - [config-storybook](/tree/main/packages/config-storybook): This local package contains reusable configurations of npm package [storybook](https://www.npmjs.com/package/storybook).
-  - [config-svelte](/tree/main/packages/config-svelte): This local package contains reusable configurations of npm package [svelte](https://www.npmjs.com/package/svelte).
-  - [config-ts](/tree/main/packages/config-ts): This local package contains reusable configurations of npm package [typescript](https://www.npmjs.com/package/typescript).
-  - [config-vite](/tree/main/packages/config-vite): This local package contains reusable configurations of npm package [vite](https://www.npmjs.com/package/vite).
+  - [config-lingui](/packages/config-lingui): This local package contains reusable configurations of npm package [lingui](https://www.npmjs.com/package/@lingui/core).
+  - [config-storybook](/packages/config-storybook): This local package contains reusable configurations of npm package [storybook](https://www.npmjs.com/package/storybook).
+  - [config-svelte](/packages/config-svelte): This local package contains reusable configurations of npm package [svelte](https://www.npmjs.com/package/svelte).
+  - [config-ts](/packages/config-ts): This local package contains reusable configurations of npm package [typescript](https://www.npmjs.com/package/typescript).
+  - [config-vite](/packages/config-vite): This local package contains reusable configurations of npm package [vite](https://www.npmjs.com/package/vite).
 - `pixi-*`
-  - [pixi-svelte](/tree/main/packages/pixi-svelte): This local package contains reusable svelte components/functions/types based on [pixijs](https://www.npmjs.com/package/pixi.js) and [svelte](https://www.npmjs.com/package/svelte).
+  - [pixi-svelte](/packages/pixi-svelte): This local package contains reusable svelte components/functions/types based on [pixijs](https://www.npmjs.com/package/pixi.js) and [svelte](https://www.npmjs.com/package/svelte).
     - It creates `stateApp` and `AppContext` as a [svelte-context](https://svelte.dev/docs/svelte/context).
     - It also builds and publishes [pixi-svelte of npm](https://www.npmjs.com/package/pixi-svelte).
-  - [pixi-svelte-storybook](/tree/main/packages/pixi-svelte-storybook): This is a storybook for components in `pixi-svelte`.
+  - [pixi-svelte-storybook](/packages/pixi-svelte-storybook): This is a storybook for components in `pixi-svelte`.
 - `constants-*`:
-  - [constants-shared](/tree/main/packages/constants-shared): This local package contains reusable <mark>global</mark> constants.
+  - [constants-shared](/packages/constants-shared): This local package contains reusable <mark>global</mark> constants.
 - `state-*`:
-  - [state-shared](/tree/main/packages/state-shared): This local package contains reusable <mark>global</mark> [svelte-$state](https://svelte.dev/docs/svelte/$state).
+  - [state-shared](/packages/state-shared): This local package contains reusable <mark>global</mark> [svelte-$state](https://svelte.dev/docs/svelte/$state).
 - `utils-*`:
-  - [utils-book](/tree/main/packages/utils-book): This local package contains reusable functions/types that are related to book and bookEvent.
-  - [utils-fetcher](/tree/main/packages/utils-fetcher): This local package contains reusable functions/types based on [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
-  - [utils-shared](/tree/main/packages/utils-shared): This local package contains reusable functions/types, except for [lodash](https://www.npmjs.com/package/lodash) and [lingui](https://www.npmjs.com/package/@lingui/core).
-  - [utils-slots](/tree/main/packages/utils-slots): This local package contains reusable functions/types for slots game, for example creating reel and spinning the board.
-  - [utils-sound](/tree/main/packages/utils-sound): This local package contains reusable functions/types based on npm package [howler](https://www.npmjs.com/package/howler) for music and sound effect.
-  - [utils-event-emitter](/tree/main/packages/utils-event-emitter): This local package contains reusable functions/types to achieve our [event-driven programming](https://en.wikipedia.org/wiki/Event-driven_programming).
+  - [utils-book](/packages/utils-book): This local package contains reusable functions/types that are related to book and bookEvent.
+  - [utils-fetcher](/packages/utils-fetcher): This local package contains reusable functions/types based on [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+  - [utils-shared](/packages/utils-shared): This local package contains reusable functions/types, except for [lodash](https://www.npmjs.com/package/lodash) and [lingui](https://www.npmjs.com/package/@lingui/core).
+  - [utils-slots](/packages/utils-slots): This local package contains reusable functions/types for slots game, for example creating reel and spinning the board.
+  - [utils-sound](/packages/utils-sound): This local package contains reusable functions/types based on npm package [howler](https://www.npmjs.com/package/howler) for music and sound effect.
+  - [utils-event-emitter](/packages/utils-event-emitter): This local package contains reusable functions/types to achieve our [event-driven programming](https://en.wikipedia.org/wiki/Event-driven_programming).
     - It creates `eventEmitter` and `EventEmitterContext` as a [svelte-context](https://svelte.dev/docs/svelte/context)
-  - [utils-xstate](/tree/main/packages/utils-xstate): This local package contains reusable functions/types based on npm package [xstate](https://www.npmjs.com/package/xstate).
+  - [utils-xstate](/packages/utils-xstate): This local package contains reusable functions/types based on npm package [xstate](https://www.npmjs.com/package/xstate).
     - It creates `stateXstate`, `stateXstateDerived` and `XstateContext` as a [svelte-context](https://svelte.dev/docs/svelte/context)
-  - [utils-layout](/tree/main/packages/utils-layout): This local package contains reusable functions/types for our layout system of pixijs.
+  - [utils-layout](/packages/utils-layout): This local package contains reusable functions/types for our layout system of pixijs.
     - It creates `stateLayout`, `stateLayoutDerived` and `LayoutContext` as a [svelte-context](https://svelte.dev/docs/svelte/context)
 - `components-*`:
-  - [components-layout](/tree/main/packages/components-layout): This local package contains reusable svelte components based on another local package `utils-layout`.
-  - [components-modal](/tree/main/packages/components-modal): This local package contains reusable svelte components for the modals in html.
-  - [components-pixi](/tree/main/packages/components-pixi): This local package contains reusable svelte components based on `pixi-svelte`.
-  - [components-shared](/tree/main/packages/components-shared): This local package contains reusable svelte components based on `html`.
-  - [components-storybook](/tree/main/packages/components-storybook): This local package contains reusable svelte components for storybooks.
-  - [components-ui-pixi](/tree/main/packages/components-ui-pixi): This local package contains reusable svelte pixi-svelte components for the game UI.
-  - [components-ui-html](/tree/main/packages/components-ui-html): This local package contains reusable svelte html components for the game UI.
+  - [components-layout](/packages/components-layout): This local package contains reusable svelte components based on another local package `utils-layout`.
+  - [components-pixi](/packages/components-pixi): This local package contains reusable svelte components based on `pixi-svelte`.
+  - [components-shared](/packages/components-shared): This local package contains reusable svelte components based on `html`.
+  - [components-storybook](/packages/components-storybook): This local package contains reusable svelte components for storybooks.
+  - [components-ui-pixi](/packages/components-ui-pixi): This local package contains reusable svelte pixi-svelte components for the game UI.
+  - [components-ui-html](/packages/components-ui-html): This local package contains reusable svelte html components for the game UI.
 
 For `*-shared` packages, they are created to be reused as much as possible by other apps and packages. Instead of having a special dependency or usage, they should have a minimum list of dependencies and a broad set of use cases.
 
@@ -738,7 +737,7 @@ For `*-shared` packages, they are created to be reused as much as possible by ot
 
 # Context
 
-[svelte-context](https://svelte.dev/docs/svelte/context) is a useful feature from svelte especially when a shared state requires some inputs/types to create. Here it shows the structure of context of sample game [apps/lines](/tree/main/apps/lines). As showed before, `setContext()` is called at entry level component. For example, [apps/lines/src/routes/+page.svelte](/apps/lines/src/routes/%2Bpage.svelte) or [apps/lines/src/stories/ComponentsGame.stories.svelte](/apps/lines/src/stories/ComponentsGame.stories.svelte). It sets four major contexts from the packages by this:
+[svelte-context](https://svelte.dev/docs/svelte/context) is a useful feature from svelte especially when a shared state requires some inputs/types to create. Here it shows the structure of context of sample game [apps/lines](/apps/lines). As showed before, `setContext()` is called at entry level component. For example, [apps/lines/src/routes/+page.svelte](/apps/lines/src/routes/%2Bpage.svelte) or [apps/lines/src/stories/ComponentsGame.stories.svelte](/apps/lines/src/stories/ComponentsGame.stories.svelte). It sets four major contexts from the packages by this:
 
 ```
 // context.ts - Example of setContext in apps
