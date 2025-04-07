@@ -219,7 +219,7 @@ export const bookEventHandlerMap: BookEventHandlerMap<BookEvent, BookEventContex
 		eventEmitter.broadcast({ type: 'winShow' });
 		winLevelSoundsPlay({ bookEventAmount: bookEvent.amount });
 		await eventEmitter.broadcastAsync({ type: 'winUpdate', amount: bookEvent.amount });
-		winLevelSoundsStop();
+		eventEmitter.broadcast({ type: 'soundStop', name: 'sfx_bigwin_coinloop' });
 		eventEmitter.broadcast({ type: 'winHide' });
 	},
 	winCap: async (bookEvent: BookEventOfType<'winCap'>) => {
