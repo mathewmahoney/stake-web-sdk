@@ -30,7 +30,7 @@ const winLevelSoundsPlay = ({ bookEventAmount }: { bookEventAmount: number }) =>
 
 const winLevelSoundsStop = () => {
 	eventEmitter.broadcast({ type: 'soundStop', name: 'sfx_bigwin_coinloop' });
-	if (stateBet.activeBetModeKey === 'SUPERSPIN') {
+	if (stateBet.activeBetModeKey === 'SUPERSPIN' || stateGame.gameType === 'freeGame') {
 		// check if SUPERSPIN, when finishing a bet.
 		eventEmitter.broadcast({ type: 'soundMusic', name: 'bgm_freespin' });
 	} else {
