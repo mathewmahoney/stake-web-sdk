@@ -663,7 +663,7 @@ pnpm run dev --filter=lines
 </Story>
 ```
 
-- We can render [<Game \/>](/apps/lines/src/components/Game.svelte) component in the app or in the storybook. Either way it requires the context to set in advance, otherwise the children or the descendants will throw errors if they use the ["getContext()"](/apps/lines/src/game/context.ts#L21) from [apps](/tree/main/apps) or ["getContext()"](/packages/components-ui/src/context.ts#L8) from [packages](/tree/main/packages).
+- We can render [<Game \/>](/apps/lines/src/components/Game.svelte) component in the app or in the storybook. Either way it requires the context to set in advance, otherwise the children or the descendants will throw errors if they use the ["getContext()"](/apps/lines/src/game/context.ts#L21) from [apps](/tree/main/apps) or ["getContext()"](/packages/components-ui-pixi/src/context.ts#L8) from [packages](/tree/main/packages).
 
 <a name="packages"></a>
 
@@ -727,11 +727,12 @@ The naming convention of packages is a combination of `<PACKAGE_TYPE>`, hyphen a
   - [components-pixi](/tree/main/packages/components-pixi): This local package contains reusable svelte components based on `pixi-svelte`.
   - [components-shared](/tree/main/packages/components-shared): This local package contains reusable svelte components based on `html`.
   - [components-storybook](/tree/main/packages/components-storybook): This local package contains reusable svelte components for storybooks.
-  - [components-ui](/tree/main/packages/components-ui): This local package contains reusable svelte components for game UI.
+  - [components-ui-pixi](/tree/main/packages/components-ui-pixi): This local package contains reusable svelte pixi-svelte components for the game UI.
+  - [components-ui-html](/tree/main/packages/components-ui-html): This local package contains reusable svelte html components for the game UI.
 
 For `*-shared` packages, they are created to be reused as much as possible by other apps and packages. Instead of having a special dependency or usage, they should have a minimum list of dependencies and a broad set of use cases.
 
-`pixi-svelte`, `utils-event-emitter`, `utils-layout` and `utils-xstate` they have functions to create corresponding [svelte-context](https://svelte.dev/docs/svelte/context). For the contexts, they can be used by either an app or a local `components-*` package by just calling the `get<CONTEXT_NAME>Context()`. For example, components in `components-layout` use `getContextLayout()` from `utils-layout`. In this way, we can regard `pixi-svelte` as an integration of "utils-pixi-svelte" and "components-pixi-svelte".
+`pixi-svelte`, `utils-event-emitter`, `utils-layout` and `utils-xstate` they have functions to create corresponding [svelte-context](https://svelte.dev/docs/svelte/context). For the contexts, they can be used by either an app or a local `components-*` package by just calling the `getContext<CONTEXT_NAME>()`. For example, components in `components-layout` use `getContextLayout()` from `utils-layout`. In this way, we can regard `pixi-svelte` as an integration of "utils-pixi-svelte" and "components-pixi-svelte".
 
 <a name="context"></a>
 
