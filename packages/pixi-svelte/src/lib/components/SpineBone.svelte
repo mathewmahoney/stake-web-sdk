@@ -8,10 +8,10 @@
 
 <script lang="ts">
 	import { propsSyncEffect } from '../utils.svelte';
-	import { getSpineContext } from '../context.svelte';
+	import { getContextSpine } from '../context.svelte';
 
 	const props: Props = $props();
-	const spine = getSpineContext();
+	const spine = getContextSpine();
 	const bone = spine.skeleton.findBone(props.boneName);
 
 	propsSyncEffect({ props, target: bone, ignore: ['boneName', 'y'] });

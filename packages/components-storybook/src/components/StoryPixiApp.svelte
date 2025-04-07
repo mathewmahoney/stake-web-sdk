@@ -1,7 +1,7 @@
 <script lang="ts">
 	import {
 		App,
-		setAppContext,
+		setContextApp,
 		createApp,
 		type Assets,
 	} from 'pixi-svelte';
@@ -11,7 +11,7 @@
 
 	const props: Props = $props();
 	const { stateApp } = createApp({ assets: props.assets });
-	setAppContext({ stateApp });
+	setContextApp({ stateApp });
 </script>
 
 <App>

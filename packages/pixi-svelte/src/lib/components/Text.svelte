@@ -12,10 +12,10 @@
 	import { onMount } from 'svelte';
 
 	import { propsSyncEffect } from '../utils.svelte';
-	import { getParentContext } from '../context.svelte';
+	import { getContextParent } from '../context.svelte';
 
 	const props: Props = $props();
-	const parentContext = getParentContext();
+	const parentContext = getContextParent();
 	const text = new PIXI.Text({ text: props.text, style: props.style });
 
 	propsSyncEffect({ props, target: text, ignore: ['onresize'] });

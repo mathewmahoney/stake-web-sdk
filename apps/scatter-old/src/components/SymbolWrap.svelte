@@ -2,7 +2,7 @@
 	import type { Snippet } from 'svelte';
 
 	import { Container } from 'pixi-svelte';
-	import { getBoardContext } from 'components-shared';
+	import { getContextBoard } from 'components-shared';
 
 	import { SYMBOL_SIZE, BOARD_DIMENSIONS } from '../game/constants';
 
@@ -14,7 +14,7 @@
 	};
 
 	const props: Props = $props();
-	const boardContext = getBoardContext();
+	const boardContext = getContextBoard();
 	const show = $derived(
 		(boardContext.animate && props.animating) || (!boardContext.animate && !props.animating),
 	);

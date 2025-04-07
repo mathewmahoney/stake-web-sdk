@@ -1,7 +1,7 @@
-import { setEventEmitterContext, getEventEmitterContext } from 'utils-event-emitter';
-import { setXstateContext, getXstateContext } from 'utils-xstate';
-import { setLayoutContext, getLayoutContext } from 'utils-layout';
-import { setAppContext, getAppContext } from 'pixi-svelte';
+import { setContextEventEmitter, getContextEventEmitter } from 'utils-event-emitter';
+import { setContextXstate, getContextXstate } from 'utils-xstate';
+import { setContextLayout, getContextLayout } from 'utils-layout';
+import { setContextApp, getContextApp } from 'pixi-svelte';
 
 import { eventEmitter, type EmitterEvent } from './eventEmitter';
 import { stateXstate, stateXstateDerived } from './stateXstate';
@@ -12,17 +12,17 @@ import { stateGame, stateGameDerived } from './stateGame.svelte';
 import { i18nDerived } from '../i18n/i18nDerived';
 
 export const setContext = () => {
-	setEventEmitterContext<EmitterEvent>({ eventEmitter });
-	setXstateContext({ stateXstate, stateXstateDerived });
-	setLayoutContext({ stateLayout, stateLayoutDerived });
-	setAppContext({ stateApp });
+	setContextEventEmitter<EmitterEvent>({ eventEmitter });
+	setContextXstate({ stateXstate, stateXstateDerived });
+	setContextLayout({ stateLayout, stateLayoutDerived });
+	setContextApp({ stateApp });
 };
 
 export const getContext = () => ({
-	...getEventEmitterContext<EmitterEvent>(),
-	...getLayoutContext(),
-	...getXstateContext(),
-	...getAppContext(),
+	...getContextEventEmitter<EmitterEvent>(),
+	...getContextLayout(),
+	...getContextXstate(),
+	...getContextApp(),
 	stateGame,
 	stateGameDerived,
 	i18nDerived,

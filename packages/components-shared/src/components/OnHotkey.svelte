@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 
-	import { getEventEmitterContext } from 'utils-event-emitter';
+	import { getContextEventEmitter } from 'utils-event-emitter';
 	import { createInterruptible } from 'utils-shared/interruptible';
 	import { waitForTimeout } from 'utils-shared/wait';
 
@@ -17,7 +17,7 @@
 	};
 
 	const props: Props = $props();
-	const context = getEventEmitterContext<EmitterEventHotKey>();
+	const context = getContextEventEmitter<EmitterEventHotKey>();
 	const interruptible = createInterruptible();
 	const WAIT_TO_HOLD_TIMEOUT = 400;
 	let isHolding = $state(false);

@@ -1,14 +1,14 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	import { createParentContext, getAppContext } from '../context.svelte';
+	import { createContextParent, getContextApp } from '../context.svelte';
 
 	type Props = { children: Snippet };
 
 	const props: Props = $props();
-	const context = getAppContext();
+	const context = getContextApp();
 
-	let parentContext = createParentContext(
+	let parentContext = createContextParent(
 		context.stateApp.pixiApplication?.stage ?? new PIXI.Container(),
 	);
 </script>

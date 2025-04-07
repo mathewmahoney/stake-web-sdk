@@ -731,7 +731,7 @@ The naming convention of packages is a combination of `<PACKAGE_TYPE>`, hyphen a
 
 For `*-shared` packages, they are created to be reused as much as possible by other apps and packages. Instead of having a special dependency or usage, they should have a minimum list of dependencies and a broad set of use cases.
 
-`pixi-svelte`, `utils-event-emitter`, `utils-layout` and `utils-xstate` they have functions to create corresponding [svelte-context](https://svelte.dev/docs/svelte/context). For the contexts, they can be used by either an app or a local `components-*` package by just calling the `get<CONTEXT_NAME>Context()`. For example, components in `components-layout` use `getLayoutContext()` from `utils-layout`. In this way, we can regard `pixi-svelte` as an integration of "utils-pixi-svelte" and "components-pixi-svelte".
+`pixi-svelte`, `utils-event-emitter`, `utils-layout` and `utils-xstate` they have functions to create corresponding [svelte-context](https://svelte.dev/docs/svelte/context). For the contexts, they can be used by either an app or a local `components-*` package by just calling the `get<CONTEXT_NAME>Context()`. For example, components in `components-layout` use `getContextLayout()` from `utils-layout`. In this way, we can regard `pixi-svelte` as an integration of "utils-pixi-svelte" and "components-pixi-svelte".
 
 <a name="context"></a>
 
@@ -743,10 +743,10 @@ For `*-shared` packages, they are created to be reused as much as possible by ot
 // context.ts - Example of setContext in apps
 
 export const setContext = () => {
-  setEventEmitterContext<EmitterEvent>({ eventEmitter });
-  setXstateContext({ stateXstate, stateXstateDerived });
-  setLayoutContext({ stateLayout, stateLayoutDerived });
-  setAppContext({ stateApp });
+  setContextEventEmitter<EmitterEvent>({ eventEmitter });
+  setContextXstate({ stateXstate, stateXstateDerived });
+  setContextLayout({ stateLayout, stateLayoutDerived });
+  setContextApp({ stateApp });
 };
 ```
 

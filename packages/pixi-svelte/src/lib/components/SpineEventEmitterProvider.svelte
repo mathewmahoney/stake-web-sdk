@@ -7,16 +7,16 @@
 <script lang="ts">
 	import * as PIXI from 'pixi.js';
 
-	import { getSpineContext, setSpineEventEmitterContext } from '../context.svelte';
+	import { getContextSpine, setContextSpineEventEmitter } from '../context.svelte';
 
 	const props: Props = $props();
-	const spine = getSpineContext();
+	const spine = getContextSpine();
 	const spineEventEmitter = new PIXI.EventEmitter();
 
 	spine.beforeUpdateWorldTransforms = () => spineEventEmitter.emit('beforeUpdateWorldTransforms');
 	spine.afterUpdateWorldTransforms = () => spineEventEmitter.emit('afterUpdateWorldTransforms');
 
-	setSpineEventEmitterContext(spineEventEmitter);
+	setContextSpineEventEmitter(spineEventEmitter);
 </script>
 
 {@render props.children()}

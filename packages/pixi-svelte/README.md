@@ -12,9 +12,9 @@ Check out the storybook repo for pixi-svelte usage and for more information: htt
 
 ```ts
 <script lang="ts">
-    import { createApp, setAppContext, App, Text } from "pixi-svelte";
+    import { createApp, setContextApp, App, Text } from "pixi-svelte";
     const context = createApp();
-    setAppContext(context);
+    setContextApp(context);
 </script>
 
 <App>
@@ -26,9 +26,9 @@ Check out the storybook repo for pixi-svelte usage and for more information: htt
 
 ```ts
 <script lang="ts">
-    import { createApp, setAppContext, App, Graphics } from "pixi-svelte";
+    import { createApp, setContextApp, App, Graphics } from "pixi-svelte";
     const context = createApp();
-    setAppContext(context);
+    setContextApp(context);
 </script>
 
 <App>
@@ -47,9 +47,9 @@ Check out the storybook repo for pixi-svelte usage and for more information: htt
 
 ```ts
 <script lang="ts">
-    import { createApp, setAppContext, App, Rectangle } from "pixi-svelte";
+    import { createApp, setContextApp, App, Rectangle } from "pixi-svelte";
     const context = createApp();
-    setAppContext(context);
+    setContextApp(context);
 </script>
 
 <App>

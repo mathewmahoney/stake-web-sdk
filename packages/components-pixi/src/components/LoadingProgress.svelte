@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Container, Rectangle, getAppContext, anchorToPivot, Sprite } from 'pixi-svelte';
+	import { Container, Rectangle, getContextApp, anchorToPivot, Sprite } from 'pixi-svelte';
 	import type { Snippet } from 'svelte';
 
 	type Props = {
@@ -13,7 +13,7 @@
 	};
 
 	const props: Props = $props();
-	const context = getAppContext();
+	const context = getContextApp();
 
 	const sizes = $derived({ width: props.width, height: props.height });
 </script>

@@ -14,10 +14,10 @@
 	import { onDestroy } from 'svelte';
 
 	import { propsSyncEffect } from '../utils.svelte';
-	import { getSpineContext } from '../context.svelte';
+	import { getContextSpine } from '../context.svelte';
 
 	const props: Props = $props();
-	const spine = getSpineContext();
+	const spine = getContextSpine();
 
 	let track = $state(spine.state.tracks[props.trackIndex]);
 

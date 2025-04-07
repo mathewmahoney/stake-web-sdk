@@ -3,13 +3,13 @@
 	import { onMount, onDestroy, type Snippet } from 'svelte';
 	import { devicePixelRatio } from 'svelte/reactivity/window';
 
-	import { getAppContext } from '../context.svelte';
+	import { getContextApp } from '../context.svelte';
 	import { preloadFont } from '../utils.svelte';
 
 	type Props = { children: Snippet };
 
 	const props: Props = $props();
-	const context = getAppContext();
+	const context = getContextApp();
 
 	let wrap: HTMLDivElement;
 	let initialised = $state(false);

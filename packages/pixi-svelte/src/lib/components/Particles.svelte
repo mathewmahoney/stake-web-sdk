@@ -11,11 +11,11 @@
 
 <script lang="ts">
 	import type { LoadedSprite } from '../types';
-	import { getAppContext, getParticleParentContext } from '../context.svelte';
+	import { getContextApp, getContextParticleParent } from '../context.svelte';
 
 	const props: Props = $props();
-	const context = getAppContext();
-	const particleContainer = getParticleParentContext();
+	const context = getContextApp();
+	const particleContainer = getContextParticleParent();
 	const texture = $derived(
 		(context.stateApp.loadedAssets?.[props.key] || PIXI.Texture.EMPTY) as LoadedSprite,
 	);

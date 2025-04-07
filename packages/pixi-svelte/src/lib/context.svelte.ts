@@ -6,16 +6,16 @@ import type { PixiSvelteApp as AppContext } from './createApp.svelte';
 
 // App context
 const APP_NS = '@@pixi_svelte';
-export function setAppContext(value: AppContext) {
+export function setContextApp(value: AppContext) {
 	setContext(APP_NS, value);
 }
-export function getAppContext() {
+export function getContextApp() {
 	return getContext(APP_NS) as AppContext;
 }
 
 // Parent context
 const PARENT_NS = '@@pixi_parent';
-export function createParentContext(value: PIXI.Container) {
+export function createContextParent(value: PIXI.Container) {
 	const addToParent = (node: PIXI.ContainerChild) => {
 		onMount(() => {
 			context.parent.addChild(node);
@@ -33,33 +33,33 @@ export function createParentContext(value: PIXI.Container) {
 
 	return context;
 }
-export function getParentContext() {
-	return getContext(PARENT_NS) as ReturnType<typeof createParentContext>;
+export function getContextParent() {
+	return getContext(PARENT_NS) as ReturnType<typeof createContextParent>;
 }
 
 // Spine context
 const PARTICLE_PARENT_NS = '@@pixi_particle_parent';
-export function setParticleParentContext(value: PIXI.ParticleContainer) {
+export function setContextParticleParent(value: PIXI.ParticleContainer) {
 	setContext(PARTICLE_PARENT_NS, value);
 }
-export function getParticleParentContext() {
+export function getContextParticleParent() {
 	return getContext(PARTICLE_PARENT_NS) as PIXI.ParticleContainer;
 }
 
 // Spine context
 const SPINE_NS = '@@pixi_spine';
-export function setSpineContext(value: SPINE_PIXI.Spine) {
+export function setContextSpine(value: SPINE_PIXI.Spine) {
 	setContext(SPINE_NS, value);
 }
-export function getSpineContext() {
+export function getContextSpine() {
 	return getContext(SPINE_NS) as SPINE_PIXI.Spine;
 }
 
 // Spine event context
 const SPINE_EVENT_EMITTER_NS = '@@pixi_spine_event_emitter';
-export function setSpineEventEmitterContext(value: PIXI.EventEmitter) {
+export function setContextSpineEventEmitter(value: PIXI.EventEmitter) {
 	setContext(SPINE_EVENT_EMITTER_NS, value);
 }
-export function getSpineEventEmitterContext() {
+export function getContextSpineEventEmitter() {
 	return getContext(SPINE_EVENT_EMITTER_NS) as PIXI.EventEmitter;
 }

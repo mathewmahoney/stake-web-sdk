@@ -1,13 +1,13 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	import { getAppContext } from 'pixi-svelte';
+	import { getContextApp } from 'pixi-svelte';
 
 	type Props = { children: Snippet<[{ x: number; y: number; }]> };
 
 	const props: Props = $props();
 
-	const context = getAppContext();
+	const context = getContextApp();
 
 	let x = $state(0);
 	let y = $state(0);

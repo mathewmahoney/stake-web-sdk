@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	import { getEventEmitterContext } from 'utils-event-emitter';
+	import { getContextEventEmitter } from 'utils-event-emitter';
 	import { Button } from 'components-shared';
 
 	import BaseIcon from './BaseIcon.svelte';
@@ -14,7 +14,7 @@
 	};
 
 	let { value = $bindable(), children }: Props = $props();
-	const { eventEmitter } = getEventEmitterContext<EmitterEventModal>();
+	const { eventEmitter } = getContextEventEmitter<EmitterEventModal>();
 	const ICONS = { on: 'volumeOn', off: 'volumeOff' } as const;
 </script>
 

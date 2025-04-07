@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	import { getLayoutContext } from 'utils-layout';
+	import { getContextLayout } from 'utils-layout';
 	import { resizeObserver, type ContentRect } from 'utils-resize-observer';
 
 	import BaseContent from './BaseContent.svelte';
@@ -16,7 +16,7 @@
 
 	const props: Props = $props();
 
-	const { stateLayoutDerived } = getLayoutContext();
+	const { stateLayoutDerived } = getContextLayout();
 
 	let contentRect = $state({ width: 0, height: 0, left: 0, top: 0 } as ContentRect);
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, onDestroy, type Snippet } from 'svelte';
 
-	import { getAppContext } from '../context.svelte';
+	import { getContextApp } from '../context.svelte';
 
 	import InitialiseApplication from './InitialiseApplication.svelte';
 	import InitialiseParent from './InitialiseParent.svelte';
@@ -10,7 +10,7 @@
 	type Props = { children: Snippet };
 
 	const props: Props = $props();
-	const context = getAppContext();
+	const context = getContextApp();
 
 	onMount(() => context.stateApp.reset());
 	onDestroy(() => context.stateApp.reset());

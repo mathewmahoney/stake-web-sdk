@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { stateBet, stateConfig } from 'state-shared';
 	import { Button, OptionsToggle } from 'components-shared';
-	import { getEventEmitterContext } from 'utils-event-emitter';
+	import { getContextEventEmitter } from 'utils-event-emitter';
 	import { numberToCurrencyString } from 'utils-shared/amount';
 
 	import BaseIcon from './BaseIcon.svelte';
 	import BaseButtonContent from './BaseButtonContent.svelte';
 	import type { EmitterEventModal } from '../types';
 
-	const { eventEmitter } = getEventEmitterContext<EmitterEventModal>();
+	const { eventEmitter } = getContextEventEmitter<EmitterEventModal>();
 
 	const iconSize = '2.5rem';
 </script>

@@ -11,15 +11,15 @@
 
 <script lang="ts">
 	import { propsSyncEffect } from '../utils.svelte';
-	import { getParentContext, setParticleParentContext } from '../context.svelte';
+	import { getContextParent, setContextParticleParent } from '../context.svelte';
 
 	const props: Props = $props();
-	const parentContext = getParentContext();
+	const parentContext = getContextParent();
 	const particleContainer = new PIXI.ParticleContainer();
 
 	propsSyncEffect({ props, target: particleContainer, ignore: ['children'] });
 	parentContext.addToParent(particleContainer);
-	setParticleParentContext(particleContainer);
+	setContextParticleParent(particleContainer);
 </script>
 
 {@render props.children()}

@@ -7,11 +7,11 @@ type EventEmitterContext<TEmitterEvent extends EmitterEventBase> = ReturnType<
 >;
 
 const EVENT_EMITTER_NS = '@@eventEmitter';
-export function setEventEmitterContext<TEmitterEvent extends EmitterEventBase>(
+export function setContextEventEmitter<TEmitterEvent extends EmitterEventBase>(
 	value: EventEmitterContext<TEmitterEvent>,
 ) {
 	setContext(EVENT_EMITTER_NS, value);
 }
-export function getEventEmitterContext<TEmitterEvent extends EmitterEventBase>() {
+export function getContextEventEmitter<TEmitterEvent extends EmitterEventBase>() {
 	return getContext(EVENT_EMITTER_NS) as EventEmitterContext<TEmitterEvent>;
 }

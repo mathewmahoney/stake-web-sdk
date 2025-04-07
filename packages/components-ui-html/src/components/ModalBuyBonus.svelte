@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Popup } from 'components-shared';
 	import { zIndex } from 'constants-shared/zIndex';
-	import { getLayoutContext } from 'utils-layout';
+	import { getContextLayout } from 'utils-layout';
 	import { stateModal, stateMetaDerived } from 'state-shared';
 
 	import BonusCards from './BonusCards.svelte';
@@ -10,7 +10,7 @@
 	import BonusContentWrapPortrait from './BonusContentWrapPortrait.svelte';
 	import BonusContentWrapLandscape from './BonusContentWrapLandscape.svelte';
 
-	const { stateLayoutDerived } = getLayoutContext();
+	const { stateLayoutDerived } = getContextLayout();
 
 	const activateList = $derived(
 		stateMetaDerived.betModeMetaList().filter((item) => item.type === 'activate'),

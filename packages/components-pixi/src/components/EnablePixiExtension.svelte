@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { getAppContext } from 'pixi-svelte';
+	import { getContextApp } from 'pixi-svelte';
 
-	const context = getAppContext();
+	const context = getContextApp();
 
 	// @ts-ignore
 	globalThis.__PIXI_APP__ = context.stateApp.pixiApplication;

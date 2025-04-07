@@ -2,7 +2,7 @@
 	import { slide } from 'svelte/transition';
 	import { stateBetDerived } from 'state-shared';
 	import { DropdownToggle } from 'components-shared';
-	import { getEventEmitterContext } from 'utils-event-emitter';
+	import { getContextEventEmitter } from 'utils-event-emitter';
 
 	import AutoSpinsLossLimit from './AutoSpinsLossLimit.svelte';
 	import AutoSpinsSingleWinLimit from './AutoSpinsSingleWinLimit.svelte';
@@ -14,7 +14,7 @@
 	};
 
 	const props: Props = $props();
-	const { eventEmitter } = getEventEmitterContext<EmitterEventModal>();
+	const { eventEmitter } = getContextEventEmitter<EmitterEventModal>();
 	const SLIDE_DURATION = 100;
 
 	let open = $state(false);

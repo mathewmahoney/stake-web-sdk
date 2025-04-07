@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	import { getLayoutContext } from 'utils-layout';
+	import { getContextLayout } from 'utils-layout';
 	import { EnableSpaceHold } from 'components-shared';
 
 	import UiFadeContainer from './UiFadeContainer.svelte';
@@ -32,7 +32,7 @@
 
 	const props: Props = $props();
 
-	const { stateLayoutDerived } = getLayoutContext();
+	const { stateLayoutDerived } = getContextLayout();
 
 	const LAYOUT_COMPONENT_MAP = {
 		desktop: LayoutDesktop,

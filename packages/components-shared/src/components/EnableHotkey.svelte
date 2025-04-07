@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 
-	import { getEventEmitterContext } from 'utils-event-emitter';
+	import { getContextEventEmitter } from 'utils-event-emitter';
 
 	import type { EmitterEventHotKey } from '../types';
 
-	const context = getEventEmitterContext<EmitterEventHotKey>();
+	const context = getContextEventEmitter<EmitterEventHotKey>();
 	const PREVENT_DEFAULT_KEYS = ['Space', 'ArrowUp', 'ArrowDown'];
 	const EXCLUDED_TAGS = ['input', 'textarea', 'select'];
 

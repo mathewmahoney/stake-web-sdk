@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { stateBet, stateModal, type BetModeData } from 'state-shared';
 	import { Button } from 'components-shared';
-	import { getEventEmitterContext } from 'utils-event-emitter';
+	import { getContextEventEmitter } from 'utils-event-emitter';
 	import { numberToCurrencyString } from 'utils-shared/amount';
 
 	import BaseIcon from './BaseIcon.svelte';
@@ -15,7 +15,7 @@
 	};
 
 	const props: Props = $props();
-	const { eventEmitter } = getEventEmitterContext<EmitterEventModal>();
+	const { eventEmitter } = getContextEventEmitter<EmitterEventModal>();
 </script>
 
 {#each props.list as betModeData}

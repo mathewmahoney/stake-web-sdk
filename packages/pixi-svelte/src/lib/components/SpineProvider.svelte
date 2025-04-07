@@ -15,10 +15,10 @@
 
 	import BaseSpineProvider from './BaseSpineProvider.svelte';
 	import { anchorToPivot } from '../utils.svelte';
-	import { getAppContext } from '../context.svelte';
+	import { getContextApp } from '../context.svelte';
 
 	const { debug, key, anchor, children, scale: scaleProp, ...baseSpineProps }: Props = $props();
-	const context = getAppContext();
+	const context = getContextApp();
 	const spineData = $derived(context.stateApp.loadedAssets?.[key] as SPINE_PIXI.SkeletonData);
 
 	const SCALE_BASE = { x: 1, y: 1 };

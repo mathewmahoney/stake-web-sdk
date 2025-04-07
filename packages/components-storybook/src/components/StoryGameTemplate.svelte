@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount, type Snippet } from 'svelte';
 
-	import { getAppContext } from 'pixi-svelte';
-	import { getLayoutContext } from 'utils-layout';
+	import { getContextApp } from 'pixi-svelte';
+	import { getContextLayout } from 'utils-layout';
 
 	type Props = {
 		skipLoadingScreen: boolean;
@@ -11,8 +11,8 @@
 	};
 
 	const props: Props = $props();
-	const appContext = getAppContext();
-	const layoutContext = getLayoutContext();
+	const appContext = getContextApp();
+	const layoutContext = getContextLayout();
 
 	let actionState = $state({
 		running: false,

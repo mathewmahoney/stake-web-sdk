@@ -6,10 +6,10 @@
 
 <script lang="ts">
 	import AnimatedSprite from './AnimatedSprite.svelte';
-	import { getAppContext } from '../context.svelte';
+	import { getContextApp } from '../context.svelte';
 	import type { LoadedSpriteSheet } from '../types';
 
-	const context = getAppContext();
+	const context = getContextApp();
 
 	const { key, ...animateSpriteProps }: Props = $props();
 	const textures = $derived(context.stateApp.loadedAssets?.[key] as LoadedSpriteSheet);

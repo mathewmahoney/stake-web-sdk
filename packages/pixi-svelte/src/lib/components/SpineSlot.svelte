@@ -8,15 +8,15 @@
 	import { onMount, type Snippet } from 'svelte';
 
 	import {
-		getSpineContext,
-		createParentContext,
-		getSpineEventEmitterContext,
+		getContextSpine,
+		createContextParent,
+		getContextSpineEventEmitter,
 	} from '../context.svelte';
 
 	const props: Props = $props();
-	const spine = getSpineContext();
+	const spine = getContextSpine();
 	const slotContainer = new PIXI.Container();
-	const spineEventEmitter = getSpineEventEmitterContext();
+	const spineEventEmitter = getContextSpineEventEmitter();
 
 	let show = $state(!Boolean(spineEventEmitter));
 
@@ -34,7 +34,7 @@
 		spine.addSlotObject(props.slotName, slotContainer);
 	});
 
-	createParentContext(slotContainer);
+	createContextParent(slotContainer);
 </script>
 
 {#if show}

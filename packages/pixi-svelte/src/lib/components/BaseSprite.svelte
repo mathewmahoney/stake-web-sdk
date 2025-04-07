@@ -10,11 +10,11 @@
 
 <script lang="ts">
 	import { propsSyncEffect } from '../utils.svelte';
-	import { getParentContext } from '../context.svelte';
+	import { getContextParent } from '../context.svelte';
 
 	const props: Props = $props();
 
-	const parentContext = getParentContext();
+	const parentContext = getContextParent();
 	const sprite = new PIXI.Sprite(props.texture);
 
 	propsSyncEffect({ props, target: sprite, ignore: ['isMask'] });

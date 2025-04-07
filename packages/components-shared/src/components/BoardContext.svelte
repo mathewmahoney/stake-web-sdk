@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { setBoardContext } from '../context';
+	import { setContextBoard } from '../context';
 
 	type Props = {
 		animate: boolean;
@@ -9,7 +9,7 @@
 
 	const props: Props = $props();
 
-	setBoardContext({ animate: props.animate });
+	setContextBoard({ animate: props.animate });
 </script>
 
 {@render props.children()}

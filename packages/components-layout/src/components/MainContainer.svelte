@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Container, Text, type ContainerProps, Rectangle, anchorToPivot } from 'pixi-svelte';
-	import { getLayoutContext } from 'utils-layout';
+	import { getContextLayout } from 'utils-layout';
 
 	type Props = Omit<ContainerProps, 'x' | 'y' | 'scale' | 'pivot'> & {
 		debug?: boolean;
@@ -11,7 +11,7 @@
 
 	const { debug, alignVertical, alignHorizontal, children, standard, ...containerProps }: Props =
 		$props();
-	const context = getLayoutContext();
+	const context = getContextLayout();
 
 	const mainLayout = $derived.by(
 		standard

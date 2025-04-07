@@ -18,12 +18,12 @@
 
 <script lang="ts">
 	import { onDestroy } from 'svelte';
-	import { getAppContext, getParentContext } from '../context.svelte';
+	import { getContextApp, getContextParent } from '../context.svelte';
 	import { propsSyncEffect } from '../utils.svelte';
 
 	const props: Props = $props();
-	const context = getAppContext();
-	const parentContext = getParentContext();
+	const context = getContextApp();
+	const parentContext = getContextParent();
 	const textures = $derived(context.stateApp.loadedAssets?.[props.key] as LoadedSpriteSheet);
 	const updatedConfig = $derived(upgradeConfig(props.config, textures));
 	// svelte-ignore state_referenced_locally

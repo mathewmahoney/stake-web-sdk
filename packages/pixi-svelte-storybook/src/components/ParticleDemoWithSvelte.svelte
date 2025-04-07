@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as PIXI from 'pixi.js';
 
-	import { getAppContext, type LoadedSprite, getParticleParentContext } from 'pixi-svelte';
+	import { getContextApp, type LoadedSprite, getContextParticleParent } from 'pixi-svelte';
 
 	type Props = {
 		size: number;
@@ -10,8 +10,8 @@
 
 	const props: Props = $props();
 
-	const particleContainer = getParticleParentContext();
-	const context = getAppContext();
+	const particleContainer = getContextParticleParent();
+	const context = getContextApp();
 	const key = 'maggot';
 	const texture = $derived(context.stateApp.loadedAssets[key]) as LoadedSprite;
 

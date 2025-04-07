@@ -2,14 +2,14 @@
 	import type { Snippet } from 'svelte';
 	import * as PIXI from 'pixi.js';
 
-	import { getAppContext } from '../context.svelte';
+	import { getContextApp } from '../context.svelte';
 	import { getProcessed } from '../assetLoad';
 	import type { LoadedAssets, RawAsset } from '../types';
 
 	type Props = { children: Snippet };
 
 	const props: Props = $props();
-	const context = getAppContext();
+	const context = getContextApp();
 
 	let preLoaded = $state(false);
 

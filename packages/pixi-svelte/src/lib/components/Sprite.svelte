@@ -11,11 +11,11 @@
 
 <script lang="ts">
 	import BaseSprite from './BaseSprite.svelte';
-	import { getAppContext } from '../context.svelte';
+	import { getContextApp } from '../context.svelte';
 	import type { LoadedSprite } from '../types';
 
 	const { debug, key, ...baseSpriteProps }: Props = $props();
-	const context = getAppContext();
+	const context = getContextApp();
 	const texture = $derived(
 		(context.stateApp.loadedAssets?.[key] || PIXI.Texture.EMPTY) as LoadedSprite,
 	);
