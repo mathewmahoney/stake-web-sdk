@@ -9,6 +9,7 @@
 		symbolBackgroundInfo: ReturnType<typeof getSymbolBackgroundInfo>;
 		x?: number;
 		y?: number;
+		loop?: boolean;
 	};
 
 	const props: Props = $props();
@@ -23,6 +24,7 @@
 		height={SYMBOL_SIZE * props.symbolBackgroundInfo.sizeRatios.height}
 	>
 		<SpineTrack
+			loop={props.loop}
 			trackIndex={0}
 			animationName={props.symbolBackgroundInfo.animationName}
 			timeScale={stateBetDerived.timeScale()}

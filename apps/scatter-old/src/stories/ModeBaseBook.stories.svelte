@@ -2,22 +2,23 @@
 	import { defineMeta, setTemplate } from '@storybook/addon-svelte-csf';
 
 	const { Story } = defineMeta({
-		title: 'Game',
+		title: 'MODE_BASE/book',
 	});
 </script>
 
 <script lang="ts">
 	import {
-		StoryLocale,
 		StoryGameTemplate,
+		StoryLocale,
 		type TemplateArgs,
 		templateArgs,
 	} from 'components-storybook';
+	import { randomInteger } from 'utils-shared/random';
 
-	import { stateGame, stateGameDerived } from '../game/stateGame.svelte';
 	import Game from '../components/Game.svelte';
 	import { setContext } from '../game/context';
-	import config from '../game/config';
+	import { playBet } from '../game/utils';
+	import books from './data/base_books';
 
 	setTemplate(template);
 	setContext();
@@ -36,21 +37,16 @@
 	</StoryGameTemplate>
 {/snippet}
 
-<Story name="Preview">
-	<StoryLocale lang="en">
-		<Game />
-	</StoryLocale>
-</Story>
-
 <Story
-	name="PreSpin"
+	name="random"
 	args={templateArgs({
 		skipLoadingScreen: true,
 		data: {},
 		action: async () => {
-			await stateGameDerived.enhancedBoard.preSpin({
-				paddingBoard: config.paddingReels[stateGame.gameType],
-			});
+			const index = randomInteger({ min: 0, max: books.length - 1 });
+			const data = books[index];
+			console.log('Running a book at index', index);
+			await playBet({ ...data, state: data.events });
 		},
 	})}
 />

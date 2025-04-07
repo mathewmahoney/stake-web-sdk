@@ -13,15 +13,27 @@
 		y?: number;
 		listener: SpineTrackProps['listener'];
 		showWinFrame: boolean;
+		loop?: boolean;
 	};
 
 	const props: Props = $props();
 </script>
 
-<SymbolSpineBackground x={props.x} y={props.y} symbolBackgroundInfo={props.symbolBackgroundInfo} />
+<SymbolSpineBackground
+	x={props.x}
+	y={props.y}
+	symbolBackgroundInfo={props.symbolBackgroundInfo}
+	loop={props.loop}
+/>
 
 <!-- main -->
-<SymbolSpineMain x={props.x} y={props.y} symbolInfo={props.symbolInfo} listener={props.listener} />
+<SymbolSpineMain
+	x={props.x}
+	y={props.y}
+	symbolInfo={props.symbolInfo}
+	listener={props.listener}
+	loop={props.loop}
+/>
 
 <!-- tumble frame -->
 {#if props.showWinFrame}

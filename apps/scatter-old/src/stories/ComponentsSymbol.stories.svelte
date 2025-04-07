@@ -2,7 +2,7 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	const { Story } = defineMeta({
-		title: 'Symbol',
+		title: 'Components/<Symbol>',
 		component: Symbol,
 		args: {
 			x: 100,
@@ -46,7 +46,7 @@
 	];
 </script>
 
-<Story name="Preview">
+<Story name="component">
 	{#snippet children(args)}
 		<StoryPixiApp {assets}>
 			<Symbol {...args} oncomplete={() => console.log('complete')} />
@@ -54,7 +54,7 @@
 	{/snippet}
 </Story>
 
-<Story name="Symbols">
+<Story name="symbols">
 	<StoryPixiApp {assets}>
 		<Container scale={0.5}>
 			{#each SYMBOLS_LEFT as symbol, rowIndex}
@@ -62,7 +62,7 @@
 					{@const x = (columnIndex + 1) * BASE}
 					{@const y = (rowIndex + 1) * BASE}
 					<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
-					<Symbol {x} {y} rawSymbol={symbol} {state} />
+					<Symbol {x} {y} rawSymbol={symbol} {state} loop />
 				{/each}
 			{/each}
 		</Container>
@@ -73,7 +73,7 @@
 					{@const x = (columnIndex + 1) * BASE}
 					{@const y = (rowIndex + 1) * BASE}
 					<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
-					<Symbol {x} {y} rawSymbol={symbol} {state} />
+					<Symbol {x} {y} rawSymbol={symbol} {state} loop />
 				{/each}
 			{/each}
 		</Container>

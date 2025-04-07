@@ -10,6 +10,7 @@
 		x?: number;
 		y?: number;
 		listener: SpineTrackProps['listener'];
+		loop?: boolean;
 	};
 
 	const props: Props = $props();
@@ -22,6 +23,7 @@
 	height={SYMBOL_SIZE * props.symbolInfo.sizeRatios.height}
 >
 	<SpineTrack
+		loop={props.loop}
 		trackIndex={0}
 		animationName={props.symbolInfo.animationName}
 		timeScale={stateBetDerived.timeScale()}

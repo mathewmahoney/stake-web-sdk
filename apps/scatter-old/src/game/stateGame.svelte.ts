@@ -2,14 +2,13 @@ import _ from 'lodash';
 import type { Tween } from 'svelte/motion';
 
 import { stateBet } from 'state-shared';
-import { createReelForCascading } from 'utils-slots';
+import { createEnhanceBoard, createReelForCascading } from 'utils-slots';
 import { createGetWinLevelDataByBookEventAmount } from 'utils-shared/winLevel';
 
 import type { GameType, RawSymbol, SymbolState } from './types';
 import { stateLayoutDerived } from './stateLayout';
 import { winLevelMap } from './winLevelMap';
 import { eventEmitter } from './eventEmitter';
-import { enhanceBoard } from './utils';
 import config from './config';
 import {
 	SYMBOL_SIZE,
@@ -116,6 +115,8 @@ const scatterLandIndex = () => {
 	return stateGame.scatterCounter as 1 | 2 | 3 | 4 | 5;
 };
 
+
+const { enhanceBoard } = createEnhanceBoard();
 const enhancedBoard = enhanceBoard({ board: stateGame.board });
 
 // win levels

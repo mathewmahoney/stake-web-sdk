@@ -11,6 +11,7 @@
 		state: SymbolState;
 		rawSymbol: RawSymbol;
 		oncomplete?: () => void;
+		loop?: boolean;
 	};
 
 	const props: Props = $props();
@@ -27,6 +28,7 @@
 		state: props.state,
 	})}
 	<SymbolSpine
+		loop={props.loop}
 		{symbolInfo}
 		{symbolBackgroundInfo}
 		x={props.x}
@@ -36,7 +38,7 @@
 			complete: props.oncomplete,
 			event: (_, event) => {
 				if (event.data?.name === 'wildExplode') {
-					context.eventEmitter.broadcast({ type: 'soundOnce', name: 'sfx_wild_explode' });
+					context.eventEmitter?.broadcast({ type: 'soundOnce', name: 'sfx_wild_explode' });
 				}
 			},
 		}}

@@ -2,18 +2,19 @@
 	import { defineMeta, setTemplate } from '@storybook/addon-svelte-csf';
 
 	const { Story } = defineMeta({
-		title: 'EmitterEvent',
+		title: 'COMPONENTS/<Game>',
 	});
 </script>
 
 <script lang="ts">
 	import {
-		StoryGameTemplate,
 		StoryLocale,
+		StoryGameTemplate,
 		type TemplateArgs,
 		templateArgs,
 	} from 'components-storybook';
 
+	import { stateGameDerived } from '../game/stateGame.svelte';
 	import Game from '../components/Game.svelte';
 	import { setContext } from '../game/context';
 	import { eventEmitter } from '../game/eventEmitter';
@@ -35,8 +36,25 @@
 	</StoryGameTemplate>
 {/snippet}
 
+<Story name="component (loadingScreen)">
+	<StoryLocale lang="en">
+		<Game />
+	</StoryLocale>
+</Story>
+
 <Story
-	name="boardHide"
+	name="preSpin"
+	args={templateArgs({
+		skipLoadingScreen: true,
+		data: {},
+		action: async () => {
+			await stateGameDerived.enhancedBoard.preSpin({});
+		},
+	})}
+/>
+
+<Story
+	name="emitterEvent: boardHide"
 	args={templateArgs({
 		skipLoadingScreen: true,
 		data: {},

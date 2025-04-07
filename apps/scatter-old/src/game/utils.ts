@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { stateBet } from 'state-shared';
 import { createPlayBookUtils } from 'utils-book';
-import { createEnhanceBoard, createGetEmptyPaddedBoard } from 'utils-slots';
+import { createGetEmptyPaddedBoard } from 'utils-slots';
 
 import {
 	SYMBOL_SIZE,
@@ -17,7 +17,6 @@ import { bookEventHandlerMap } from './bookEventHandlerMap';
 import type { RawSymbol, SymbolName, SymbolState } from './types';
 
 // general utils
-export const { enhanceBoard } = createEnhanceBoard();
 export const { getEmptyBoard } = createGetEmptyPaddedBoard({ reelsDimensions: BOARD_DIMENSIONS });
 export const { playBookEvent, playBookEvents } = createPlayBookUtils({
 	bookEventHandlerMap,
