@@ -117,7 +117,7 @@ export const bookEventHandlerMap: BookEventHandlerMap<BookEvent, BookEventContex
 			current: undefined,
 			total: bookEvent.totFS,
 		});
-		stateUi.freeSpinCounter.total = bookEvent.totFS;
+		stateUi.freeSpinCounterTotal = bookEvent.totFS;
 		await eventEmitter.broadcastAsync({ type: 'uiShow' });
 		await eventEmitter.broadcastAsync({ type: 'drawerButtonShow' });
 		eventEmitter.broadcast({ type: 'drawerFold' });
@@ -130,7 +130,7 @@ export const bookEventHandlerMap: BookEventHandlerMap<BookEvent, BookEventContex
 			current: bookEvent.amount,
 			total: undefined,
 		});
-		stateUi.freeSpinCounter.current = bookEvent.amount;
+		stateUi.freeSpinCounterCurrent = bookEvent.amount;
 	},
 	updateGlobalMult: async (bookEvent: BookEventOfType<'updateGlobalMult'>) => {
 		eventEmitter.broadcast({ type: 'globalMultiplierShow' });
