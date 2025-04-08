@@ -24,4 +24,4 @@ export function createApp({ assets }: { assets: Assets }) {
 	};
 }
 
-export type PixiSvelteApp = ReturnType<typeof createApp>;
+export type App = ReturnType<typeof createApp>;

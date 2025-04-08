@@ -2,15 +2,15 @@ import type * as PIXI from 'pixi.js';
 import { setContext, getContext, onMount } from 'svelte';
 import * as SPINE_PIXI from '@esotericsoftware/spine-pixi-v8';
 
-import type { PixiSvelteApp as AppContext } from './createApp.svelte';
+import type { App as ContextApp } from './createApp.svelte';
 
 // App context
 const APP_NS = '@@pixi_svelte';
-export function setContextApp(value: AppContext) {
+export function setContextApp(value: ContextApp) {
 	setContext(APP_NS, value);
 }
 export function getContextApp() {
-	return getContext(APP_NS) as AppContext;
+	return getContext(APP_NS) as ContextApp;
 }
 
 // Parent context
@@ -37,7 +37,7 @@ export function getContextParent() {
 	return getContext(PARENT_NS) as ReturnType<typeof createContextParent>;
 }
 
-// Spine context
+// Particle context
 const PARTICLE_PARENT_NS = '@@pixi_particle_parent';
 export function setContextParticleParent(value: PIXI.ParticleContainer) {
 	setContext(PARTICLE_PARENT_NS, value);

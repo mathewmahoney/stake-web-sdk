@@ -20,10 +20,10 @@ This is a web game engine that allows you develop a game in a declarative way. I
   - [/apps](#apps)
   - [/packages](#packages)
 - [Context](#context)
-  - [EventEmitterContext](#eventEmitterContext)
-  - [LayoutContext](#layoutContext)
-  - [XstateContext](#xstateContext)
-  - [AppContext](#appContext)
+  - [ContextEventEmitter](#contextEventEmitter)
+  - [ContextLayout](#contextLayout)
+  - [ContextXstate](#contextXstate)
+  - [ContextApp](#contextApp)
 
 <a name="dependencies"></a>
 
@@ -716,11 +716,11 @@ The naming convention of packages is a combination of `<PACKAGE_TYPE>`, hyphen a
   - [utils-slots](/packages/utils-slots): This local package contains reusable functions/types for slots game, for example creating reel and spinning the board.
   - [utils-sound](/packages/utils-sound): This local package contains reusable functions/types based on npm package [howler](https://www.npmjs.com/package/howler) for music and sound effect.
   - [utils-event-emitter](/packages/utils-event-emitter): This local package contains reusable functions/types to achieve our [event-driven programming](https://en.wikipedia.org/wiki/Event-driven_programming).
-    - It creates `eventEmitter` and `EventEmitterContext` as a [svelte-context](https://svelte.dev/docs/svelte/context)
+    - It creates `eventEmitter` and `ContextEventEmitter` as a [svelte-context](https://svelte.dev/docs/svelte/context)
   - [utils-xstate](/packages/utils-xstate): This local package contains reusable functions/types based on npm package [xstate](https://www.npmjs.com/package/xstate).
-    - It creates `stateXstate`, `stateXstateDerived` and `XstateContext` as a [svelte-context](https://svelte.dev/docs/svelte/context)
+    - It creates `stateXstate`, `stateXstateDerived` and `ContextXstate` as a [svelte-context](https://svelte.dev/docs/svelte/context)
   - [utils-layout](/packages/utils-layout): This local package contains reusable functions/types for our layout system of pixijs.
-    - It creates `stateLayout`, `stateLayoutDerived` and `LayoutContext` as a [svelte-context](https://svelte.dev/docs/svelte/context)
+    - It creates `stateLayout`, `stateLayoutDerived` and `ContextLayout` as a [svelte-context](https://svelte.dev/docs/svelte/context)
 - `components-*`:
   - [components-layout](/packages/components-layout): This local package contains reusable svelte components based on another local package `utils-layout`.
   - [components-pixi](/packages/components-pixi): This local package contains reusable svelte components based on `pixi-svelte`.
@@ -754,15 +754,15 @@ export const setContext = () => {
 
 <img src="./documentation/context_diagram.png" alt="isolated" width="100%"/>
 
-<a name="eventEmitterContext"></a>
+<a name="contextEventEmitter"></a>
 
-## EventEmitterContext
+## ContextEventEmitter
 
 `eventEmitter` is created by [packages/utils-event-emitter/src/createEventEmitter.ts](/packages/utils-event-emitter/src/createEventEmitter.ts). We have covered eventEmitter in the [previous content](#eventEmitter).
 
-<a name="layoutContext"></a>
+<a name="contextLayout"></a>
 
-## LayoutContext
+## ContextLayout
 
 `stateLayout` and `stateLayoutDerived` are created by [packages/utils-layout/src/createLayout.svelte.ts](/packages/utils-layout/src/createLayout.svelte.ts). It provides canvasSizes, canvasRatio, layoutType and so on. Because we have a setting `resizeTo: window` for PIXI.Application, we use the sizes of window from [svelte-reactivity](https://svelte.dev/docs/svelte/svelte-reactivity-window) as `canvasSizes`.
 
@@ -799,9 +799,9 @@ const stateLayoutDerived = {
 };
 ```
 
-<a name="xstateContext"></a>
+<a name="contextXstate"></a>
 
-## XstateContext
+## ContextXstate
 
 `stateXstate` and `stateXstateDerived` are created by [packages/utils-xstate/src/createXstateUtils.svelte.ts](/packages/utils-xstate/src/createXstateUtils.svelte.ts). It provides a few functions to check the state of [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine), also known as `gameActor`, which is created by [packages/utils-xstate/src/createGameActor.svelte.ts](/packages/utils-xstate/src/createGameActor.ts).
 
@@ -875,7 +875,7 @@ const gameActor = createActor(gameMachine);
 <SimpleUiButton disabled={context.stateXstateDerived.isPlaying()} />
 ```
 
-<a name="appContext"></a>
+<a name="contextApp"></a>
 
 ## AppContext
 
