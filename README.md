@@ -2,7 +2,7 @@
 
 This is a web game engine that allows you develop a game in a declarative way. It is powered by Svelte 5, PixiJS 8 and TurboRepo.
 
- - How to use: Fork or start your own codebase with this codebase.
+ - How to use: Fork or start your own codebase with this repo.
 
 # Table of Contents
 
