@@ -1,6 +1,15 @@
 const BASE_BUCKET = 'https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/1-2-mining-game';
 
 export default {
+	loader: {
+		type: 'spine',
+		src: {
+			atlas: new URL('../../assets/spines/loader/loader.atlas', import.meta.url).href,
+			skeleton: new URL('../../assets/spines/loader/loader.json', import.meta.url).href,
+			scale: 2,
+		},
+		preload: true,
+	},
 	pressToContinueText: {
 		type: 'sprites',
 		src: `${BASE_BUCKET}/sprites/pressToContinueText/MM_pressanywhere.json`,
@@ -141,15 +150,6 @@ export default {
 	purpleFont: {
 		type: 'font',
 		src: `${BASE_BUCKET}/fonts/purpleFont/mm_purple.xml`,
-	},
-	loader: {
-		type: 'spine',
-		src: {
-			atlas: `${BASE_BUCKET}/spines/loader/loader.atlas`,
-			skeleton: `${BASE_BUCKET}/spines/loader/loader.json`,
-			scale: 2,
-		},
-		preload: true,
 	},
 	bigwin: {
 		type: 'spine',
