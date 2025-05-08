@@ -1410,6 +1410,9 @@ importers:
 
   packages/state-shared:
     dependencies:
+      '@lingui/core':
+        specifier: latest
+        version: 5.3.1(babel-plugin-macros@3.1.0)
       '@sveltejs/kit':
         specifier: latest
         version: 2.17.3(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.20.5)(vite@6.2.4(@types/node@22.13.8)(jiti@1.21.7)(sass-embedded@1.85.1)))(svelte@5.20.5)(vite@6.2.4(@types/node@22.13.8)(jiti@1.21.7)(sass-embedded@1.85.1))
@@ -2256,6 +2259,18 @@ packages:
       babel-plugin-macros:
         optional: true
 
+  '@lingui/core@5.3.1':
+    resolution: {integrity: sha512-Y6WdhTlzzz+HzE6rn34rVoyXuKvTHTF5JmKdevTRu5x7ZfURaEtcoT9y6k9jgA2QMaP8YblcnU50M0svn/UZTA==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      '@lingui/babel-plugin-lingui-macro': 5.3.1
+      babel-plugin-macros: 2 || 3
+    peerDependenciesMeta:
+      '@lingui/babel-plugin-lingui-macro':
+        optional: true
+      babel-plugin-macros:
+        optional: true
+
   '@lingui/format-po@5.2.0':
     resolution: {integrity: sha512-viUQaoRa8UxSghayTY7xjtwXbfXIVdlM8C4HsxmozQnl5TXnPVEwlaPYds3sdJ8PmQGcYCm35r8EsmuKBoWYDQ==}
     engines: {node: '>=20.0.0'}
@@ -2268,6 +2283,12 @@ packages:
 
   '@lingui/message-utils@5.3.0':
     resolution: {integrity: sha512-pWh7rUUkIdfq2WrxXpXXlnikmKDf+2OvHUb0LTb60AyWAvvFT0rtZ1O2OSLUQ68rKfSQJCTYl1o6LELHJ38EXA==}
+    engines: {node: '>=20.0.0'}
+    bundledDependencies:
+      - '@messageformat/date-skeleton'
+
+  '@lingui/message-utils@5.3.1':
+    resolution: {integrity: sha512-/nwO/uXHYNO4pT+gor7iFdvNHSIjhGhJnqGeWMndSAAqmx0LstrFp9yWhcUU3XaTceyy7AtgVZh0ter7ghOw/Q==}
     engines: {node: '>=20.0.0'}
     bundledDependencies:
       - '@messageformat/date-skeleton'
@@ -5114,6 +5135,14 @@ snapshots:
     optionalDependencies:
       babel-plugin-macros: 3.1.0
 
+  '@lingui/core@5.3.1(babel-plugin-macros@3.1.0)':
+    dependencies:
+      '@babel/runtime': 7.26.9
+      '@lingui/message-utils': 5.3.1
+      unraw: 3.0.0
+    optionalDependencies:
+      babel-plugin-macros: 3.1.0
+
   '@lingui/format-po@5.2.0(typescript@5.8.2)':
     dependencies:
       '@lingui/conf': 5.2.0(typescript@5.8.2)
@@ -5129,6 +5158,11 @@ snapshots:
       js-sha256: 0.10.1
 
   '@lingui/message-utils@5.3.0':
+    dependencies:
+      '@messageformat/parser': 5.1.1
+      js-sha256: 0.10.1
+
+  '@lingui/message-utils@5.3.1':
     dependencies:
       '@messageformat/parser': 5.1.1
       js-sha256: 0.10.1

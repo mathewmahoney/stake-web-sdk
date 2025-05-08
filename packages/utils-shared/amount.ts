@@ -1,4 +1,4 @@
-import { i18n } from '@lingui/core';
+import { stateI18n } from 'state-shared';
 
 import { BOOK_AMOUNT_MULTIPLIER } from 'constants-shared/bet';
 import { stateBet } from 'state-shared';
@@ -34,7 +34,7 @@ export const numberToCurrencyString = (value: number) => {
 		return `${NO_LOCALISATION_CURRENCY_MAP[stateBet.currency]} ${numberToFloat(value).toFixed(2)}`;
 	}
 
-	return i18n.number(value, {
+	return stateI18n.i18n.number(value, {
 		minimumFractionDigits: 2,
 		maximumFractionDigits: 2,
 		style: 'currency',

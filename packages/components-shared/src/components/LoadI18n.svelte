@@ -3,7 +3,8 @@
 	// https://lingui.dev/tutorials/javascript
 	// https://lingui.dev/ref/vite-plugin
 
-	import { i18n, type Messages } from '@lingui/core';
+	import { stateI18nDerived } from 'state-shared';
+
 	import { onMount, type Snippet } from 'svelte';
 
 	import { stateUrlDerived, type Language } from 'state-shared';
@@ -25,26 +26,21 @@
 		return messages;
 	};
 
-	const initI18n = (lang: Language, messages: Messages) => {
-		i18n.load(lang, messages as Messages);
-		i18n.activate(lang);
-		loaded = true;
-	};
-
 	onMount(() => {
 		try {
 			const messages = loadMessages(stateUrlDerived.lang());
-			initI18n(stateUrlDerived.lang(), messages);
+			stateI18nDerived.init(stateUrlDerived.lang(), messages);
 		} catch (error) {
 			console.error("Loading fallback locale 'en' because of error", error);
 			try {
 				const messages = loadMessages('en');
-				initI18n('en', messages);
+				stateI18nDerived.init('en', messages);
 			} catch (error) {
 				console.error("Loading fallback locale 'en' without any messages because of error", error);
-				initI18n('en', {});
+				stateI18nDerived.init('en', {});
 			}
 		}
+		loaded = true;
 	});
 </script>
 
