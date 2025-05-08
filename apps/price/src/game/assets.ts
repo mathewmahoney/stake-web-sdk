@@ -1,5 +1,4 @@
 export default {
-
 	loader: {
 		type: 'spine',
 		src: {
