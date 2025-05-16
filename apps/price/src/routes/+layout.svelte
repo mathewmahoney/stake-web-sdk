@@ -10,6 +10,8 @@
 	const props: Props = $props();
 
 	let showYourLoader = $state(false);
+
+	const loaderUrl = new URL('../../loader.gif', import.meta.url).href;
 </script>
 
 <GlobalStyle>
@@ -23,7 +25,7 @@
 <LoaderCarrot oncomplete={() => (showYourLoader = true)} />
 
 {#if showYourLoader}
-	<LoaderExample src={'/loader.gif'} />
+	<LoaderExample src={loaderUrl} />
 	<!-- '/loader.gif' is served from static folder of sveltekit -->
 	<!-- File location: apps/scatter/static/loader.gif -->
 {/if}
