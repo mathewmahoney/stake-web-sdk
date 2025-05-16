@@ -16,7 +16,7 @@
 	"dependencies": {
 		"svelte": "^5",
 		"vite": "latest",
-		"@sveltejs/adapter-auto": "latest",
+		"@sveltejs/adapter-static": "latest",
 		"@sveltejs/vite-plugin-svelte": "^5"
 	}
 }
