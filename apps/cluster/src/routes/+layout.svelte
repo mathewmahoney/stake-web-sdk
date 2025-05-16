@@ -2,6 +2,8 @@
 	import { type Snippet } from 'svelte';
 	import { GlobalStyle } from 'components-ui-html';
 	import { Authenticate, LoaderCarrot, LoaderExample, LoadI18n } from 'components-shared';
+	import Game from '../components/Game.svelte';
+	import { setContext } from '../game/context';
 
 	import messagesMap from '../i18n/messagesMap';
 
@@ -12,12 +14,14 @@
 	let showYourLoader = $state(false);
 
 	const loaderUrl = new URL('../../loader.gif', import.meta.url).href;
+
+	setContext();
 </script>
 
 <GlobalStyle>
 	<Authenticate>
 		<LoadI18n {messagesMap}>
-			{@render props.children()}
+			<Game />
 		</LoadI18n>
 	</Authenticate>
 </GlobalStyle>
@@ -29,3 +33,5 @@
 	<!-- '/loader.gif' is served from static folder of sveltekit -->
 	<!-- File location: apps/scatter/static/loader.gif -->
 {/if}
+
+{@render props.children()}
