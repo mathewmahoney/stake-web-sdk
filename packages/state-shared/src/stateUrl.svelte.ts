@@ -12,7 +12,7 @@ const lang = () =>
 const gameID = () => getUrlSearchParam('gameID') || '';
 const sessionID = () => getUrlSearchParam('sessionID') || '';
 const rgsUrl = () => getUrlSearchParam('rgs_url') || '';
-const socialCasino = () => getUrlSearchParam('socialCasino') === 'true';
+const socialCasino = () => getUrlSearchParam('social') === 'true';
 const force = () => getUrlSearchParam('force') === 'true';
 
 export const stateUrlDerived = {
