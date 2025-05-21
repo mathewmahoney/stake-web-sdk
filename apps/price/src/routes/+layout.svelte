@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { type Snippet } from 'svelte';
 	import { GlobalStyle } from 'components-ui-html';
-	import { Authenticate, LoaderCarrot, LoaderExample, LoadI18n } from 'components-shared';
+	import { Authenticate, LoaderStakeEngine, LoaderExample, LoadI18n } from 'components-shared';
 	import Game from '../components/Game.svelte';
 	import { setContext } from '../game/context';
 
@@ -26,7 +26,7 @@
 	</Authenticate>
 </GlobalStyle>
 
-<LoaderCarrot oncomplete={() => (showYourLoader = true)} />
+<LoaderStakeEngine oncomplete={() => (showYourLoader = true)} />
 
 {#if showYourLoader}
 	<LoaderExample src={loaderUrl} />

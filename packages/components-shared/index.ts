@@ -1,5 +1,5 @@
 import LoaderBase from './src/components/LoaderBase.svelte';
-import LoaderCarrot from './src/components/LoaderCarrot.svelte';
+import LoaderStakeEngine from './src/components/LoaderStakeEngine.svelte';
 import LoaderExample from './src/components/LoaderExample.svelte';
 import OnHotkey from './src/components/OnHotkey.svelte';
 import EnableHotkey from './src/components/EnableHotkey.svelte';
@@ -20,7 +20,7 @@ export * from './src/types';
 
 export {
 	LoaderBase,
-	LoaderCarrot,
+	LoaderStakeEngine,
 	LoaderExample,
 	OnHotkey,
 	EnableHotkey,
