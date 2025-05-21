@@ -13,6 +13,7 @@
 
 	let showYourLoader = $state(false);
 
+	const loaderUrlStakeEngine = new URL('../../stake-engine-loader.gif', import.meta.url).href;
 	const loaderUrl = new URL('../../loader.gif', import.meta.url).href;
 
 	setContext();
@@ -26,7 +27,7 @@
 	</Authenticate>
 </GlobalStyle>
 
-<LoaderStakeEngine oncomplete={() => (showYourLoader = true)} />
+<LoaderStakeEngine src={loaderUrlStakeEngine} oncomplete={() => (showYourLoader = true)} />
 
 {#if showYourLoader}
 	<LoaderExample src={loaderUrl} />
