@@ -770,7 +770,7 @@ The naming convention of packages is a combination of `<PACKAGE_TYPE>`, hyphen a
   - [config-vite](/packages/config-vite): This local package contains reusable configurations of npm package [vite](https://www.npmjs.com/package/vite).
 - `pixi-*`
   - [pixi-svelte](/packages/pixi-svelte): This local package contains reusable svelte components/functions/types based on [pixijs](https://www.npmjs.com/package/pixi.js) and [svelte](https://www.npmjs.com/package/svelte).
-    - It creates `stateApp` and `AppContext` as a [svelte-context](https://svelte.dev/docs/svelte/context).
+    - It creates `stateApp` and `ContextApp` as a [svelte-context](https://svelte.dev/docs/svelte/context).
     - It also builds and publishes [pixi-svelte of npm](https://www.npmjs.com/package/pixi-svelte).
   - [pixi-svelte-storybook](/packages/pixi-svelte-storybook): This is a storybook for components in `pixi-svelte`.
 - `constants-*`:
@@ -945,7 +945,7 @@ const gameActor = createActor(gameMachine);
 
 <a name="contextApp"></a>
 
-## AppContext
+## ContextApp
 
 `stateApp` is created by [packages/pixi-svelte/src/lib/createApp.svelte.ts](/packages/pixi-svelte/src/lib/createApp.svelte.ts). `loadedAssets` contains the static images, animations and sound data that is processed by `PIXI.Assets.load` with `stateApp.assets`. `loadedAssets` can be digested by pixi-svelte components directly as showed in pixi-svelte component [\<Sprite /\>](/packages/pixi-svelte/src/lib/components/Sprite.svelte).
 
