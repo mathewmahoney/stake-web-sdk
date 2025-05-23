@@ -73,7 +73,7 @@ pnpm run storybook --filter=lines
 <img src="./documentation/get-started-storybook-action.png" alt="isolated" width="100%"/>
 
 - Click on the `Action` button and wait for a base game to finish.
-- Congratulations! You are having a game running locally in the storybook now.
+- Now you are having a game running locally in the storybook.
 
 ## Run in DEV mode
 ```
@@ -134,7 +134,7 @@ build
 
 - Now you can go back to the dev mode and copy/paste the query strings in the url and play it locally.
 
-Congrats! You've completed the tutorial. You can explore the more content in the following documentation for details.
+Congratulations! You've completed the tutorial. You can explore the more content in the following documentation for details.
 
 # Table of Contents
 
