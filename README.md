@@ -1,6 +1,6 @@
 # Web SDK
 
-This is a web sdk that allows you to develop a game in a declarative way and an optional way to build and launch your games on with [Stake Engine](https://engine.stake.com/) with some easy steps. It is powered by Svelte 5, PixiJS 8 and TurboRepo.
+This is a web sdk that is convenient for you to develop a game in a declarative way. It is an optional way to build and launch your games on with [Stake Engine](https://engine.stake.com/) with some easy steps. It is powered by Svelte 5, PixiJS 8 and TurboRepo.
 
 - How to use: Start your own codebase based on this repo and changing any source code as you need.
 
