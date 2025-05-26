@@ -112,7 +112,7 @@ pnpm run storybook --filter=lines
 
 <a name="runInDevMode"></a>
 
-## Run in DEV mode
+## Run in DEV Mode
 ```
 pnpm run dev --filter=lines
 ```
@@ -120,7 +120,7 @@ pnpm run dev --filter=lines
 
 <img src="./documentation/get-started-dev.png" alt="isolated" width="100%"/>
 
-- It is all good to have that error screen for now, because we have not connected to the RGS with dev mode. We will show you later how to do that.
+- It is all good to have that error screen for now, because we have not connected to the RGS with DEV mode. We will show you later how to do that.
 
 <a name="buildAGame"></a>
 
@@ -173,7 +173,7 @@ build
 
 - Check the query string in the URL and those are the values required to connect to the RGS.
 
-- Now you can go back to the dev mode and copy/paste the query strings in the url and play it locally.
+- Now you can go back to the DEV mode and copy/paste the query strings in the url and play it locally.
 
 Congratulations! You've completed the tutorial. You can explore the more content in the following documentation for details.
 
