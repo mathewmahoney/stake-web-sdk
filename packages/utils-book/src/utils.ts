@@ -19,7 +19,6 @@ export function recordBookEvent<TBookEvent extends BaseBookEvent>({
 			eventIndex: bookEvent.index,
 			rgsUrl: stateUrlDerived.rgsUrl(),
 			sessionID: stateUrlDerived.sessionID(),
-			gameID: stateUrlDerived.gameID(),
 		});
 	} catch (error) {
 		console.error(error);

@@ -3477,7 +3477,7 @@ export default {
 				},
 			],
 		],
-		freeSpins: [
+		freegame: [
 			[
 				{
 					name: 'L5',

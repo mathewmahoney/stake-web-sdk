@@ -10,7 +10,6 @@ const handleRequestBet = async ({ onError }: { onError: () => void }) => {
 	try {
 		const data = await requestBet({
 			rgsUrl: stateUrlDerived.rgsUrl(),
-			gameID: stateUrlDerived.gameID(),
 			sessionID: stateUrlDerived.sessionID(),
 			currency: stateBet.currency,
 			mode: stateBet.activeBetModeKey,
@@ -43,7 +42,6 @@ const handleRequestBet = async ({ onError }: { onError: () => void }) => {
 const handleRequestEndRound = async () => {
 	try {
 		const data = await requestEndRound({
-			gameID: stateUrlDerived.gameID(),
 			sessionID: stateUrlDerived.sessionID(),
 			rgsUrl: stateUrlDerived.rgsUrl(),
 		});
@@ -208,7 +206,6 @@ function createPrimaryMachines<TBet extends BaseBet>(options: Options<TBet>) {
 			const forceWithApi = async () => {
 				return await requestForceResult({
 					rgsUrl: stateUrlDerived.rgsUrl(),
-					gameID: stateUrlDerived.gameID(),
 					mode: stateForce.forceBetModeKey.toUpperCase(),
 					search: {
 						bookID:

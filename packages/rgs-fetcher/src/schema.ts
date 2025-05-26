@@ -84,7 +84,6 @@ export interface components {
 			gameType?: string;
 		};
 		req_search: {
-			gameID?: components['schemas']['GameID'];
 			mode?: components['schemas']['Mode'];
 			search?: components['schemas']['Search'];
 		};
@@ -99,11 +98,9 @@ export interface components {
 		 */
 		SessionID: string;
 		/** @description RGS game id */
-		GameID: string;
 		Language: string;
 		req_authenticate: {
 			sessionID: components['schemas']['SessionID'];
-			gameID?: components['schemas']['GameID'];
 			language?: components['schemas']['Language'];
 		};
 		/**
@@ -214,6 +211,20 @@ export interface components {
 			 * @example 10
 			 */
 			defaultBetLevel?: number;
+			jurisdiction: {
+				socialCasino: boolean,
+				disabledFullscreen: boolean,
+				disabledTurbo: boolean,
+				disabledSuperTurbo: boolean,
+				disabledAutoplay: boolean,
+				disabledSlamstop: boolean,
+				disabledSpacebar: boolean,
+				disabledBuyFeature: boolean,
+				displayNetPosition: boolean,
+				displayRTP: boolean,
+				displaySessionTimer: boolean,
+				minimumRoundDuration: number,
+			},
 		};
 		res_authenticate: {
 			status?: components['schemas']['StatusObject'];
@@ -236,7 +247,6 @@ export interface components {
 			sessionID: components['schemas']['SessionID'];
 			amount: components['schemas']['Amount'];
 			currency: components['schemas']['Currency'];
-			gameID: components['schemas']['GameID'];
 			mode: components['schemas']['Mode'];
 			meta?: components['schemas']['Meta'];
 		};
@@ -248,7 +258,6 @@ export interface components {
 		};
 		req_end_round: {
 			sessionID: components['schemas']['SessionID'];
-			gameID?: components['schemas']['GameID'];
 		};
 		res_end_round: {
 			balance?: components['schemas']['BalanceObject'];
@@ -257,7 +266,6 @@ export interface components {
 		};
 		req_event: {
 			sessionID: components['schemas']['SessionID'];
-			gameID?: components['schemas']['GameID'];
 			event?: components['schemas']['Event'];
 		};
 		res_event: {
@@ -269,7 +277,6 @@ export interface components {
 		Action: string;
 		req_action: {
 			sessionID: components['schemas']['SessionID'];
-			gameID: components['schemas']['GameID'];
 			action: components['schemas']['Action'];
 			meta?: components['schemas']['Meta'];
 		};
@@ -284,7 +291,6 @@ export interface components {
 		/** @description String that represents a session on the casino side. This can be passed back with every API call. */
 		Token: OneOf<[string, Record<string, never>]>;
 		req_sess_start: {
-			gameID: components['schemas']['GameID'];
 			currency: components['schemas']['currency'];
 			token: components['schemas']['Token'];
 			/** @default 100000 */

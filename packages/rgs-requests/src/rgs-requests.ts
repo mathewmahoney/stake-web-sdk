@@ -5,7 +5,6 @@ export * from './types';
 
 export const requestAuthenticate = async (options: {
 	sessionID: string;
-	gameID: string;
 	rgsUrl: string;
 	language: string;
 }) => {
@@ -13,7 +12,6 @@ export const requestAuthenticate = async (options: {
 		rgsUrl: options.rgsUrl,
 		url: '/wallet/authenticate',
 		variables: {
-			gameID: options.gameID,
 			sessionID: options.sessionID,
 			language: options.language,
 		},
@@ -23,7 +21,6 @@ export const requestAuthenticate = async (options: {
 };
 
 export const requestEndRound = async (options: {
-	gameID: string;
 	sessionID: string;
 	rgsUrl: string;
 }) => {
@@ -31,7 +28,6 @@ export const requestEndRound = async (options: {
 		rgsUrl: options.rgsUrl,
 		url: '/wallet/end-round',
 		variables: {
-			gameID: options.gameID,
 			sessionID: options.sessionID,
 		},
 	});
@@ -40,7 +36,6 @@ export const requestEndRound = async (options: {
 };
 
 export const requestEndEvent = async (options: {
-	gameID: string;
 	sessionID: string;
 	eventIndex: number;
 	rgsUrl: string;
@@ -49,7 +44,6 @@ export const requestEndEvent = async (options: {
 		rgsUrl: options.rgsUrl,
 		url: '/bet/event',
 		variables: {
-			gameID: options.gameID,
 			sessionID: options.sessionID,
 			event: `${options.eventIndex}`,
 		},
@@ -59,7 +53,6 @@ export const requestEndEvent = async (options: {
 };
 
 export const requestForceResult = async (options: {
-	gameID: string;
 	mode: string;
 	search: {
 		bookID?: number;
@@ -75,7 +68,6 @@ export const requestForceResult = async (options: {
 		rgsUrl: options.rgsUrl,
 		url: '/game/search',
 		variables: {
-			gameID: options.gameID,
 			mode: options.mode,
 			search: options.search,
 		},
@@ -85,7 +77,6 @@ export const requestForceResult = async (options: {
 };
 
 export const requestBet = async (options: {
-	gameID: string;
 	sessionID: string;
 	currency: string;
 	amount: number;
@@ -96,7 +87,6 @@ export const requestBet = async (options: {
 		rgsUrl: options.rgsUrl,
 		url: '/wallet/play',
 		variables: {
-			gameID: options.gameID,
 			mode: options.mode,
 			currency: options.currency,
 			sessionID: options.sessionID,

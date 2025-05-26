@@ -338,7 +338,7 @@ export default [
 					],
 				],
 				paddingPositions: [178, 114, 68, 184, 205, 58],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -680,7 +680,7 @@ export default [
 					],
 				],
 				paddingPositions: [81, 7, 5, 6, 166, 138],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -844,7 +844,7 @@ export default [
 					],
 				],
 				paddingPositions: [175, 55, 248, 108, 185, 7],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -1175,7 +1175,7 @@ export default [
 					],
 				],
 				paddingPositions: [240, 126, 141, 59, 88, 59],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -1339,7 +1339,7 @@ export default [
 					],
 				],
 				paddingPositions: [243, 74, 237, 5, 106, 214],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -1502,7 +1502,7 @@ export default [
 					],
 				],
 				paddingPositions: [25, 47, 161, 185, 220, 75],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -1665,7 +1665,7 @@ export default [
 					],
 				],
 				paddingPositions: [85, 229, 184, 249, 182, 128],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -1973,7 +1973,7 @@ export default [
 					],
 				],
 				paddingPositions: [108, 129, 212, 233, 171, 48],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -3020,7 +3020,7 @@ export default [
 					],
 				],
 				paddingPositions: [9, 222, 7, 93, 119, 238],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -3329,7 +3329,7 @@ export default [
 					],
 				],
 				paddingPositions: [134, 42, 143, 45, 60, 59],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -4017,7 +4017,7 @@ export default [
 					],
 				],
 				paddingPositions: [83, 44, 34, 130, 130, 92],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -4605,7 +4605,7 @@ export default [
 					],
 				],
 				paddingPositions: [228, 114, 203, 106, 188, 134],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -4768,7 +4768,7 @@ export default [
 					],
 				],
 				paddingPositions: [90, 92, 219, 246, 114, 41],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -5363,7 +5363,7 @@ export default [
 					],
 				],
 				paddingPositions: [102, 183, 189, 118, 167, 135],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -5854,7 +5854,7 @@ export default [
 					],
 				],
 				paddingPositions: [127, 128, 131, 212, 203, 90],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -6017,7 +6017,7 @@ export default [
 					],
 				],
 				paddingPositions: [116, 230, 231, 118, 89, 145],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -6180,7 +6180,7 @@ export default [
 					],
 				],
 				paddingPositions: [142, 185, 116, 124, 168, 56],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -6343,7 +6343,7 @@ export default [
 					],
 				],
 				paddingPositions: [208, 179, 213, 42, 224, 232],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -6916,7 +6916,7 @@ export default [
 					],
 				],
 				paddingPositions: [122, 79, 77, 245, 204, 180],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -7224,7 +7224,7 @@ export default [
 					],
 				],
 				paddingPositions: [143, 132, 129, 166, 157, 150],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -7731,7 +7731,7 @@ export default [
 					],
 				],
 				paddingPositions: [140, 121, 101, 163, 220, 38],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -8049,7 +8049,7 @@ export default [
 					],
 				],
 				paddingPositions: [38, 222, 237, 133, 99, 189],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -8212,7 +8212,7 @@ export default [
 					],
 				],
 				paddingPositions: [198, 16, 40, 194, 245, 151],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -8520,7 +8520,7 @@ export default [
 					],
 				],
 				paddingPositions: [199, 7, 210, 221, 68, 121],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -9115,7 +9115,7 @@ export default [
 					],
 				],
 				paddingPositions: [99, 182, 201, 235, 109, 101],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -9468,7 +9468,7 @@ export default [
 					],
 				],
 				paddingPositions: [147, 113, 246, 239, 34, 224],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -10097,7 +10097,7 @@ export default [
 					],
 				],
 				paddingPositions: [126, 55, 66, 247, 172, 111],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -10261,7 +10261,7 @@ export default [
 					],
 				],
 				paddingPositions: [107, 129, 213, 98, 146, 89],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -11263,7 +11263,7 @@ export default [
 					],
 				],
 				paddingPositions: [27, 67, 54, 241, 237, 6],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -11846,7 +11846,7 @@ export default [
 					],
 				],
 				paddingPositions: [206, 66, 204, 69, 49, 42],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -12009,7 +12009,7 @@ export default [
 					],
 				],
 				paddingPositions: [187, 245, 218, 217, 225, 95],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -12466,7 +12466,7 @@ export default [
 					],
 				],
 				paddingPositions: [155, 86, 171, 99, 129, 63],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -12808,7 +12808,7 @@ export default [
 					],
 				],
 				paddingPositions: [121, 71, 22, 241, 239, 209],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -12972,7 +12972,7 @@ export default [
 					],
 				],
 				paddingPositions: [140, 215, 76, 1, 232, 74],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -13135,7 +13135,7 @@ export default [
 					],
 				],
 				paddingPositions: [217, 195, 130, 49, 105, 108],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -13592,7 +13592,7 @@ export default [
 					],
 				],
 				paddingPositions: [110, 115, 41, 59, 78, 66],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -13954,7 +13954,7 @@ export default [
 					],
 				],
 				paddingPositions: [55, 104, 71, 46, 234, 222],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -14119,7 +14119,7 @@ export default [
 					],
 				],
 				paddingPositions: [40, 195, 204, 18, 35, 158],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -14455,7 +14455,7 @@ export default [
 					],
 				],
 				paddingPositions: [53, 198, 55, 245, 42, 223],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -14761,7 +14761,7 @@ export default [
 					],
 				],
 				paddingPositions: [80, 246, 50, 138, 224, 173],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -14924,7 +14924,7 @@ export default [
 					],
 				],
 				paddingPositions: [46, 240, 247, 176, 50, 247],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -15496,7 +15496,7 @@ export default [
 					],
 				],
 				paddingPositions: [98, 76, 5, 92, 106, 42],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -16000,7 +16000,7 @@ export default [
 					],
 				],
 				paddingPositions: [67, 16, 84, 77, 209, 154],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -16163,7 +16163,7 @@ export default [
 					],
 				],
 				paddingPositions: [152, 173, 181, 86, 16, 79],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -16674,7 +16674,7 @@ export default [
 					],
 				],
 				paddingPositions: [49, 144, 141, 179, 206, 186],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -17155,7 +17155,7 @@ export default [
 					],
 				],
 				paddingPositions: [205, 156, 175, 22, 216, 108],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -17513,7 +17513,7 @@ export default [
 					],
 				],
 				paddingPositions: [206, 64, 113, 179, 24, 193],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -17676,7 +17676,7 @@ export default [
 					],
 				],
 				paddingPositions: [162, 203, 74, 24, 243, 11],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -17839,7 +17839,7 @@ export default [
 					],
 				],
 				paddingPositions: [51, 211, 167, 233, 92, 124],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -18003,7 +18003,7 @@ export default [
 					],
 				],
 				paddingPositions: [232, 49, 131, 147, 165, 248],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -18166,7 +18166,7 @@ export default [
 					],
 				],
 				paddingPositions: [249, 234, 7, 162, 92, 62],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -18329,7 +18329,7 @@ export default [
 					],
 				],
 				paddingPositions: [77, 91, 150, 30, 22, 128],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -19096,7 +19096,7 @@ export default [
 					],
 				],
 				paddingPositions: [134, 50, 29, 155, 169, 68],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -19414,7 +19414,7 @@ export default [
 					],
 				],
 				paddingPositions: [50, 97, 123, 57, 35, 152],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -19925,7 +19925,7 @@ export default [
 					],
 				],
 				paddingPositions: [108, 15, 211, 144, 31, 242],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -20089,7 +20089,7 @@ export default [
 					],
 				],
 				paddingPositions: [242, 15, 147, 149, 101, 12],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -20997,7 +20997,7 @@ export default [
 					],
 				],
 				paddingPositions: [219, 34, 74, 107, 36, 138],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -21160,7 +21160,7 @@ export default [
 					],
 				],
 				paddingPositions: [46, 26, 148, 146, 163, 48],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -21616,7 +21616,7 @@ export default [
 					],
 				],
 				paddingPositions: [140, 182, 16, 144, 15, 158],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -22741,7 +22741,7 @@ export default [
 					],
 				],
 				paddingPositions: [174, 136, 109, 198, 80, 119],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -23669,7 +23669,7 @@ export default [
 					],
 				],
 				paddingPositions: [116, 92, 76, 63, 203, 46],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -24390,7 +24390,7 @@ export default [
 					],
 				],
 				paddingPositions: [62, 20, 147, 76, 134, 126],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -25815,7 +25815,7 @@ export default [
 					],
 				],
 				paddingPositions: [186, 114, 73, 155, 250, 18],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -26597,7 +26597,7 @@ export default [
 					],
 				],
 				paddingPositions: [38, 238, 125, 107, 10, 246],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -27143,7 +27143,7 @@ export default [
 					],
 				],
 				paddingPositions: [229, 212, 103, 22, 124, 59],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -27780,7 +27780,7 @@ export default [
 					],
 				],
 				paddingPositions: [133, 104, 121, 230, 233, 97],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -27943,7 +27943,7 @@ export default [
 					],
 				],
 				paddingPositions: [169, 66, 24, 208, 16, 98],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -28106,7 +28106,7 @@ export default [
 					],
 				],
 				paddingPositions: [96, 27, 169, 14, 86, 60],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -28702,7 +28702,7 @@ export default [
 					],
 				],
 				paddingPositions: [127, 231, 166, 132, 230, 53],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -29297,7 +29297,7 @@ export default [
 					],
 				],
 				paddingPositions: [36, 155, 16, 138, 242, 9],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -29629,7 +29629,7 @@ export default [
 					],
 				],
 				paddingPositions: [242, 220, 148, 116, 186, 149],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -30369,7 +30369,7 @@ export default [
 					],
 				],
 				paddingPositions: [195, 153, 24, 136, 176, 80],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -31869,7 +31869,7 @@ export default [
 					],
 				],
 				paddingPositions: [215, 126, 128, 159, 50, 79],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -32032,7 +32032,7 @@ export default [
 					],
 				],
 				paddingPositions: [135, 72, 130, 168, 18, 206],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -32554,7 +32554,7 @@ export default [
 					],
 				],
 				paddingPositions: [185, 108, 40, 43, 60, 13],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -32717,7 +32717,7 @@ export default [
 					],
 				],
 				paddingPositions: [129, 223, 236, 151, 16, 198],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -33338,7 +33338,7 @@ export default [
 					],
 				],
 				paddingPositions: [235, 74, 52, 172, 57, 185],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -33501,7 +33501,7 @@ export default [
 					],
 				],
 				paddingPositions: [197, 68, 233, 53, 101, 71],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -34371,7 +34371,7 @@ export default [
 					],
 				],
 				paddingPositions: [11, 51, 181, 226, 1, 225],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -35806,7 +35806,7 @@ export default [
 					],
 				],
 				paddingPositions: [229, 96, 216, 125, 35, 6],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -36284,7 +36284,7 @@ export default [
 					],
 				],
 				paddingPositions: [188, 232, 217, 28, 246, 152],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -37654,7 +37654,7 @@ export default [
 					],
 				],
 				paddingPositions: [234, 4, 128, 21, 146, 127],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -38143,7 +38143,7 @@ export default [
 					],
 				],
 				paddingPositions: [195, 23, 179, 148, 37, 44],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -38450,7 +38450,7 @@ export default [
 					],
 				],
 				paddingPositions: [184, 245, 10, 13, 69, 142],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -39119,7 +39119,7 @@ export default [
 					],
 				],
 				paddingPositions: [154, 90, 97, 107, 72, 211],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -39283,7 +39283,7 @@ export default [
 					],
 				],
 				paddingPositions: [175, 77, 169, 92, 34, 116],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -39613,7 +39613,7 @@ export default [
 					],
 				],
 				paddingPositions: [248, 112, 157, 96, 11, 149],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -40359,7 +40359,7 @@ export default [
 					],
 				],
 				paddingPositions: [240, 232, 77, 137, 93, 197],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -40522,7 +40522,7 @@ export default [
 					],
 				],
 				paddingPositions: [140, 115, 111, 120, 16, 167],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -41325,7 +41325,7 @@ export default [
 					],
 				],
 				paddingPositions: [216, 128, 40, 215, 57, 248],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -41488,7 +41488,7 @@ export default [
 					],
 				],
 				paddingPositions: [9, 8, 127, 77, 209, 155],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -41652,7 +41652,7 @@ export default [
 					],
 				],
 				paddingPositions: [136, 236, 218, 20, 38, 98],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -42166,7 +42166,7 @@ export default [
 					],
 				],
 				paddingPositions: [227, 177, 162, 10, 152, 101],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -42484,7 +42484,7 @@ export default [
 					],
 				],
 				paddingPositions: [167, 189, 157, 166, 40, 159],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -42791,7 +42791,7 @@ export default [
 					],
 				],
 				paddingPositions: [135, 16, 15, 9, 48, 225],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -43098,7 +43098,7 @@ export default [
 					],
 				],
 				paddingPositions: [7, 199, 118, 83, 112, 151],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -43261,7 +43261,7 @@ export default [
 					],
 				],
 				paddingPositions: [132, 59, 163, 75, 127, 1],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -43602,7 +43602,7 @@ export default [
 					],
 				],
 				paddingPositions: [117, 167, 71, 104, 141, 238],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -44512,7 +44512,7 @@ export default [
 					],
 				],
 				paddingPositions: [73, 7, 17, 144, 196, 27],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -44676,7 +44676,7 @@ export default [
 					],
 				],
 				paddingPositions: [216, 74, 98, 17, 245, 4],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -45697,7 +45697,7 @@ export default [
 					],
 				],
 				paddingPositions: [86, 231, 53, 15, 147, 209],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -46177,7 +46177,7 @@ export default [
 					],
 				],
 				paddingPositions: [209, 86, 174, 103, 204, 215],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -46486,7 +46486,7 @@ export default [
 					],
 				],
 				paddingPositions: [235, 15, 209, 234, 169, 130],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -46650,7 +46650,7 @@ export default [
 					],
 				],
 				paddingPositions: [113, 28, 169, 108, 248, 34],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -46980,7 +46980,7 @@ export default [
 					],
 				],
 				paddingPositions: [142, 41, 249, 178, 226, 13],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -47881,7 +47881,7 @@ export default [
 					],
 				],
 				paddingPositions: [129, 208, 21, 102, 155, 107],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -48337,7 +48337,7 @@ export default [
 					],
 				],
 				paddingPositions: [120, 122, 155, 98, 138, 7],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -48700,7 +48700,7 @@ export default [
 					],
 				],
 				paddingPositions: [21, 247, 49, 249, 201, 169],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -49495,7 +49495,7 @@ export default [
 					],
 				],
 				paddingPositions: [32, 214, 175, 155, 3, 70],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -49658,7 +49658,7 @@ export default [
 					],
 				],
 				paddingPositions: [21, 223, 203, 207, 227, 206],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -49821,7 +49821,7 @@ export default [
 					],
 				],
 				paddingPositions: [115, 190, 111, 243, 35, 203],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -49985,7 +49985,7 @@ export default [
 					],
 				],
 				paddingPositions: [91, 217, 59, 124, 229, 193],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -50149,7 +50149,7 @@ export default [
 					],
 				],
 				paddingPositions: [171, 93, 227, 110, 163, 80],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -50916,7 +50916,7 @@ export default [
 					],
 				],
 				paddingPositions: [152, 204, 162, 67, 176, 114],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -52374,7 +52374,7 @@ export default [
 					],
 				],
 				paddingPositions: [191, 34, 112, 173, 186, 113],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -52537,7 +52537,7 @@ export default [
 					],
 				],
 				paddingPositions: [75, 51, 45, 133, 91, 64],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -52900,7 +52900,7 @@ export default [
 					],
 				],
 				paddingPositions: [80, 91, 206, 66, 92, 205],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -53063,7 +53063,7 @@ export default [
 					],
 				],
 				paddingPositions: [41, 141, 170, 169, 70, 42],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -53226,7 +53226,7 @@ export default [
 					],
 				],
 				paddingPositions: [17, 31, 152, 86, 7, 21],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -53390,7 +53390,7 @@ export default [
 					],
 				],
 				paddingPositions: [218, 250, 97, 103, 149, 239],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -53722,7 +53722,7 @@ export default [
 					],
 				],
 				paddingPositions: [223, 164, 175, 226, 28, 148],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -54605,7 +54605,7 @@ export default [
 					],
 				],
 				paddingPositions: [46, 221, 24, 191, 223, 124],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -55087,7 +55087,7 @@ export default [
 					],
 				],
 				paddingPositions: [115, 159, 55, 124, 204, 72],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -55568,7 +55568,7 @@ export default [
 					],
 				],
 				paddingPositions: [209, 22, 71, 71, 30, 7],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -55940,7 +55940,7 @@ export default [
 					],
 				],
 				paddingPositions: [52, 223, 90, 204, 80, 57],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -56271,7 +56271,7 @@ export default [
 					],
 				],
 				paddingPositions: [186, 130, 107, 59, 147, 116],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -56435,7 +56435,7 @@ export default [
 					],
 				],
 				paddingPositions: [118, 144, 204, 92, 112, 145],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -56598,7 +56598,7 @@ export default [
 					],
 				],
 				paddingPositions: [115, 103, 198, 221, 207, 16],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -56919,7 +56919,7 @@ export default [
 					],
 				],
 				paddingPositions: [241, 214, 4, 50, 35, 136],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -57272,7 +57272,7 @@ export default [
 					],
 				],
 				paddingPositions: [73, 135, 126, 38, 227, 219],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -58347,7 +58347,7 @@ export default [
 					],
 				],
 				paddingPositions: [29, 101, 12, 18, 119, 185],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -58511,7 +58511,7 @@ export default [
 					],
 				],
 				paddingPositions: [102, 236, 128, 59, 45, 139],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -58674,7 +58674,7 @@ export default [
 					],
 				],
 				paddingPositions: [60, 79, 79, 42, 211, 160],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -58838,7 +58838,7 @@ export default [
 					],
 				],
 				paddingPositions: [231, 121, 86, 222, 113, 200],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -59157,7 +59157,7 @@ export default [
 					],
 				],
 				paddingPositions: [203, 69, 121, 36, 29, 173],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -59645,7 +59645,7 @@ export default [
 					],
 				],
 				paddingPositions: [215, 66, 237, 247, 189, 23],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -60007,7 +60007,7 @@ export default [
 					],
 				],
 				paddingPositions: [5, 202, 56, 244, 154, 64],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -60170,7 +60170,7 @@ export default [
 					],
 				],
 				paddingPositions: [39, 206, 155, 170, 161, 7],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -60510,7 +60510,7 @@ export default [
 					],
 				],
 				paddingPositions: [153, 160, 180, 75, 57, 200],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -60674,7 +60674,7 @@ export default [
 					],
 				],
 				paddingPositions: [66, 107, 201, 22, 89, 126],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -60838,7 +60838,7 @@ export default [
 					],
 				],
 				paddingPositions: [242, 144, 75, 148, 11, 72],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -61001,7 +61001,7 @@ export default [
 					],
 				],
 				paddingPositions: [202, 1, 133, 95, 60, 125],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -61320,7 +61320,7 @@ export default [
 					],
 				],
 				paddingPositions: [77, 81, 117, 116, 16, 42],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -61928,7 +61928,7 @@ export default [
 					],
 				],
 				paddingPositions: [186, 217, 3, 113, 215, 221],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -62980,7 +62980,7 @@ export default [
 					],
 				],
 				paddingPositions: [163, 216, 175, 241, 185, 102],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -63143,7 +63143,7 @@ export default [
 					],
 				],
 				paddingPositions: [35, 208, 202, 224, 50, 38],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -63307,7 +63307,7 @@ export default [
 					],
 				],
 				paddingPositions: [136, 143, 205, 244, 175, 53],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -63470,7 +63470,7 @@ export default [
 					],
 				],
 				paddingPositions: [183, 163, 17, 79, 104, 20],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -63789,7 +63789,7 @@ export default [
 					],
 				],
 				paddingPositions: [153, 36, 174, 207, 104, 208],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -65318,7 +65318,7 @@ export default [
 					],
 				],
 				paddingPositions: [86, 4, 110, 95, 146, 13],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -65482,7 +65482,7 @@ export default [
 					],
 				],
 				paddingPositions: [12, 245, 122, 95, 148, 198],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -65952,7 +65952,7 @@ export default [
 					],
 				],
 				paddingPositions: [29, 142, 54, 245, 63, 134],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -66283,7 +66283,7 @@ export default [
 					],
 				],
 				paddingPositions: [16, 201, 70, 49, 191, 154],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -66614,7 +66614,7 @@ export default [
 					],
 				],
 				paddingPositions: [230, 33, 64, 168, 78, 234],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -66977,7 +66977,7 @@ export default [
 					],
 				],
 				paddingPositions: [44, 221, 247, 241, 207, 60],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -67342,7 +67342,7 @@ export default [
 					],
 				],
 				paddingPositions: [93, 147, 129, 51, 207, 173],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -67505,7 +67505,7 @@ export default [
 					],
 				],
 				paddingPositions: [193, 213, 126, 55, 183, 76],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -67823,7 +67823,7 @@ export default [
 					],
 				],
 				paddingPositions: [87, 249, 103, 56, 197, 186],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -67986,7 +67986,7 @@ export default [
 					],
 				],
 				paddingPositions: [88, 151, 146, 134, 69, 211],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -70378,7 +70378,7 @@ export default [
 					],
 				],
 				paddingPositions: [181, 77, 141, 29, 72, 122],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -72288,7 +72288,7 @@ export default [
 					],
 				],
 				paddingPositions: [203, 161, 203, 41, 48, 52],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -72451,7 +72451,7 @@ export default [
 					],
 				],
 				paddingPositions: [206, 111, 33, 104, 131, 122],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -73377,7 +73377,7 @@ export default [
 					],
 				],
 				paddingPositions: [145, 158, 51, 225, 18, 235],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -73542,7 +73542,7 @@ export default [
 					],
 				],
 				paddingPositions: [99, 221, 187, 18, 205, 25],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -73706,7 +73706,7 @@ export default [
 					],
 				],
 				paddingPositions: [193, 218, 101, 112, 168, 76],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -73869,7 +73869,7 @@ export default [
 					],
 				],
 				paddingPositions: [40, 202, 163, 244, 104, 59],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -74715,7 +74715,7 @@ export default [
 					],
 				],
 				paddingPositions: [147, 187, 27, 205, 53, 99],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -74878,7 +74878,7 @@ export default [
 					],
 				],
 				paddingPositions: [34, 160, 126, 26, 140, 180],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -75234,7 +75234,7 @@ export default [
 					],
 				],
 				paddingPositions: [231, 122, 152, 30, 133, 122],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -75397,7 +75397,7 @@ export default [
 					],
 				],
 				paddingPositions: [109, 229, 138, 221, 46, 227],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -75864,7 +75864,7 @@ export default [
 					],
 				],
 				paddingPositions: [23, 6, 119, 96, 115, 29],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -76172,7 +76172,7 @@ export default [
 					],
 				],
 				paddingPositions: [167, 67, 239, 32, 121, 72],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -76539,7 +76539,7 @@ export default [
 					],
 				],
 				paddingPositions: [148, 115, 105, 53, 51, 81],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -77284,7 +77284,7 @@ export default [
 					],
 				],
 				paddingPositions: [174, 85, 84, 109, 23, 160],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -77730,7 +77730,7 @@ export default [
 					],
 				],
 				paddingPositions: [103, 20, 52, 146, 62, 8],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -78049,7 +78049,7 @@ export default [
 					],
 				],
 				paddingPositions: [21, 48, 64, 177, 195, 72],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -78212,7 +78212,7 @@ export default [
 					],
 				],
 				paddingPositions: [159, 30, 231, 5, 68, 180],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -78375,7 +78375,7 @@ export default [
 					],
 				],
 				paddingPositions: [215, 56, 146, 60, 14, 3],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -78683,7 +78683,7 @@ export default [
 					],
 				],
 				paddingPositions: [158, 76, 71, 35, 177, 165],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -78846,7 +78846,7 @@ export default [
 					],
 				],
 				paddingPositions: [184, 114, 232, 39, 236, 163],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -79611,7 +79611,7 @@ export default [
 					],
 				],
 				paddingPositions: [213, 110, 40, 42, 103, 237],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -79918,7 +79918,7 @@ export default [
 					],
 				],
 				paddingPositions: [30, 176, 32, 199, 148, 109],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -80732,7 +80732,7 @@ export default [
 					],
 				],
 				paddingPositions: [37, 203, 192, 59, 235, 59],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -81049,7 +81049,7 @@ export default [
 					],
 				],
 				paddingPositions: [111, 189, 197, 224, 104, 157],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -81369,7 +81369,7 @@ export default [
 					],
 				],
 				paddingPositions: [244, 84, 138, 127, 177, 29],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -81532,7 +81532,7 @@ export default [
 					],
 				],
 				paddingPositions: [5, 39, 189, 209, 22, 31],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -81696,7 +81696,7 @@ export default [
 					],
 				],
 				paddingPositions: [5, 116, 41, 141, 186, 87],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -82049,7 +82049,7 @@ export default [
 					],
 				],
 				paddingPositions: [170, 9, 120, 221, 209, 60],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -83818,7 +83818,7 @@ export default [
 					],
 				],
 				paddingPositions: [50, 53, 172, 248, 205, 228],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -83982,7 +83982,7 @@ export default [
 					],
 				],
 				paddingPositions: [243, 195, 229, 148, 186, 18],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -84354,7 +84354,7 @@ export default [
 					],
 				],
 				paddingPositions: [79, 107, 48, 46, 217, 28],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -84518,7 +84518,7 @@ export default [
 					],
 				],
 				paddingPositions: [240, 186, 198, 246, 243, 144],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -84964,7 +84964,7 @@ export default [
 					],
 				],
 				paddingPositions: [85, 66, 47, 244, 100, 79],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -86109,7 +86109,7 @@ export default [
 					],
 				],
 				paddingPositions: [222, 244, 244, 166, 131, 36],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -86272,7 +86272,7 @@ export default [
 					],
 				],
 				paddingPositions: [69, 170, 177, 47, 110, 12],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -86435,7 +86435,7 @@ export default [
 					],
 				],
 				paddingPositions: [230, 8, 107, 236, 64, 129],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -87040,7 +87040,7 @@ export default [
 					],
 				],
 				paddingPositions: [225, 104, 101, 169, 236, 234],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -87203,7 +87203,7 @@ export default [
 					],
 				],
 				paddingPositions: [144, 95, 101, 149, 6, 76],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -87660,7 +87660,7 @@ export default [
 					],
 				],
 				paddingPositions: [143, 139, 134, 110, 193, 172],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -89036,7 +89036,7 @@ export default [
 					],
 				],
 				paddingPositions: [23, 113, 91, 25, 110, 199],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -89201,7 +89201,7 @@ export default [
 					],
 				],
 				paddingPositions: [237, 215, 243, 50, 131, 61],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -89364,7 +89364,7 @@ export default [
 					],
 				],
 				paddingPositions: [43, 7, 139, 96, 89, 45],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -90162,7 +90162,7 @@ export default [
 					],
 				],
 				paddingPositions: [181, 127, 107, 5, 131, 160],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -90325,7 +90325,7 @@ export default [
 					],
 				],
 				paddingPositions: [91, 197, 14, 52, 200, 9],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -90488,7 +90488,7 @@ export default [
 					],
 				],
 				paddingPositions: [168, 44, 158, 55, 248, 188],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -90968,7 +90968,7 @@ export default [
 					],
 				],
 				paddingPositions: [194, 220, 94, 247, 146, 72],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -91314,7 +91314,7 @@ export default [
 					],
 				],
 				paddingPositions: [121, 45, 183, 123, 151, 202],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -91656,7 +91656,7 @@ export default [
 					],
 				],
 				paddingPositions: [46, 204, 45, 136, 82, 172],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -92250,7 +92250,7 @@ export default [
 					],
 				],
 				paddingPositions: [50, 149, 29, 21, 25, 109],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -92582,7 +92582,7 @@ export default [
 					],
 				],
 				paddingPositions: [146, 71, 210, 151, 84, 27],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -92745,7 +92745,7 @@ export default [
 					],
 				],
 				paddingPositions: [78, 229, 199, 116, 140, 55],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -93457,7 +93457,7 @@ export default [
 					],
 				],
 				paddingPositions: [27, 158, 200, 30, 181, 203],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -93824,7 +93824,7 @@ export default [
 					],
 				],
 				paddingPositions: [125, 189, 216, 113, 174, 77],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -93987,7 +93987,7 @@ export default [
 					],
 				],
 				paddingPositions: [21, 175, 194, 65, 215, 156],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -94151,7 +94151,7 @@ export default [
 					],
 				],
 				paddingPositions: [83, 245, 78, 19, 138, 166],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -95056,7 +95056,7 @@ export default [
 					],
 				],
 				paddingPositions: [236, 54, 80, 86, 229, 190],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -95220,7 +95220,7 @@ export default [
 					],
 				],
 				paddingPositions: [170, 152, 204, 39, 209, 217],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -95383,7 +95383,7 @@ export default [
 					],
 				],
 				paddingPositions: [68, 143, 190, 70, 236, 50],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -95547,7 +95547,7 @@ export default [
 					],
 				],
 				paddingPositions: [126, 200, 39, 167, 36, 83],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -95710,7 +95710,7 @@ export default [
 					],
 				],
 				paddingPositions: [249, 200, 33, 121, 129, 66],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -96459,7 +96459,7 @@ export default [
 					],
 				],
 				paddingPositions: [136, 203, 62, 21, 161, 34],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -96622,7 +96622,7 @@ export default [
 					],
 				],
 				paddingPositions: [166, 58, 100, 52, 203, 78],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -98511,7 +98511,7 @@ export default [
 					],
 				],
 				paddingPositions: [147, 175, 186, 213, 50, 131],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -98968,7 +98968,7 @@ export default [
 					],
 				],
 				paddingPositions: [241, 159, 80, 211, 235, 46],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -99303,7 +99303,7 @@ export default [
 					],
 				],
 				paddingPositions: [226, 249, 213, 162, 173, 25],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -100302,7 +100302,7 @@ export default [
 					],
 				],
 				paddingPositions: [90, 48, 173, 41, 158, 117],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -100465,7 +100465,7 @@ export default [
 					],
 				],
 				paddingPositions: [103, 144, 17, 131, 162, 32],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -100628,7 +100628,7 @@ export default [
 					],
 				],
 				paddingPositions: [247, 10, 138, 44, 19, 209],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -101354,7 +101354,7 @@ export default [
 					],
 				],
 				paddingPositions: [114, 111, 205, 126, 156, 129],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -101517,7 +101517,7 @@ export default [
 					],
 				],
 				paddingPositions: [209, 208, 126, 72, 43, 12],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -103559,7 +103559,7 @@ export default [
 					],
 				],
 				paddingPositions: [56, 36, 33, 55, 152, 123],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -104016,7 +104016,7 @@ export default [
 					],
 				],
 				paddingPositions: [244, 99, 93, 62, 211, 149],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -104348,7 +104348,7 @@ export default [
 					],
 				],
 				paddingPositions: [75, 216, 139, 137, 31, 130],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -105074,7 +105074,7 @@ export default [
 					],
 				],
 				paddingPositions: [143, 80, 208, 81, 217, 170],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -105237,7 +105237,7 @@ export default [
 					],
 				],
 				paddingPositions: [51, 14, 225, 243, 64, 50],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -105401,7 +105401,7 @@ export default [
 					],
 				],
 				paddingPositions: [98, 221, 109, 155, 132, 39],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -105564,7 +105564,7 @@ export default [
 					],
 				],
 				paddingPositions: [139, 140, 182, 199, 11, 12],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -105915,7 +105915,7 @@ export default [
 					],
 				],
 				paddingPositions: [94, 152, 199, 233, 23, 218],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -106995,7 +106995,7 @@ export default [
 					],
 				],
 				paddingPositions: [26, 104, 200, 11, 241, 107],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -107474,7 +107474,7 @@ export default [
 					],
 				],
 				paddingPositions: [148, 19, 10, 90, 24, 172],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -107846,7 +107846,7 @@ export default [
 					],
 				],
 				paddingPositions: [106, 189, 13, 168, 112, 89],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -108009,7 +108009,7 @@ export default [
 					],
 				],
 				paddingPositions: [249, 208, 164, 122, 64, 35],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -108614,7 +108614,7 @@ export default [
 					],
 				],
 				paddingPositions: [180, 208, 134, 36, 25, 249],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -108777,7 +108777,7 @@ export default [
 					],
 				],
 				paddingPositions: [77, 233, 191, 203, 238, 9],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -108940,7 +108940,7 @@ export default [
 					],
 				],
 				paddingPositions: [135, 21, 43, 117, 181, 38],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -109997,7 +109997,7 @@ export default [
 					],
 				],
 				paddingPositions: [247, 166, 3, 115, 199, 38],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -110329,7 +110329,7 @@ export default [
 					],
 				],
 				paddingPositions: [78, 112, 223, 208, 119, 90],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -110647,7 +110647,7 @@ export default [
 					],
 				],
 				paddingPositions: [40, 200, 67, 45, 123, 91],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -110810,7 +110810,7 @@ export default [
 					],
 				],
 				paddingPositions: [63, 43, 53, 195, 188, 125],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -111258,7 +111258,7 @@ export default [
 					],
 				],
 				paddingPositions: [85, 86, 195, 14, 100, 87],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -111421,7 +111421,7 @@ export default [
 					],
 				],
 				paddingPositions: [203, 142, 178, 176, 21, 76],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -112036,7 +112036,7 @@ export default [
 					],
 				],
 				paddingPositions: [72, 131, 30, 149, 5, 232],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -113075,7 +113075,7 @@ export default [
 					],
 				],
 				paddingPositions: [61, 17, 24, 107, 229, 80],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -113238,7 +113238,7 @@ export default [
 					],
 				],
 				paddingPositions: [45, 231, 238, 129, 133, 176],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -114913,7 +114913,7 @@ export default [
 					],
 				],
 				paddingPositions: [156, 59, 234, 173, 114, 33],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -115222,7 +115222,7 @@ export default [
 					],
 				],
 				paddingPositions: [239, 197, 72, 162, 172, 66],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -115565,7 +115565,7 @@ export default [
 					],
 				],
 				paddingPositions: [147, 106, 226, 42, 51, 94],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -115883,7 +115883,7 @@ export default [
 					],
 				],
 				paddingPositions: [109, 195, 213, 206, 124, 95],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -116651,7 +116651,7 @@ export default [
 					],
 				],
 				paddingPositions: [214, 244, 98, 224, 129, 169],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -117819,7 +117819,7 @@ export default [
 					],
 				],
 				paddingPositions: [58, 44, 79, 196, 150, 48],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -118320,7 +118320,7 @@ export default [
 					],
 				],
 				paddingPositions: [138, 107, 214, 186, 51, 114],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -118628,7 +118628,7 @@ export default [
 					],
 				],
 				paddingPositions: [56, 111, 200, 104, 172, 202],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -119097,7 +119097,7 @@ export default [
 					],
 				],
 				paddingPositions: [134, 50, 139, 172, 108, 76],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -119428,7 +119428,7 @@ export default [
 					],
 				],
 				paddingPositions: [192, 56, 209, 105, 245, 201],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -119757,7 +119757,7 @@ export default [
 					],
 				],
 				paddingPositions: [76, 150, 181, 165, 120, 101],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -120329,7 +120329,7 @@ export default [
 					],
 				],
 				paddingPositions: [217, 198, 229, 25, 187, 240],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -120494,7 +120494,7 @@ export default [
 					],
 				],
 				paddingPositions: [219, 35, 67, 38, 176, 87],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -120657,7 +120657,7 @@ export default [
 					],
 				],
 				paddingPositions: [160, 167, 109, 119, 72, 239],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -121173,7 +121173,7 @@ export default [
 					],
 				],
 				paddingPositions: [232, 215, 208, 153, 135, 234],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -121337,7 +121337,7 @@ export default [
 					],
 				],
 				paddingPositions: [102, 6, 63, 206, 144, 172],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -122103,7 +122103,7 @@ export default [
 					],
 				],
 				paddingPositions: [24, 172, 71, 163, 143, 229],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -122266,7 +122266,7 @@ export default [
 					],
 				],
 				paddingPositions: [239, 79, 33, 212, 79, 224],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -123174,7 +123174,7 @@ export default [
 					],
 				],
 				paddingPositions: [35, 62, 179, 80, 30, 197],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -124204,7 +124204,7 @@ export default [
 					],
 				],
 				paddingPositions: [129, 77, 45, 134, 164, 47],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -124367,7 +124367,7 @@ export default [
 					],
 				],
 				paddingPositions: [84, 131, 115, 220, 168, 242],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -125089,7 +125089,7 @@ export default [
 					],
 				],
 				paddingPositions: [86, 17, 5, 239, 167, 241],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -125453,7 +125453,7 @@ export default [
 					],
 				],
 				paddingPositions: [105, 52, 151, 23, 30, 5],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -125616,7 +125616,7 @@ export default [
 					],
 				],
 				paddingPositions: [52, 84, 100, 93, 152, 244],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -125779,7 +125779,7 @@ export default [
 					],
 				],
 				paddingPositions: [185, 55, 106, 149, 169, 140],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -125943,7 +125943,7 @@ export default [
 					],
 				],
 				paddingPositions: [13, 214, 46, 91, 34, 52],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -126319,7 +126319,7 @@ export default [
 					],
 				],
 				paddingPositions: [96, 7, 22, 188, 135, 222],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -126636,7 +126636,7 @@ export default [
 					],
 				],
 				paddingPositions: [207, 55, 53, 203, 110, 186],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -126800,7 +126800,7 @@ export default [
 					],
 				],
 				paddingPositions: [84, 164, 209, 56, 123, 10],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -127643,7 +127643,7 @@ export default [
 					],
 				],
 				paddingPositions: [123, 165, 166, 214, 80, 246],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -128149,7 +128149,7 @@ export default [
 					],
 				],
 				paddingPositions: [32, 134, 2, 124, 187, 197],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -129031,7 +129031,7 @@ export default [
 					],
 				],
 				paddingPositions: [214, 73, 244, 236, 51, 114],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -129350,7 +129350,7 @@ export default [
 					],
 				],
 				paddingPositions: [30, 9, 250, 134, 28, 186],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -129513,7 +129513,7 @@ export default [
 					],
 				],
 				paddingPositions: [12, 235, 9, 142, 90, 58],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -129677,7 +129677,7 @@ export default [
 					],
 				],
 				paddingPositions: [79, 186, 237, 126, 42, 136],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -129841,7 +129841,7 @@ export default [
 					],
 				],
 				paddingPositions: [145, 147, 147, 21, 197, 8],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -130183,7 +130183,7 @@ export default [
 					],
 				],
 				paddingPositions: [84, 20, 62, 169, 102, 215],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -130629,7 +130629,7 @@ export default [
 					],
 				],
 				paddingPositions: [109, 178, 17, 203, 122, 2],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -131792,7 +131792,7 @@ export default [
 					],
 				],
 				paddingPositions: [162, 18, 77, 105, 79, 132],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -131956,7 +131956,7 @@ export default [
 					],
 				],
 				paddingPositions: [155, 220, 188, 173, 109, 208],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -132120,7 +132120,7 @@ export default [
 					],
 				],
 				paddingPositions: [142, 195, 174, 62, 30, 221],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -132587,7 +132587,7 @@ export default [
 					],
 				],
 				paddingPositions: [72, 54, 229, 16, 191, 93],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -132917,7 +132917,7 @@ export default [
 					],
 				],
 				paddingPositions: [82, 197, 62, 131, 69, 81],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -133407,7 +133407,7 @@ export default [
 					],
 				],
 				paddingPositions: [134, 168, 77, 142, 100, 99],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -133863,7 +133863,7 @@ export default [
 					],
 				],
 				paddingPositions: [28, 225, 8, 93, 223, 160],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -134027,7 +134027,7 @@ export default [
 					],
 				],
 				paddingPositions: [143, 218, 31, 16, 38, 23],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -134390,7 +134390,7 @@ export default [
 					],
 				],
 				paddingPositions: [88, 156, 0, 198, 39, 192],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -134553,7 +134553,7 @@ export default [
 					],
 				],
 				paddingPositions: [94, 65, 189, 141, 180, 214],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -134872,7 +134872,7 @@ export default [
 					],
 				],
 				paddingPositions: [99, 239, 42, 150, 223, 162],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -135036,7 +135036,7 @@ export default [
 					],
 				],
 				paddingPositions: [97, 80, 54, 52, 115, 137],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -135200,7 +135200,7 @@ export default [
 					],
 				],
 				paddingPositions: [183, 100, 139, 108, 60, 63],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -135703,7 +135703,7 @@ export default [
 					],
 				],
 				paddingPositions: [171, 191, 19, 207, 113, 71],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -135866,7 +135866,7 @@ export default [
 					],
 				],
 				paddingPositions: [148, 72, 233, 232, 50, 202],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -136173,7 +136173,7 @@ export default [
 					],
 				],
 				paddingPositions: [199, 198, 232, 87, 115, 221],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -136536,7 +136536,7 @@ export default [
 					],
 				],
 				paddingPositions: [24, 184, 126, 95, 187, 6],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -136700,7 +136700,7 @@ export default [
 					],
 				],
 				paddingPositions: [127, 13, 5, 60, 250, 83],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -136863,7 +136863,7 @@ export default [
 					],
 				],
 				paddingPositions: [144, 18, 122, 216, 92, 21],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -137884,7 +137884,7 @@ export default [
 					],
 				],
 				paddingPositions: [147, 19, 172, 232, 33, 139],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -138047,7 +138047,7 @@ export default [
 					],
 				],
 				paddingPositions: [82, 101, 158, 99, 9, 67],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -138210,7 +138210,7 @@ export default [
 					],
 				],
 				paddingPositions: [197, 247, 116, 128, 142, 193],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -138517,7 +138517,7 @@ export default [
 					],
 				],
 				paddingPositions: [211, 212, 29, 171, 86, 140],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -139021,7 +139021,7 @@ export default [
 					],
 				],
 				paddingPositions: [103, 218, 50, 113, 99, 174],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -139799,7 +139799,7 @@ export default [
 					],
 				],
 				paddingPositions: [211, 125, 99, 88, 193, 206],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -140440,7 +140440,7 @@ export default [
 					],
 				],
 				paddingPositions: [62, 100, 42, 31, 131, 127],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -140887,7 +140887,7 @@ export default [
 					],
 				],
 				paddingPositions: [52, 134, 75, 47, 125, 180],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -141333,7 +141333,7 @@ export default [
 					],
 				],
 				paddingPositions: [182, 226, 140, 43, 0, 152],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -142092,7 +142092,7 @@ export default [
 					],
 				],
 				paddingPositions: [193, 225, 55, 106, 229, 95],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -142255,7 +142255,7 @@ export default [
 					],
 				],
 				paddingPositions: [238, 237, 186, 192, 240, 65],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -142724,7 +142724,7 @@ export default [
 					],
 				],
 				paddingPositions: [166, 129, 75, 115, 186, 21],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -143297,7 +143297,7 @@ export default [
 					],
 				],
 				paddingPositions: [77, 52, 145, 42, 45, 16],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -143804,7 +143804,7 @@ export default [
 					],
 				],
 				paddingPositions: [248, 231, 214, 12, 23, 105],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -144497,7 +144497,7 @@ export default [
 					],
 				],
 				paddingPositions: [180, 110, 211, 150, 144, 93],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -144660,7 +144660,7 @@ export default [
 					],
 				],
 				paddingPositions: [8, 206, 134, 158, 54, 129],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -145960,7 +145960,7 @@ export default [
 					],
 				],
 				paddingPositions: [233, 92, 17, 181, 148, 57],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -146295,7 +146295,7 @@ export default [
 					],
 				],
 				paddingPositions: [220, 5, 186, 3, 229, 241],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -147281,7 +147281,7 @@ export default [
 					],
 				],
 				paddingPositions: [184, 79, 179, 58, 130, 166],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -147589,7 +147589,7 @@ export default [
 					],
 				],
 				paddingPositions: [159, 10, 72, 69, 183, 52],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -147896,7 +147896,7 @@ export default [
 					],
 				],
 				paddingPositions: [54, 68, 158, 162, 12, 112],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -148059,7 +148059,7 @@ export default [
 					],
 				],
 				paddingPositions: [142, 166, 0, 68, 166, 61],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -148222,7 +148222,7 @@ export default [
 					],
 				],
 				paddingPositions: [166, 33, 87, 89, 7, 25],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -149525,7 +149525,7 @@ export default [
 					],
 				],
 				paddingPositions: [156, 21, 135, 125, 36, 111],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -149688,7 +149688,7 @@ export default [
 					],
 				],
 				paddingPositions: [2, 97, 95, 184, 137, 232],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -149997,7 +149997,7 @@ export default [
 					],
 				],
 				paddingPositions: [245, 157, 129, 6, 37, 121],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -150160,7 +150160,7 @@ export default [
 					],
 				],
 				paddingPositions: [117, 22, 30, 197, 100, 75],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -150524,7 +150524,7 @@ export default [
 					],
 				],
 				paddingPositions: [91, 116, 232, 107, 125, 73],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -150687,7 +150687,7 @@ export default [
 					],
 				],
 				paddingPositions: [67, 176, 176, 41, 178, 95],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -150850,7 +150850,7 @@ export default [
 					],
 				],
 				paddingPositions: [133, 186, 145, 63, 77, 189],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -151297,7 +151297,7 @@ export default [
 					],
 				],
 				paddingPositions: [37, 219, 216, 109, 230, 239],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -151461,7 +151461,7 @@ export default [
 					],
 				],
 				paddingPositions: [235, 191, 134, 212, 226, 188],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -151792,7 +151792,7 @@ export default [
 					],
 				],
 				paddingPositions: [231, 149, 9, 56, 96, 37],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -151956,7 +151956,7 @@ export default [
 					],
 				],
 				paddingPositions: [16, 41, 153, 149, 11, 138],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -152119,7 +152119,7 @@ export default [
 					],
 				],
 				paddingPositions: [96, 35, 231, 132, 223, 192],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -152481,7 +152481,7 @@ export default [
 					],
 				],
 				paddingPositions: [108, 202, 192, 24, 222, 100],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -152645,7 +152645,7 @@ export default [
 					],
 				],
 				paddingPositions: [76, 68, 183, 17, 117, 110],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -152962,7 +152962,7 @@ export default [
 					],
 				],
 				paddingPositions: [0, 185, 181, 221, 11, 166],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -153125,7 +153125,7 @@ export default [
 					],
 				],
 				paddingPositions: [158, 230, 158, 123, 158, 192],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -154222,7 +154222,7 @@ export default [
 					],
 				],
 				paddingPositions: [99, 167, 89, 122, 34, 135],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -154707,7 +154707,7 @@ export default [
 					],
 				],
 				paddingPositions: [192, 73, 60, 202, 177, 186],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -155165,7 +155165,7 @@ export default [
 					],
 				],
 				paddingPositions: [25, 101, 207, 241, 187, 222],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -155494,7 +155494,7 @@ export default [
 					],
 				],
 				paddingPositions: [22, 106, 8, 4, 185, 186],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -156163,7 +156163,7 @@ export default [
 					],
 				],
 				paddingPositions: [181, 117, 217, 246, 13, 45],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -156327,7 +156327,7 @@ export default [
 					],
 				],
 				paddingPositions: [80, 29, 64, 247, 83, 37],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -156490,7 +156490,7 @@ export default [
 					],
 				],
 				paddingPositions: [133, 226, 249, 24, 104, 224],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -156653,7 +156653,7 @@ export default [
 					],
 				],
 				paddingPositions: [210, 80, 187, 193, 85, 58],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -156971,7 +156971,7 @@ export default [
 					],
 				],
 				paddingPositions: [79, 41, 133, 79, 178, 211],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -157134,7 +157134,7 @@ export default [
 					],
 				],
 				paddingPositions: [200, 40, 228, 150, 53, 125],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -157591,7 +157591,7 @@ export default [
 					],
 				],
 				paddingPositions: [16, 43, 149, 52, 155, 203],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -157755,7 +157755,7 @@ export default [
 					],
 				],
 				paddingPositions: [22, 119, 156, 77, 28, 48],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -158122,7 +158122,7 @@ export default [
 					],
 				],
 				paddingPositions: [38, 250, 185, 81, 42, 65],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -158285,7 +158285,7 @@ export default [
 					],
 				],
 				paddingPositions: [158, 149, 15, 30, 200, 150],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -158448,7 +158448,7 @@ export default [
 					],
 				],
 				paddingPositions: [221, 72, 215, 188, 55, 18],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -159217,7 +159217,7 @@ export default [
 					],
 				],
 				paddingPositions: [32, 142, 171, 4, 31, 25],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -159380,7 +159380,7 @@ export default [
 					],
 				],
 				paddingPositions: [250, 45, 13, 68, 81, 57],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -160008,7 +160008,7 @@ export default [
 					],
 				],
 				paddingPositions: [46, 111, 227, 203, 216, 14],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -160327,7 +160327,7 @@ export default [
 					],
 				],
 				paddingPositions: [37, 27, 170, 23, 104, 5],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -160492,7 +160492,7 @@ export default [
 					],
 				],
 				paddingPositions: [101, 58, 5, 21, 34, 19],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -160655,7 +160655,7 @@ export default [
 					],
 				],
 				paddingPositions: [190, 71, 138, 7, 225, 3],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -160818,7 +160818,7 @@ export default [
 					],
 				],
 				paddingPositions: [82, 45, 35, 206, 16, 183],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -161606,7 +161606,7 @@ export default [
 					],
 				],
 				paddingPositions: [166, 179, 139, 107, 56, 114],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -162511,7 +162511,7 @@ export default [
 					],
 				],
 				paddingPositions: [1, 194, 206, 40, 178, 108],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -162675,7 +162675,7 @@ export default [
 					],
 				],
 				paddingPositions: [245, 195, 86, 26, 23, 97],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -162839,7 +162839,7 @@ export default [
 					],
 				],
 				paddingPositions: [154, 67, 206, 11, 186, 117],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -163180,7 +163180,7 @@ export default [
 					],
 				],
 				paddingPositions: [96, 20, 141, 75, 212, 160],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -163637,7 +163637,7 @@ export default [
 					],
 				],
 				paddingPositions: [220, 92, 147, 49, 180, 17],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -163801,7 +163801,7 @@ export default [
 					],
 				],
 				paddingPositions: [58, 197, 74, 20, 218, 59],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -163964,7 +163964,7 @@ export default [
 					],
 				],
 				paddingPositions: [116, 162, 213, 93, 41, 94],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -165336,7 +165336,7 @@ export default [
 					],
 				],
 				paddingPositions: [62, 41, 118, 97, 69, 236],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -165499,7 +165499,7 @@ export default [
 					],
 				],
 				paddingPositions: [142, 56, 175, 83, 215, 196],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -166561,7 +166561,7 @@ export default [
 					],
 				],
 				paddingPositions: [140, 226, 193, 243, 111, 100],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -166985,7 +166985,7 @@ export default [
 					],
 				],
 				paddingPositions: [217, 27, 209, 31, 96, 39],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -167326,7 +167326,7 @@ export default [
 					],
 				],
 				paddingPositions: [126, 32, 197, 99, 152, 250],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -167489,7 +167489,7 @@ export default [
 					],
 				],
 				paddingPositions: [147, 46, 96, 16, 12, 148],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -168371,7 +168371,7 @@ export default [
 					],
 				],
 				paddingPositions: [214, 42, 75, 70, 227, 19],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -168841,7 +168841,7 @@ export default [
 					],
 				],
 				paddingPositions: [26, 219, 208, 149, 167, 238],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -169005,7 +169005,7 @@ export default [
 					],
 				],
 				paddingPositions: [117, 201, 165, 230, 185, 84],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -170302,7 +170302,7 @@ export default [
 					],
 				],
 				paddingPositions: [112, 42, 32, 217, 20, 199],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -170974,7 +170974,7 @@ export default [
 					],
 				],
 				paddingPositions: [171, 83, 91, 18, 86, 215],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -171137,7 +171137,7 @@ export default [
 					],
 				],
 				paddingPositions: [130, 17, 150, 24, 69, 245],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -171446,7 +171446,7 @@ export default [
 					],
 				],
 				paddingPositions: [241, 160, 210, 248, 74, 8],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -171609,7 +171609,7 @@ export default [
 					],
 				],
 				paddingPositions: [48, 48, 33, 66, 191, 63],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -171772,7 +171772,7 @@ export default [
 					],
 				],
 				paddingPositions: [11, 172, 245, 209, 174, 111],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -172239,7 +172239,7 @@ export default [
 					],
 				],
 				paddingPositions: [189, 182, 177, 188, 216, 167],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -172402,7 +172402,7 @@ export default [
 					],
 				],
 				paddingPositions: [94, 212, 120, 161, 116, 151],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -172565,7 +172565,7 @@ export default [
 					],
 				],
 				paddingPositions: [38, 59, 123, 116, 203, 188],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -173045,7 +173045,7 @@ export default [
 					],
 				],
 				paddingPositions: [214, 188, 11, 71, 40, 2],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -173208,7 +173208,7 @@ export default [
 					],
 				],
 				paddingPositions: [3, 148, 192, 154, 165, 142],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -173731,7 +173731,7 @@ export default [
 					],
 				],
 				paddingPositions: [39, 54, 217, 194, 183, 109],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -174693,7 +174693,7 @@ export default [
 					],
 				],
 				paddingPositions: [179, 14, 236, 8, 44, 82],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -175002,7 +175002,7 @@ export default [
 					],
 				],
 				paddingPositions: [246, 81, 24, 105, 22, 5],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -175758,7 +175758,7 @@ export default [
 					],
 				],
 				paddingPositions: [224, 239, 190, 135, 169, 137],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -175921,7 +175921,7 @@ export default [
 					],
 				],
 				paddingPositions: [207, 179, 164, 65, 151, 169],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -176321,7 +176321,7 @@ export default [
 					],
 				],
 				paddingPositions: [233, 53, 89, 39, 160, 201],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -176484,7 +176484,7 @@ export default [
 					],
 				],
 				paddingPositions: [159, 108, 75, 53, 106, 98],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -176647,7 +176647,7 @@ export default [
 					],
 				],
 				paddingPositions: [36, 149, 116, 141, 22, 143],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -177608,7 +177608,7 @@ export default [
 					],
 				],
 				paddingPositions: [239, 195, 23, 101, 249, 180],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -177771,7 +177771,7 @@ export default [
 					],
 				],
 				paddingPositions: [39, 120, 119, 212, 19, 117],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -178390,7 +178390,7 @@ export default [
 					],
 				],
 				paddingPositions: [139, 158, 28, 110, 57, 86],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -178881,7 +178881,7 @@ export default [
 					],
 				],
 				paddingPositions: [90, 224, 17, 155, 85, 117],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -179188,7 +179188,7 @@ export default [
 					],
 				],
 				paddingPositions: [47, 98, 77, 91, 197, 198],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -179772,7 +179772,7 @@ export default [
 					],
 				],
 				paddingPositions: [29, 149, 63, 156, 183, 182],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -180078,7 +180078,7 @@ export default [
 					],
 				],
 				paddingPositions: [80, 16, 193, 72, 207, 29],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -180833,7 +180833,7 @@ export default [
 					],
 				],
 				paddingPositions: [46, 93, 135, 192, 169, 145],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -181441,7 +181441,7 @@ export default [
 					],
 				],
 				paddingPositions: [213, 43, 184, 138, 48, 16],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -181887,7 +181887,7 @@ export default [
 					],
 				],
 				paddingPositions: [189, 219, 86, 44, 146, 0],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -182534,7 +182534,7 @@ export default [
 					],
 				],
 				paddingPositions: [208, 230, 80, 145, 109, 58],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -182697,7 +182697,7 @@ export default [
 					],
 				],
 				paddingPositions: [131, 91, 113, 245, 61, 8],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -182860,7 +182860,7 @@ export default [
 					],
 				],
 				paddingPositions: [183, 176, 90, 153, 87, 142],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -183023,7 +183023,7 @@ export default [
 					],
 				],
 				paddingPositions: [50, 61, 201, 215, 186, 234],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -183187,7 +183187,7 @@ export default [
 					],
 				],
 				paddingPositions: [32, 85, 25, 92, 148, 98],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -184536,7 +184536,7 @@ export default [
 					],
 				],
 				paddingPositions: [223, 225, 58, 237, 178, 216],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -185166,7 +185166,7 @@ export default [
 					],
 				],
 				paddingPositions: [28, 197, 106, 154, 90, 172],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -186120,7 +186120,7 @@ export default [
 					],
 				],
 				paddingPositions: [225, 197, 207, 61, 207, 142],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -186487,7 +186487,7 @@ export default [
 					],
 				],
 				paddingPositions: [130, 39, 120, 55, 7, 18],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -186933,7 +186933,7 @@ export default [
 					],
 				],
 				paddingPositions: [33, 127, 172, 41, 243, 32],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -187097,7 +187097,7 @@ export default [
 					],
 				],
 				paddingPositions: [140, 74, 239, 86, 178, 86],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -187429,7 +187429,7 @@ export default [
 					],
 				],
 				paddingPositions: [67, 165, 3, 239, 225, 146],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -188193,7 +188193,7 @@ export default [
 					],
 				],
 				paddingPositions: [51, 102, 203, 208, 216, 200],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -188357,7 +188357,7 @@ export default [
 					],
 				],
 				paddingPositions: [6, 93, 24, 73, 146, 74],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -188520,7 +188520,7 @@ export default [
 					],
 				],
 				paddingPositions: [199, 29, 57, 37, 84, 120],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -190094,7 +190094,7 @@ export default [
 					],
 				],
 				paddingPositions: [110, 28, 198, 2, 200, 94],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -191381,7 +191381,7 @@ export default [
 					],
 				],
 				paddingPositions: [0, 204, 149, 233, 175, 163],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -191701,7 +191701,7 @@ export default [
 					],
 				],
 				paddingPositions: [109, 154, 66, 39, 196, 94],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -192251,7 +192251,7 @@ export default [
 					],
 				],
 				paddingPositions: [146, 95, 102, 7, 63, 185],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -192414,7 +192414,7 @@ export default [
 					],
 				],
 				paddingPositions: [108, 186, 96, 83, 197, 91],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -192997,7 +192997,7 @@ export default [
 					],
 				],
 				paddingPositions: [102, 246, 242, 157, 158, 13],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -193593,7 +193593,7 @@ export default [
 					],
 				],
 				paddingPositions: [176, 139, 232, 157, 52, 166],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -193758,7 +193758,7 @@ export default [
 					],
 				],
 				paddingPositions: [16, 144, 65, 138, 152, 136],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -194105,7 +194105,7 @@ export default [
 					],
 				],
 				paddingPositions: [65, 149, 111, 245, 156, 125],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -194268,7 +194268,7 @@ export default [
 					],
 				],
 				paddingPositions: [127, 195, 97, 68, 247, 235],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -194431,7 +194431,7 @@ export default [
 					],
 				],
 				paddingPositions: [140, 5, 138, 233, 38, 2],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -195316,7 +195316,7 @@ export default [
 					],
 				],
 				paddingPositions: [241, 241, 212, 77, 16, 13],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -195653,7 +195653,7 @@ export default [
 					],
 				],
 				paddingPositions: [111, 218, 83, 215, 18, 121],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -196155,7 +196155,7 @@ export default [
 					],
 				],
 				paddingPositions: [48, 17, 248, 221, 84, 154],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -196932,7 +196932,7 @@ export default [
 					],
 				],
 				paddingPositions: [109, 162, 22, 234, 237, 246],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -197391,7 +197391,7 @@ export default [
 					],
 				],
 				paddingPositions: [176, 164, 213, 110, 1, 58],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -197881,7 +197881,7 @@ export default [
 					],
 				],
 				paddingPositions: [111, 179, 27, 51, 233, 113],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -198044,7 +198044,7 @@ export default [
 					],
 				],
 				paddingPositions: [177, 148, 117, 32, 69, 159],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -198207,7 +198207,7 @@ export default [
 					],
 				],
 				paddingPositions: [148, 31, 105, 174, 159, 227],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -199172,7 +199172,7 @@ export default [
 					],
 				],
 				paddingPositions: [160, 201, 247, 139, 127, 109],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
@@ -199337,7 +199337,7 @@ export default [
 					],
 				],
 				paddingPositions: [208, 136, 209, 172, 32, 127],
-				gameType: 'freeSpins',
+				gameType: 'freegame',
 				anticipation: [0, 0, 0, 0, 0, 0],
 			},
 			{
