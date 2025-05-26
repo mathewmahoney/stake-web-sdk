@@ -1,6 +1,6 @@
 {
 	"name": "pixi-svelte",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"type": "module",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -8,6 +8,10 @@
 	"files": [
 		"dist"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/StakeEngine/web-sdk/tree/main/packages/pixi-svelte"
+	},
 	"scripts": {
 		"format": "prettier --write --ignore-path=../../.prettierignore .",
 		"build": "svelte-package",

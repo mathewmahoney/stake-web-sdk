@@ -2,11 +2,13 @@
 
 Use PixiJS in a declarative way with Svelte5.
 
-## Storybook
+## Documentation
 
-Check out the storybook repo for pixi-svelte usage and for more information: https://github.com/qk0106/pixi-svelte-storybook
+Check out the github repo for pixi-svelte usage and for more information in https://github.com/StakeEngine/web-sdk/tree/main/packages/pixi-svelte
 
-## Example of usage
+For more usage please checkout storybook: https://github.com/StakeEngine/web-sdk/tree/main/packages/pixi-svelte-storybook
+
+## Examples of usage
 
 ### Text
 
@@ -76,7 +78,7 @@ Check out the storybook repo for pixi-svelte usage and for more information: htt
 - Turn off SSR
 
 ```ts
-// src/routes/+page.ts
+// src/routes/+layout.ts
 export const ssr = false;
 ```
 
@@ -86,7 +88,3 @@ export const ssr = false;
 - Pixi Graphics Example: https://pixijs.io/examples-v4/#/graphics/simple.js
 - SvelteKit SSR: https://kit.svelte.dev/docs/page-options#ssr
 - Create a SvelteKit app: https://kit.svelte.dev/docs/creating-a-project
-
-## Documentation
-
-WIP...
