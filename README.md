@@ -4,11 +4,44 @@ This is a web sdk that is convenient for you to develop a game in a declarative 
 
 - How to use: Start your own codebase based on this repo and changing any source code as you need.
 
+
+# Table of Contents
+
+- [Get Started](#getStarted)
+  - [Installation](#installation)
+  - [Run in Storybook](#runInStorybook)
+  - [Run in DEV Mode](#runInDevMode) 
+  - [Build a Game](#buildAGame) 
+  - [Launch a Game](#launchAGame) 
+- [Dependencies](#dependencies)
+- [Explore Storybook](#exploreStorybook)
+- [Flow Chart](#flowChart)
+  - [playBookEvents()](#playBookEvents)
+  - [bookEvent](#bookEvent)
+  - [bookEventHandlerMap](#bookEventHandlerMap)
+  - [eventEmitter](#eventEmitter)
+  - [emitterEvent](#emitterEvent)
+  - [emitterEventHandlerMap](#emitterEventHandlerMap)
+- [Task Breakdown](#taskBreakdown)
+- [Steps to Add a New BookEvent](#steps)
+- [File Structure](#fileStructure)
+  - [/apps](#apps)
+  - [/packages](#packages)
+- [Context](#context)
+  - [ContextEventEmitter](#contextEventEmitter)
+  - [ContextLayout](#contextLayout)
+  - [ContextXstate](#contextXstate)
+  - [ContextApp](#contextApp)
+- [UI](#ui)
+- [Internationalisation](#internationalisation)
+
 <a name="getStarted"></a>
 
 # Get started
 
 Here is a complete tutorial to start with one of our sample games from storybook running and local test to build and launch it on [Stake Engine](https://engine.stake.com/). Please ignore those steps that you already know or done.
+
+<a name="installation"></a>
 
 ## Installation
 We use [VSCode](https://code.visualstudio.com/download) as IDE but this is optional and it is up to you.
@@ -54,6 +87,8 @@ pnpm install
 
 WIth out any error messages showing up, you are good to continue.
 
+<a name="runInStorybook"></a>
+
 ## Run in Storybook
 
 ```
@@ -75,6 +110,8 @@ pnpm run storybook --filter=lines
 - Click on the `Action` button and wait for a base game to finish.
 - Now you are having a game running locally in the storybook.
 
+<a name="runInDevMode"></a>
+
 ## Run in DEV mode
 ```
 pnpm run dev --filter=lines
@@ -84,6 +121,8 @@ pnpm run dev --filter=lines
 <img src="./documentation/get-started-dev.png" alt="isolated" width="100%"/>
 
 - It is all good to have that error screen for now, because we have not connected to the RGS with dev mode. We will show you later how to do that.
+
+<a name="buildAGame"></a>
 
 ## Build a game
 ```
@@ -112,6 +151,8 @@ build
 ```
 - Now you are ready to upload a game!
 
+<a name="launchAGame"></a>
+
 ## Launch a game
 
 - Login [Stake Engine](https://engine.stake.com/) account. Go to `Files` page of a game. Import files by uploading your the frontend by selecting the whole folder.
@@ -135,31 +176,6 @@ build
 - Now you can go back to the dev mode and copy/paste the query strings in the url and play it locally.
 
 Congratulations! You've completed the tutorial. You can explore the more content in the following documentation for details.
-
-# Table of Contents
-
-- [Get Started](#getStarted)
-- [Dependencies](#dependencies)
-- [Explore Storybook](#exploreStorybook)
-- [Flow Chart](#flowChart)
-  - [playBookEvents()](#playBookEvents)
-  - [bookEvent](#bookEvent)
-  - [bookEventHandlerMap](#bookEventHandlerMap)
-  - [eventEmitter](#eventEmitter)
-  - [emitterEvent](#emitterEvent)
-  - [emitterEventHandlerMap](#emitterEventHandlerMap)
-- [Task Breakdown](#taskBreakdown)
-- [Steps to Add a New BookEvent](#steps)
-- [File Structure](#fileStructure)
-  - [/apps](#apps)
-  - [/packages](#packages)
-- [Context](#context)
-  - [ContextEventEmitter](#contextEventEmitter)
-  - [ContextLayout](#contextLayout)
-  - [ContextXstate](#contextXstate)
-  - [ContextApp](#contextApp)
-- [UI](#ui)
-- [Internationalisation](#internationalisation)
 
 <a name="dependencies"></a>
 
