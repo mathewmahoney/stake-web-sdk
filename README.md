@@ -122,6 +122,8 @@ pnpm run dev --filter=lines
 
 - It is all good to have that error screen for now, because we have not connected to the RGS with DEV mode. We will show you later how to do that.
 
+- For more information about how the authentication is handled, please refer to [Authenticate.svelte](https://github.com/StakeEngine/web-sdk/blob/main/packages/components-shared/src/components/Authenticate.svelte)
+
 <a name="buildAGame"></a>
 
 ## Build a game
