@@ -1,12 +1,14 @@
 export type SoundId = number;
 export type SoundState = 'new' | 'playing' | 'paused';
 export type SoundConfig = { volume: number };
+export type SoundVolume = number;
 
 export type GetSound<TSoundName> = {
 	soundId: SoundId;
 	soundName: TSoundName;
 	soundState: SoundState;
 	soundConfig: SoundConfig;
+	soundVolume: SoundVolume;
 };
 
 export type GetSoundMap<TSoundName extends string> = Record<TSoundName, GetSound<TSoundName>>;
