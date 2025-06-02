@@ -54,10 +54,10 @@
 		"tumble_win_5": [404000, 989.6145124716327]
 	},
 	"src": [
-		"https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/1-2-mining-game/audio/sounds.ogg",
-		"https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/1-2-mining-game/audio/sounds.m4a",
-		"https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/1-2-mining-game/audio/sounds.mp3",
-		"https://test-twist-front-2.s3.ap-southeast-2.amazonaws.com/1-2-mining-game/audio/sounds.ac3"
+		"./assets/audio/sounds.ogg",
+		"./assets/audio/sounds.m4a",
+		"./assets/audio/sounds.mp3",
+		"./assets/audio/sounds.ac3"
 	],
 	"config": {
 		"bgm_freespin": { "volume": 1 },
