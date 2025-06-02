@@ -105,13 +105,36 @@ function createSound<TSoundName extends string>() {
 		});
 	};
 
+
+	const volumeMusicEffect = () => {
+		if (players) {
+			players.music.volume(stateSoundDerived.volumeMusic());
+		}
+	};
+
+	const volumeLoopEffect = () => {
+		if (players) {
+			players.loop.volume(stateSoundDerived.volumeSoundEffect());
+		}
+	};
+
+	const volumeOnceEffect = () => {
+		if (players) {
+			players.once.volume(stateSoundDerived.volumeSoundEffect());
+		}
+	};
+
 	const volumeEffect = () => {
 		$effect(() => {
-			if (players) {
-				players.music.volume(stateSoundDerived.volumeMusic());
-				players.loop.volume(stateSoundDerived.volumeSoundEffect());
-				players.once.volume(stateSoundDerived.volumeSoundEffect());
-			}
+			volumeMusicEffect();
+		});
+
+		$effect(() => {
+			volumeLoopEffect();
+		});
+
+		$effect(() => {
+			volumeOnceEffect();
 		});
 	};
 
