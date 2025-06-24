@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { defineMeta, setTemplate } from '@storybook/addon-svelte-csf';
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	const { Story } = defineMeta({
 		title: 'MODE_BONUS/book',
@@ -20,7 +20,6 @@
 	import { playBet } from '../game/utils';
 	import books from './data/bonus_books';
 
-	setTemplate(template);
 	setContext();
 </script>
 
@@ -49,4 +48,5 @@
 			await playBet({ ...data, state: data.events });
 		},
 	})}
+	{template}
 />

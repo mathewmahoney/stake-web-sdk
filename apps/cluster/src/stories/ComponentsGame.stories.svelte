@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { defineMeta, setTemplate } from '@storybook/addon-svelte-csf';
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	const { Story } = defineMeta({
 		title: 'COMPONENTS/<Game>',
@@ -19,7 +19,6 @@
 	import { setContext } from '../game/context';
 	import { eventEmitter } from '../game/eventEmitter';
 
-	setTemplate(template);
 	setContext();
 </script>
 
@@ -51,6 +50,7 @@
 			await stateGameDerived.enhancedBoard.preSpin({});
 		},
 	})}
+	{template}
 />
 
 <Story
@@ -62,4 +62,5 @@
 			eventEmitter.broadcast({ type: 'boardHide' });
 		},
 	})}
+	{template}
 />
