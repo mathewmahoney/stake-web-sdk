@@ -20,7 +20,7 @@
 		"config-lingui": "workspace:*",
 		"config-storybook": "workspace:*",
 		"chromatic": "latest",
-		"@storybook/addon-svelte-csf": "next",
+		"@storybook/addon-svelte-csf": "latest",
 		"@sveltejs/vite-plugin-svelte": "^5"
 	},
 	"dependencies": {

@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { defineMeta, setTemplate } from '@storybook/addon-svelte-csf';
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	const { Story } = defineMeta({
 		title: 'MODE_BASE/bookEvent',
@@ -19,7 +19,6 @@
 	import { playBookEvent } from '../game/utils';
 	import events from './data/base_events';
 
-	setTemplate(template);
 	setContext();
 </script>
 
@@ -43,6 +42,7 @@
 		data: events.reveal,
 		action: async (data) => await playBookEvent(data, { bookEvents: [] }),
 	})}
+	{template}
 />
 
 <Story
@@ -52,6 +52,7 @@
 		data: events.setTotalWin,
 		action: async (data) => await playBookEvent(data, { bookEvents: [] }),
 	})}
+	{template}
 />
 
 <Story
@@ -61,6 +62,7 @@
 		data: events.freeSpinTrigger,
 		action: async (data) => await playBookEvent(data, { bookEvents: [] }),
 	})}
+	{template}
 />
 
 <Story
@@ -70,6 +72,7 @@
 		data: events.updateFreeSpin,
 		action: async (data) => await playBookEvent(data, { bookEvents: [] }),
 	})}
+	{template}
 />
 
 <Story
@@ -79,6 +82,7 @@
 		data: events.winInfo,
 		action: async (data) => await playBookEvent(data, { bookEvents: [] }),
 	})}
+	{template}
 />
 
 <Story
@@ -88,6 +92,7 @@
 		data: events.setWin,
 		action: async (data) => await playBookEvent(data, { bookEvents: [] }),
 	})}
+	{template}
 />
 
 <Story
@@ -97,6 +102,7 @@
 		data: events.freeSpinEnd,
 		action: async (data) => await playBookEvent(data, { bookEvents: [] }),
 	})}
+	{template}
 />
 
 <Story
@@ -106,4 +112,5 @@
 		data: events.finalWin,
 		action: async (data) => await playBookEvent(data, { bookEvents: [] }),
 	})}
+	{template}
 />

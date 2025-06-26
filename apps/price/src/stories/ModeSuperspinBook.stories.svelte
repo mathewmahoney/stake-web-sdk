@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { defineMeta, setTemplate } from '@storybook/addon-svelte-csf';
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	const { Story } = defineMeta({
 		title: 'MODE_SUPERSPIN/book',
@@ -20,7 +20,7 @@
 	import { playBet } from '../game/utils';
 	import books from './data/superspin_books';
 
-	setTemplate(template);
+	
 	setContext();
 </script>
 

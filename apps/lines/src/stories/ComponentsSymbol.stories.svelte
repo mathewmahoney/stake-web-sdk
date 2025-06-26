@@ -49,7 +49,7 @@
 	{/snippet}
 </Story>
 
-<Story name="symbols">
+<Story name="symbols" >
 	<StoryPixiApp {assets}>
 		<Container scale={0.5}>
 			{#each SYMBOLS_LEFT as symbol, rowIndex}

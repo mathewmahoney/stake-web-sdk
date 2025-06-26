@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { defineMeta, setTemplate } from '@storybook/addon-svelte-csf';
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	const { Story } = defineMeta({
 		title: 'COMPONENTS/<Game>',
@@ -20,7 +20,7 @@
 	import { eventEmitter } from '../game/eventEmitter';
 	import config from '../game/config';
 
-	setTemplate(template);
+	
 	setContext();
 </script>
 
