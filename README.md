@@ -247,7 +247,7 @@ This function is created by [packages/utils-book/src/createPlayBookUtils.ts](/pa
 
 ## bookEvent
 
-- `book`: A book is a json data that is returned from the RGS (Remote Game Server) for each game requested. It is randomly picked from over a million of books, which is [math](https://twist-gaming.github.io/carrot-math-engine). It is mainly composed by bookEvents.
+- `book`: A book is a json data that is returned from the RGS (Remote Game Server) for each game requested. It is randomly picked from over a million of books, which is [math](https://stakeengine.github.io/math-sdk/math_docs/general_overview/). It is mainly composed by bookEvents.
 
 ```
 // base_books.ts - Example of a base game book
