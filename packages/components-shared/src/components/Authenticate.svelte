@@ -19,8 +19,6 @@
 				language: stateUrlDerived.lang(),
 			});
 
-			console.log({ authenticateData });
-
 			// error
 			if (authenticateData?.error) throw authenticateData;
 
