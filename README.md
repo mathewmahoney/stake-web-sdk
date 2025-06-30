@@ -46,7 +46,7 @@ Here is a complete tutorial to start with one of our sample games from storybook
 ## Installation
 We use [VSCode](https://code.visualstudio.com/download) as IDE but this is optional and it is up to you.
 
-- Install node with version 18.18.0. [download](https://nodejs.org/en/download)
+- Install node with version 22.16.0. [download](https://nodejs.org/en/download)
 
 ```
 # Download and install nvm:
@@ -56,9 +56,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 \. "$HOME/.nvm/nvm.sh"
 
 # Download and install Node.js:
-nvm install 18.18.0
+nvm install 22.16.0
 
-# Verify the node versions. Should print "v18.18.0".
+# Verify the node versions. Should print "v22.16.0".
 node -v
 ```
 
