@@ -10,7 +10,7 @@ import { playBet, convertTorResumableBet } from './utils';
 import { stateGame, stateGameDerived } from './stateGame.svelte';
 import config from './config';
 
-const PrimaryMachines = createPrimaryMachines<Bet>({
+const primaryMachines = createPrimaryMachines<Bet>({
 	onResumeGameActive: (lastBetData) => convertTorResumableBet(lastBetData),
 	onResumeGameInactive: (lastBetData) => {
 		const lastRevealEvent = _.findLast(
@@ -32,6 +32,6 @@ const PrimaryMachines = createPrimaryMachines<Bet>({
 	checkIsBonusGame: (bet) => checkIsMultipleRevealEvents({ bookEvents: bet.state }),
 });
 
-const IntermediateMachines = createIntermediateMachines(PrimaryMachines);
+const intermediateMachines = createIntermediateMachines(primaryMachines);
 
-export const gameActor = createGameActor(IntermediateMachines);
+export const gameActor = createGameActor(intermediateMachines);
