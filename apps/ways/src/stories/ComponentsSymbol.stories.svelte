@@ -42,7 +42,7 @@
 </script>
 
 <Story name="component">
-	{#snippet children(args)}
+	{#snippet template(args)}
 		<StoryPixiApp {assets}>
 			<Symbol {...args} oncomplete={() => console.log('complete')} />
 		</StoryPixiApp>
@@ -50,27 +50,29 @@
 </Story>
 
 <Story name="symbols">
-	<StoryPixiApp {assets}>
-		<Container scale={0.5}>
-			{#each SYMBOLS_LEFT as symbol, rowIndex}
-				{#each SYMBOL_STATES as state, columnIndex}
-					{@const x = (columnIndex + 1) * BASE}
-					{@const y = (rowIndex + 1) * BASE}
-					<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
-					<Symbol {x} {y} rawSymbol={symbol} {state} loop />
+	{#snippet template()}
+		<StoryPixiApp {assets}>
+			<Container scale={0.5}>
+				{#each SYMBOLS_LEFT as symbol, rowIndex}
+					{#each SYMBOL_STATES as state, columnIndex}
+						{@const x = (columnIndex + 1) * BASE}
+						{@const y = (rowIndex + 1) * BASE}
+						<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
+						<Symbol {x} {y} rawSymbol={symbol} {state} loop />
+					{/each}
 				{/each}
-			{/each}
-		</Container>
+			</Container>
 
-		<Container scale={0.5} x={550}>
-			{#each SYMBOLS_RIGHT as symbol, rowIndex}
-				{#each SYMBOL_STATES as state, columnIndex}
-					{@const x = (columnIndex + 1) * BASE}
-					{@const y = (rowIndex + 1) * BASE}
-					<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
-					<Symbol {x} {y} rawSymbol={symbol} {state} loop />
+			<Container scale={0.5} x={550}>
+				{#each SYMBOLS_RIGHT as symbol, rowIndex}
+					{#each SYMBOL_STATES as state, columnIndex}
+						{@const x = (columnIndex + 1) * BASE}
+						{@const y = (rowIndex + 1) * BASE}
+						<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
+						<Symbol {x} {y} rawSymbol={symbol} {state} loop />
+					{/each}
 				{/each}
-			{/each}
-		</Container>
-	</StoryPixiApp>
+			</Container>
+		</StoryPixiApp>
+	{/snippet}
 </Story>

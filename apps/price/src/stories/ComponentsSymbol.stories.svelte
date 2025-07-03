@@ -44,7 +44,7 @@
 </script>
 
 <Story name="component">
-	{#snippet children(args)}
+	{#snippet template(args)}
 		<StoryLocale lang="en">
 			<StoryPixiApp {assets}>
 				<Symbol {...args} oncomplete={() => console.log('complete')} />
@@ -54,29 +54,31 @@
 </Story>
 
 <Story name="symbols">
-	<StoryLocale lang="en">
-		<StoryPixiApp {assets}>
-			<Container scale={0.5}>
-				{#each SYMBOLS_LEFT as symbol, rowIndex}
-					{#each SYMBOL_STATES as state, columnIndex}
-						{@const x = (columnIndex + 1) * BASE}
-						{@const y = (rowIndex + 1) * BASE}
-						<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
-						<Symbol {x} {y} rawSymbol={symbol} {state} loop />
+	{#snippet template()}
+		<StoryLocale lang="en">
+			<StoryPixiApp {assets}>
+				<Container scale={0.5}>
+					{#each SYMBOLS_LEFT as symbol, rowIndex}
+						{#each SYMBOL_STATES as state, columnIndex}
+							{@const x = (columnIndex + 1) * BASE}
+							{@const y = (rowIndex + 1) * BASE}
+							<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
+							<Symbol {x} {y} rawSymbol={symbol} {state} loop />
+						{/each}
 					{/each}
-				{/each}
-			</Container>
+				</Container>
 
-			<Container scale={0.5} x={550}>
-				{#each SYMBOLS_RIGHT as symbol, rowIndex}
-					{#each SYMBOL_STATES as state, columnIndex}
-						{@const x = (columnIndex + 1) * BASE}
-						{@const y = (rowIndex + 1) * BASE}
-						<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
-						<Symbol {x} {y} rawSymbol={symbol} {state} loop />
+				<Container scale={0.5} x={550}>
+					{#each SYMBOLS_RIGHT as symbol, rowIndex}
+						{#each SYMBOL_STATES as state, columnIndex}
+							{@const x = (columnIndex + 1) * BASE}
+							{@const y = (rowIndex + 1) * BASE}
+							<Text {x} y={y - 100} anchor={{ x: 0.5, y: 0 }} text={`${symbol.name}: ${state}`} />
+							<Symbol {x} {y} rawSymbol={symbol} {state} loop />
+						{/each}
 					{/each}
-				{/each}
-			</Container>
-		</StoryPixiApp>
-	</StoryLocale>
+				</Container>
+			</StoryPixiApp>
+		</StoryLocale>
+	{/snippet}
 </Story>
