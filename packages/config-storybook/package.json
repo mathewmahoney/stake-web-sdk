@@ -14,12 +14,12 @@
 		"config-ts": "workspace:*",
 		"@chromatic-com/storybook": "latest",
 		"@storybook/addon-svelte-csf": "5.0.5",
-		"@storybook/addon-essentials": "8.6.3",
-		"@storybook/builder-vite": "8.6.3",
-		"@storybook/svelte": "8.6.3",
-		"@storybook/sveltekit": "8.6.3",
+    "@storybook/addon-docs": "9.0.15",
+		"storybook": "9.0.15",
+		"@storybook/builder-vite": "9.0.15",
+		"@storybook/svelte": "9.0.15",
+		"@storybook/sveltekit": "9.0.15",
 		"@sveltejs/adapter-static": "latest",
-		"storybook": "8.6.3",
 		"vite": "latest"
 	}
 }

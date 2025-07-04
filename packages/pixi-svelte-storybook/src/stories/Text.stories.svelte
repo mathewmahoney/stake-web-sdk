@@ -36,7 +36,7 @@
 </script>
 
 <Story name="Preview">
-	{#snippet children(args)}
+	{#snippet template(args)}
 		<StoryPixiApp assets={{}}>
 			<Rectangle x={args.x} y={args.y} {...textSizes} backgroundColor={0x500000} backgroundAlpha={0.5} />
 			<Text
