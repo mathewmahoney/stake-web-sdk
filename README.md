@@ -121,7 +121,7 @@ pnpm run dev --filter=lines
 
 <img src="./documentation/get-started-dev.png" alt="isolated" width="100%"/>
 
-- It is all good to have that error screen for now, because we have not connected to the RGS with DEV mode. We will show you later how to do that.
+- It is all good to have that error screen for now, because we have not connected to the RGS with DEV mode. We will show you how to do that in the launch-a-game step.
 
 - For more information about how the authentication is handled, please refer to [Authenticate.svelte](https://github.com/StakeEngine/web-sdk/blob/main/packages/components-shared/src/components/Authenticate.svelte)
 
