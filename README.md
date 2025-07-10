@@ -97,9 +97,11 @@ pnpm run storybook --filter=lines
 ```
 
 - Run `pnpm run storybook --filter=<MODULE_NAME>` in the terminal to see the storybook of a sample game in a TurboRepo way. `<MODULE_NAME>` is the name in the package.json file of a module in apps or packages folders.
-- For example, we have `"name": "lines"` in the [apps/lines/package.json](/apps/lines/package.json), so we can find it and run its storybook by:
-
-
+- For example, we have `"name": "lines"` in the [apps/lines/package.json](/apps/lines/package.json), so we can find it and run its storybook.
+- For Windows users, you might need to add the script with "cross-env" to make it work:
+```
+"storybook": "cross-env PUBLIC_CHROMATIC=true storybook dev -p 6001 public",
+```
 - You should see this:
 
 <img src="./documentation/get-started-storybook-run.png" alt="isolated" width="100%"/>
@@ -1081,3 +1083,5 @@ For the branding purpose, we recommend you to regard them as just an example of 
 <a name="internationalisation"></a>
 
 # Internationalisation ([i18n](http://www.i18nguy.com/origini18n.html))
+
+To be continued.
