@@ -4,6 +4,7 @@
 	"types": "./index.ts",
 	"version": "0.0.0",
 	"private": true,
+	"license": "MIT",
 	"scripts": {
 		"format": "prettier --write --ignore-path=../../.prettierignore .",
 		"lint": "eslint \"src\"",
