@@ -236,6 +236,19 @@ const BET_TYPE_METHODS_MAP = {
   - A: Spritesheet animation is a good alternative.
 Check out the example of spritesheet animation here: [SpriteSheet.stories.svelte](https://github.com/StakeEngine/web-sdk/blob/main/packages/pixi-svelte-storybook/src/stories/SpriteSheet.stories.svelte)
 
+- Q: Is there a mechanism to switch from a game type (i.e. lines) to another game type (i.e. cluster) as a mechanic?
+  - A: It's easy. What you can do:
+    - Create a new "cluster" board in "src/game/stateGame.ts".
+    - Add a new bookEvent in your math to tell the game to switch from a "lines" board to a "cluster" board. (Whatever data shape that you need)
+    - Add this bookEvent in your "bookEventHandlerMap" and create emitterEvents.
+    - In "src/components/Board.svelte" subscribe according emitterEvents and then do the switching in a emitterEventHandler.
+
+    From this example, it shows you that you can basically do anything you want to achieve through this pattern.
+    - Create a bookEvent
+    - Add it to bookEventHandlerMap and create emitterEvents
+    - Subscribe emitterEvents in a svelte component
+    - Do anything you want.
+
 <a name="dependencies"></a>
 
 # Dependencies
