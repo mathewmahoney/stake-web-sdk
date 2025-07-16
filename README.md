@@ -178,7 +178,7 @@ build
 
 - Check the query string in the URL and those are the values required to connect to the RGS.
 
-- Now you can go back to the DEV mode and copy/paste the query strings in the url and play it locally.
+- Now you can go back to the DEV mode and copy/paste the query string in the url and play it locally.
 
 Congratulations! You've completed the tutorial. You can explore the more content in the following documentation for details.
 
@@ -248,6 +248,9 @@ Check out the example of spritesheet animation here: [SpriteSheet.stories.svelte
     - Add it to bookEventHandlerMap and create emitterEvents
     - Subscribe emitterEvents in a svelte component
     - Do anything you want.
+
+- Q: What are the requirements to launch the same game on social casinos like [stake.us](https://stake.us)?
+  - A: You will need to add a different set of text for your UI when `social=true` in the query string. For example 'BET' to 'SPIN'. Check the example in the codebase here `packages/components-ui-pixi/src/i18n/i18nDerived.ts`
 
 <a name="dependencies"></a>
 
