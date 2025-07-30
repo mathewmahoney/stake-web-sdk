@@ -252,6 +252,12 @@ Check out the example of spritesheet animation here: [SpriteSheet.stories.svelte
 - Q: What are the requirements to launch the same game on social casinos like [stake.us](https://stake.us)?
   - A: You will need to add a different set of text for your UI when `social=true` in the query string. For example 'BET' to 'SPIN'. Check the example in the codebase here `packages/components-ui-pixi/src/i18n/i18nDerived.ts`
 
+- Q: When updating things in packages/pixi-svelte, it doesn't seem to take effect. Why is that?
+  - A: It's because the pixi-svelte is using the built version, which is described in the (package.json).main. Built it again after anything is changed in the folder.
+  ```
+  pnpm run build --filter=pixi-svelte
+  ```
+
 <a name="dependencies"></a>
 
 # Dependencies
