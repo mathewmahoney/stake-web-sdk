@@ -238,16 +238,16 @@ Check out the example of spritesheet animation here: [SpriteSheet.stories.svelte
 
 - Q: Is there a mechanism to switch from a game type (i.e. lines) to another game type (i.e. cluster) as a mechanic?
   - A: It's easy. What you can do:
-    - Create a new "cluster" board in "src/game/stateGame.ts".
+    - Create a new "cluster" board in "src/game/stateGame.ts"
     - Add a new bookEvent in your math to tell the game to switch from a "lines" board to a "cluster" board. (Whatever data shape that you need)
-    - Add this bookEvent in your "bookEventHandlerMap" and create emitterEvents.
-    - In "src/components/Board.svelte" subscribe according emitterEvents and then do the switching in a emitterEventHandler.
+    - Add this bookEvent in your "bookEventHandlerMap" and create emitterEvents
+    - In "src/components/Board.svelte" subscribe according emitterEvents and then do the switching in a emitterEventHandler
 
     From this example, it shows you that you can basically do anything you want to achieve through this pattern.
     - Create a bookEvent
     - Add it to bookEventHandlerMap and create emitterEvents
     - Subscribe emitterEvents in a svelte component
-    - Do anything you want.
+    - Do anything you want
 
 - Q: What are the requirements to launch the same game on social casinos like [stake.us](https://stake.us)?
   - A: You will need to add a different set of text for your UI when `social=true` in the query string. For example 'BET' to 'SPIN'. Check the example in the codebase here `packages/components-ui-pixi/src/i18n/i18nDerived.ts`
@@ -257,6 +257,8 @@ Check out the example of spritesheet animation here: [SpriteSheet.stories.svelte
   ```
   pnpm run build --filter=pixi-svelte
   ```
+- Q: Loading time for Storybook on Windows is insanely long, what can I do?
+  - A: From the information we have collected, we found the initial loading is slow on windows for storybook. Sometimes it takes up to 15 minutes to finish the initial loading, but once it's loaded switching between the stories is much quicker. The hot reloading can take effect for any changes on fly. We strongly suggest the developers to implement each piece of a game in storybook as task breakdown, it will make your development much easier and quicker. So patience is the answer for the time being.
 
 <a name="dependencies"></a>
 
